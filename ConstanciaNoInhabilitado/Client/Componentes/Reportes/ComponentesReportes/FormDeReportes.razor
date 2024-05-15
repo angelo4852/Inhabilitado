@@ -1,0 +1,35 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+<MudItem xs="5">
+    <MudDatePicker T="DateTime"
+                   Label="Introduce la Fecha de Inicio"
+                   DateFormat="dd/MM/yyyy"
+                   @bind-Date="CriterioDeReportes.FechaInicio"
+                   For="@(()=>CriterioDeReportes.FechaInicio)" />
+</MudItem>
+<MudItem xs="5">
+    <MudDatePicker T="DateTime"
+                   Label="Introduce la Fecha de Término"
+                   DateFormat="dd/MM/yyyy"
+                   @bind-Date="CriterioDeReportes.FechaTermino"
+                   For="@(()=>CriterioDeReportes.FechaTermino)" />
+</MudItem>
+@if (ReporteAltasBajas)
+{
+    <MudItem xs="5">
+        <MudSelect T="string" Label="Selecciona la Dependencia" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="CriterioDeReportes.TipoDeReporte">
+            <MudSelectItem Value="@("Informe de Altas")" />
+            <MudSelectItem Value="@("Informe de Bajas")" />
+        </MudSelect>
+    </MudItem>
+}
+
+<MudItem xs="3">
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Obtener Reporte</MudButton>
+</MudItem>
+
+@code
+{
+    [Parameter] public bool ReporteAltasBajas { set; get; } = false;
+    private CriterioDeReportes CriterioDeReportes { set; get; } = new();
+}

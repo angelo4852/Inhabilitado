@@ -1,0 +1,25 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/Default";
+
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@attribute [Authorize]
+
+
+<MainFormHome>
+        <ContentBreadcrumbs>
+            <MudLink Href="ConstanciaNoInhabilitado/Default">
+                <b>Inicio</b>
+            </MudLink>
+            <b>/ Administración / </b>
+            <b style="color:#A8113E;">Inicio</b>    
+        </ContentBreadcrumbs>       
+        <Main>    
+            <Menu></Menu>
+        </Main>
+</MainFormHome>

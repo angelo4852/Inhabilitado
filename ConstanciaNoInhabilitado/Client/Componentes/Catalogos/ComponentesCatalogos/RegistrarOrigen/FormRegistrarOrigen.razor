@@ -1,0 +1,15 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+
+<MudItem xs="5">
+    <MudTextField @bind-Value="RegistrarOrigenInhabilitacion.Descripcion" Label="Introduzca la descripcion del origen" Variant="Variant.Outlined" />
+</MudItem>
+
+
+<MudItem xs="3">
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Registrar Origen de Inhabilitación </MudButton>
+</MudItem>
+
+@code {
+    private RegistrarOrigenInhabilitacion RegistrarOrigenInhabilitacion { get; set; } = new();
+}

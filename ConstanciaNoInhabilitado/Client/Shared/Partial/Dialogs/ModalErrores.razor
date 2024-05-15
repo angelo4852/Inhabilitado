@@ -1,0 +1,41 @@
+﻿<MudDialog>
+    <TitleContent>
+        <div class="container">
+            <p style="text-align:center; font-size: 1.2rem;">
+                <b>Error al agregar Inhabilitado</b>
+            </p>
+        </div>
+    </TitleContent>
+    <DialogContent>
+        <MudText>
+            @foreach (var item in listaErrores)
+            {
+                <p>@item</p>
+            
+            }
+        </MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Style="color:white; background-color:#A8113E; width:150px; margin-right:25px; margin-bottom: 8px" OnClick="Submit">Cerrar</MudButton>
+    </DialogActions>
+</MudDialog>
+
+<style>
+    a {
+        color: #A5987E;
+        opacity: 75%;
+    }
+
+    .my-custom-class {
+        backdrop-filter: blur(10px);
+    }
+</style>
+
+@code {
+    [Parameter]
+    public List<string>? listaErrores { get; set; }
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}

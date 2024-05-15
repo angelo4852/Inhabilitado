@@ -1,0 +1,89 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+<MudGrid Justify="Justify.Center">
+    <MudItem xs="7">
+        <MudSelect T="string" Label="Selecciona el tipo de persona" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="servidorPublico.TypePersonProovedor">
+            @foreach (var item in TypePerson)
+            {
+                <MudSelectItem Value="@(item.Text)" />
+            }
+        </MudSelect>
+    </MudItem>
+    @if (servidorPublico.TypePersonProovedor != string.Empty)
+    {
+        <MudItem xs="7">
+            <MudTextField @bind-Value="servidorPublico.Nombre" Label="Nombre" Variant="Variant.Outlined"></MudTextField>
+        </MudItem>
+        @if (servidorPublico.TypePersonProovedor == "Fisica")
+        {
+            <MudItem xs="7">
+                <MudTextField @bind-Value="servidorPublico.ApellidoPaterno" Label="Apellido Paterno" Variant="Variant.Outlined"></MudTextField>
+            </MudItem>
+            <MudItem xs="7">
+                <MudTextField @bind-Value="servidorPublico.ApellidoMaterno" Label="Apellido Materno" Variant="Variant.Outlined"></MudTextField>
+            </MudItem>
+            <MudItem xs="7">
+                <MudTextField @bind-Value="servidorPublico.CURP" Label="CURP" Variant="Variant.Outlined"></MudTextField>
+            </MudItem>
+        }
+
+        @if (!DefineInhabilitado)
+        {
+            <MudItem xs="7">
+                <MudTextField @bind-Value="servidorPublico.RFC" Label="R.F.C" Variant="Variant.Outlined"></MudTextField>
+            </MudItem>
+        }
+
+        <MudItem xs="7">
+            <MudSelect T="int" Label="Sexo" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="servidorPublico.idGenero" Required="true">
+                @foreach (var item in ListSexo)
+                {
+                    <MudSelectItem Value="@(item.Value)">
+                        @item.Text
+                    </MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+        <MudItem xs="7">
+            @if (DefineInhabilitado)
+            {
+                <MudButton Variant="Variant.Outlined" Color="Color.Secondary">Establecer Inhabilitado</MudButton>
+            }
+            else
+            {
+                <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="callEvent">Guardar Registro</MudButton>
+
+@*                 <MudButton Variant="Variant.Outlined" Color="Color.Secondary">Guardar Registro</MudButton>
+ *@            }
+        </MudItem>
+    }
+    
+</MudGrid>
+
+
+
+
+@code {
+    [Parameter] public bool DefineInhabilitado { set; get; } = false;
+   
+    [Parameter]
+    public EventCallback<ServidorPublico> eventCallback { set; get; }
+    [Parameter]
+    public ServidorPublico? servidorPublico { set; get; } = new ServidorPublico();
+    private List<Sexo> ListSexo = new List<Sexo>
+    {
+        new Sexo { Value =1, Text = "Femenino" },
+        new Sexo { Value = 2, Text = "Masculino" },
+        new Sexo { Value = 3, Text = "Otro" }
+    };
+    private List<TypePerson> TypePerson = new List<TypePerson>
+    {
+        new TypePerson { Value = "1", Text = "Fisica" },
+        new TypePerson { Value = "2", Text = "Moral" },
+    };
+
+    private async Task callEvent()
+    {
+        await eventCallback.InvokeAsync(servidorPublico);
+    }
+}

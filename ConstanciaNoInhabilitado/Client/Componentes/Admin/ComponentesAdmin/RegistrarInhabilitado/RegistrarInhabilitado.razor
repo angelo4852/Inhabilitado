@@ -1,0 +1,81 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/RegistrarInhabilitado"
+
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@inject HttpClient httpClient;
+@inject IDialogService DialogService
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@attribute [Authorize]
+
+
+<MainFormHome>
+    <ContentBreadcrumbs>
+       
+        <MudLink Href="ConstanciaNoInhabilitado/Default">
+            <b>Inicio</b>
+        </MudLink>
+        <b>/</b>
+        <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
+            <b>Administración</b>
+        </MudLink>
+        <b>/</b>
+        <b style="color:#A8113E;">
+            Registrar Inhabilitados
+        </b>
+    </ContentBreadcrumbs>
+    <Main>
+        <CardForm>
+            <Content>
+                <MudGrid Justify="Justify.Center">
+                    @if (servidorPublico.IdInhabilitado > 1)
+                    {
+                        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">El registro se agrego correctamente en la base de datos</MudAlert>
+                    }
+                    else if (servidorPublico.IdInhabilitado == 0)
+                    {
+                        <MudAlert Severity="Severity.Error" Variant="Variant.Filled">El Inhabilitado ya existe en la base de datos</MudAlert>                        
+                    }
+                   @*  @if (bandera == true && idInhabilitado > 0)
+                    {
+                        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">El registro se agrego correctamente en la base de datos</MudAlert>
+                    }
+                    else if (bandera == false && idInhabilitado == 0)
+                    {
+                        <MudAlert Severity="Severity.Error" Variant="Variant.Filled">El Inhabilitado ya existe en la base de datos</MudAlert>
+                    } *@
+
+                     <MudItem xs="11">
+                            <MudText Typo="Typo.h5">Ingrese los siguientes datos</MudText>
+                     </MudItem>
+                     <MudItem xs="7">
+                        <MudSelect T="string" Label="Selecciona la categoría" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="@selectValueCategoria">
+                            @foreach (var item in CategoriasDefault)
+                            {
+                                <MudSelectItem Value=@(@item.Text)/>
+                            }
+                        </MudSelect>
+                     </MudItem>
+                </MudGrid>
+
+                @if (selectValueCategoria == "Servidor Público")
+                {
+                    <FormServidorPublico servidorPublico="servidorPublico" eventCallback="Insertar" />
+                }
+                else if (selectValueCategoria == "Proovedor o Contratista")
+                {
+                    <FormProveedorContratista servidorPublico="servidorPublico" eventCallback="Insertar" />
+                }
+            </Content>
+        </CardForm>
+
+       
+    </Main>
+</MainFormHome>
+
+<p>@servidorPublico.IdInhabilitado @selectValueCategoria @servidorPublico.TypePersonProovedor</p>

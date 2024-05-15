@@ -1,0 +1,19 @@
+﻿@using ConstanciaNoInhabilitado.Client.Pages
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager navigationManager
+
+<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>                    
+                       <ConstanciaNoInhabilitado.Client.Pages.Login.Login/>
+                </NotAuthorized>
+            </AuthorizeRouteView>
+        </Found>
+        <NotFound>
+            <ConstanciaNoInhabilitado.Client.Shared.Errors.NotFound/>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
+

@@ -1,0 +1,343 @@
+/* /Pages/Login/Default.razor.rz.scp.css */
+
+@keyframes CardStyler-b-r39in0vhjj {
+    to {
+        left: -5.5rem;
+    }
+}
+
+.CardStylerFirts[b-r39in0vhjj], .CardStylerSecond[b-r39in0vhjj] {
+    width: 7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9rem;
+    margin: 2rem 0rem;
+    animation: CardStyler-b-r39in0vhjj .45s ease forwards;
+}
+
+.CardStylerFirts[b-r39in0vhjj] {
+    background-color: #a8113e;
+}
+
+.CardStylerSecond[b-r39in0vhjj] {
+    background-color: #750929;
+}
+
+a[b-r39in0vhjj] {
+    color: #A8113E;
+    opacity: 75%;
+}
+
+a:hover[b-r39in0vhjj] {
+    color: #0a58ca;
+}
+
+.SpacePadding[b-r39in0vhjj] {
+    padding: 0 20% 0 20%;
+}
+
+.SpacePaddingInput[b-r39in0vhjj] {
+    padding: 0 25% 0 25%;
+}
+
+
+
+
+
+/* /Pages/Login/Login.razor.rz.scp.css */
+
+@keyframes CardStyler-b-7yhwc714s9 {
+    to {
+        left: -5.5rem;
+    }
+}
+
+.CardStylerFirts[b-7yhwc714s9], .CardStylerSecond[b-7yhwc714s9] {
+    width: 7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9rem;
+    margin: 2rem 0rem;
+    animation: CardStyler-b-7yhwc714s9 .45s ease forwards;
+}
+
+.CardStylerFirts[b-7yhwc714s9] {
+    background-color: #a8113e;
+}
+
+.CardStylerSecond[b-7yhwc714s9] {
+    background-color: #750929;
+}
+
+a[b-7yhwc714s9] {
+    color: #A8113E;
+    opacity: 75%;
+}
+
+a:hover[b-7yhwc714s9] {
+    color: #0a58ca;
+}
+
+.SpacePadding[b-7yhwc714s9] {
+    padding: 0 20% 0 20%;
+}
+
+.SpacePaddingInput[b-7yhwc714s9] {
+    padding: 0 25% 0 25%;
+}
+
+
+
+
+
+/* /Shared/Forms/MainForm.razor.rz.scp.css */
+[b-cxpm6ac47i] .mud-input-root{
+    text-transform: uppercase !important;
+}
+
+header[b-cxpm6ac47i] {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+
+main[b-cxpm6ac47i] {
+    padding-top: 13rem;
+    padding-bottom: 9rem;
+}
+
+#header[b-cxpm6ac47i] {
+    background: #A2A2A2;
+}
+
+#escudo[b-cxpm6ac47i] {
+    background: #E5E0DA;
+    color: #aeaba2;
+
+}
+
+#informacion[b-cxpm6ac47i]  {
+    background: #E0DACE;
+    color: #aeaba2;
+
+}
+
+a[b-cxpm6ac47i] {
+    text-decoration: none;
+    opacity: 75%;
+    color: #aeaba2;
+}
+/* /Shared/Forms/MainFormHome.razor.rz.scp.css */
+[b-jjfc4oppvl] .mud-input-root{
+    text-transform: uppercase !important;
+}
+
+header[b-jjfc4oppvl] {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+
+main[b-jjfc4oppvl] {
+    padding-top: 13rem;
+    padding-bottom: 9rem;
+}
+
+#header[b-jjfc4oppvl] {
+    background: #A2A2A2;
+}
+
+#escudo[b-jjfc4oppvl] {
+    background: #E5E0DA;
+    color: #aeaba2;
+
+}
+
+#informacion[b-jjfc4oppvl]  {
+    background: #E0DACE;
+    color: #aeaba2;
+
+}
+
+a[b-jjfc4oppvl] {
+    text-decoration: none;
+    opacity: 75%;
+    color: #aeaba2;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-kijgo3skqq] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-kijgo3skqq] {
+    flex: 1;
+}
+
+.sidebar[b-kijgo3skqq] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-kijgo3skqq] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-kijgo3skqq]  a, .top-row[b-kijgo3skqq]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-kijgo3skqq]  a:hover, .top-row[b-kijgo3skqq]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-kijgo3skqq]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-kijgo3skqq] {
+        display: none;
+    }
+
+    .top-row.auth[b-kijgo3skqq] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-kijgo3skqq]  a, .top-row[b-kijgo3skqq]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-kijgo3skqq] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-kijgo3skqq] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-kijgo3skqq] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-kijgo3skqq]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-kijgo3skqq], article[b-kijgo3skqq] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-3nolpozc3g] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-3nolpozc3g] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-3nolpozc3g] {
+    font-size: 1.1rem;
+}
+
+.oi[b-3nolpozc3g] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-3nolpozc3g] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-3nolpozc3g] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-3nolpozc3g] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-3nolpozc3g]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-3nolpozc3g]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-3nolpozc3g]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-3nolpozc3g] {
+        display: none;
+    }
+
+    .collapse[b-3nolpozc3g] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+    
+    .nav-scrollable[b-3nolpozc3g] {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+/* /Shared/Partial/Cards/CardForm.razor.rz.scp.css */
+.CardStylerFirts[b-rzef2lrm0d], .CardStylerSecond[b-rzef2lrm0d] {
+    width: 7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9rem;
+    margin: 2rem 0rem;
+    animation: CardStyler-b-rzef2lrm0d .45s ease forwards;
+}
+
+.CardStylerFirts[b-rzef2lrm0d]{
+    background-color: #a8113e;
+}
+
+@keyframes CardStyler-b-rzef2lrm0d {
+    to {
+        left: -5.5rem;
+    }
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "Create",
+    "RelativePath": "api/AdminRegistraInhabilitado/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userTaxLogin",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Login",
+    "Method": "ConsultaUsuario",
+    "RelativePath": "api/Login/ConsultaUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userTaxLogin",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.UserTaxLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Login",
+    "Method": "DescargarConstancia",
+    "RelativePath": "api/Login/DescargarConstancia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchReference",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.SearchReference",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.RegistrarInhabilitado",
+    "Method": "Create",
+    "RelativePath": "api/RegistrarInhabilitado/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userTaxLogin",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ConstanciaNoInhabilitado.Shared.WeatherForecast, ConstanciaNoInhabilitado.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

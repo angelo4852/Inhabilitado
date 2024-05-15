@@ -1,0 +1,71 @@
+﻿@using ConstanciaNoInhabilitado.Client.Componentes.Todo;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin;
+@using ConstanciaNoInhabilitado.Client.Componentes.Catalogos;
+@using ConstanciaNoInhabilitado.Client.Componentes.Reportes;
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+<MudTabs Elevation="1" Rounded="true" PanelClass="pa-6">
+    <MudTabPanel Text="Mostrar Todo">
+        <ChildContent>
+            <MostoTodo MenuTotal="MenuGeneral" />
+        </ChildContent>
+        <TabWrapperContent>
+            <MudTooltip Text="ToolTip Three">
+                @context
+            </MudTooltip>
+        </TabWrapperContent>
+    </MudTabPanel>
+    <MudTabPanel Text="Administración">
+        <ChildContent>
+            <Admin MenuAdmin="MenuGeneral.Where(m => m.TipoMenu == TipoMenu.Admin).ToList()" />
+        </ChildContent>
+        <TabWrapperContent>
+            <MudTooltip Text="ToolTip Three">
+                @context
+            </MudTooltip>
+        </TabWrapperContent>
+    </MudTabPanel>
+    <MudTabPanel Text="Catálogos">
+        <ChildContent>
+            <Catalogos MenuCatalogos="MenuGeneral.Where(m => m.TipoMenu == TipoMenu.Catalogo).ToList()" />
+        </ChildContent>
+        <TabWrapperContent>
+            <MudTooltip Text="ToolTip Three">
+                @context
+            </MudTooltip>
+        </TabWrapperContent>
+    </MudTabPanel>
+    <MudTabPanel Text="Reportes">
+        <ChildContent>
+            <Reportes MenuReportes="MenuGeneral.Where(m => m.TipoMenu == TipoMenu.Reporte).ToList()" />
+        </ChildContent>
+        <TabWrapperContent>
+            <MudTooltip Text="ToolTip Three">
+                @context
+            </MudTooltip>
+        </TabWrapperContent>
+    </MudTabPanel>
+</MudTabs>
+
+@code
+{  
+
+    public List<MenuOpciones> MenuGeneral = new List<MenuOpciones> {
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/1.png", Title ="Registrar Inhabilitado", Description ="Agrega una nueva persona física, moral o servidor público.", Url ="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitado"},
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/2.png", Title ="Editar Inhabilitados", Description ="Edita los registros de una persona física, moral o servidor público", Url ="ConstanciaNoInhabilitado/Admin/EditarInhabilitado"},
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/3.png", Title ="Agregar Inhabilitación", Description ="Registra una nueva inhabilitación a una persona fisica, moral o servidor público", Url ="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitacion"},
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/4.png", Title ="Editar Inhabilitación", Description ="Selecciona y edita las inhabilitaciones asociadas a un inhabilitado.", Url ="ConstanciaNoInhabilitado/Admin/EditarInhabilitacion"},
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/6.png", Title ="Asistente de Registro", Description ="Secuencia para dar de alta una inhabilitación.", Url ="ConstanciaNoInhabilitado/Admin/Asistente"},
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/7.png", Title ="Ver Inhabilitaciones", Description ="Muestra las inhabilitaciones de un servidor público.", Url ="ConstanciaNoInhabilitado/Admin/VerInhabilitacion"},
+         new MenuOpciones {TipoMenu = TipoMenu.Reporte, Image = "img/Menu/11.png", Title ="Reportes de Constancias", Description ="Genera informes de las constancias de no inhabilitado.", Url ="ConstanciaNoInhabilitado/Admin/ReporteConstancias"},
+         new MenuOpciones {TipoMenu = TipoMenu.Reporte, Image = "img/Menu/8.png", Title ="Reportes Inhabilitaciones", Description ="Genera informes de altas y bajas de inhabilitaciones", Url ="ConstanciaNoInhabilitado/Admin/ReporteInhabilitaciones"},
+         new MenuOpciones {TipoMenu = TipoMenu.Reporte, Image = "img/Menu/5.png", Title ="Consultar Constancias", Description ="Lista las constancias expedidas a un R.F.C.", Url ="ConstanciaNoInhabilitado/Admin/ConsultarConstancias"},
+         new MenuOpciones {TipoMenu = TipoMenu.Catalogo, Image = "img/Menu/10.png", Title ="Registrar Dependencia ", Description ="Registra una nueva dependencia de gobierno", Url ="ConstanciaNoInhabilitado/Admin/RegistrarDependencia"},
+         new MenuOpciones {TipoMenu = TipoMenu.Catalogo, Image = "img/Menu/3.png", Title ="Registrar Causa ", Description ="Registra una nueva causa de inhabilitación", Url ="ConstanciaNoInhabilitado/Admin/RegistrarCausa"},
+         new MenuOpciones {TipoMenu = TipoMenu.Catalogo, Image = "img/Menu/3.png", Title ="Registrar Origen ", Description ="Registra un nuevo origen de inhabilitación", Url ="ConstanciaNoInhabilitado/Admin/RegistrarOrigen"},
+         new MenuOpciones {TipoMenu = TipoMenu.Catalogo, Image = "img/Menu/4.png", Title ="Editar Causas ", Description ="Edita los registros de causas de inhabilitación", Url ="ConstanciaNoInhabilitado/Admin/EditarCausa"},
+         new MenuOpciones {TipoMenu = TipoMenu.Catalogo, Image = "img/Menu/4.png", Title ="Editar Origen ", Description ="Edita los registros de origen de inhabilitacion", Url ="ConstanciaNoInhabilitado/Admin/EditarOrigen"},
+         new MenuOpciones {TipoMenu = TipoMenu.Admin, Image = "img/Menu/17.png", Title ="Cargar desde Excel", Description ="Carga la lista de inhabilitados de la federación.", Url ="ConstanciaNoInhabilitado/Admin/CargarExcel"},
+         new MenuOpciones {TipoMenu = TipoMenu.Catalogo, Image = "img/Menu/13.png", Title ="Editar Dependencias ", Description ="Edita los registros de dependencias de gobierno", Url ="ConstanciaNoInhabilitado/Admin/EditarDependencia"}
+    };   
+}

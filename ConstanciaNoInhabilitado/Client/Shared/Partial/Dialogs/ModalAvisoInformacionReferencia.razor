@@ -1,0 +1,59 @@
+﻿<MudDialog>
+    <TitleContent>
+        <div class="container">
+            <p style="text-align:center; font-size: 1.8rem;">
+                <MudIcon Icon="@Icons.Material.Filled.Flag" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                <b>Estimado Usuario</b>
+            </p>
+        </div>
+    </TitleContent>
+    <DialogContent>
+        <MudText>
+            <div class="container" style="text-align: justify; font-size: 1rem">
+                <p>
+                    <MudIcon Icon="@Icons.Material.Filled.Check" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                    La Constancia de No Inhabilitado será válida si el nombre(s), apellido(s), Registro Federal de Contribuyentes y CURP corresponden exactamente con los del solicitante.
+                </p>    
+                <p>
+                    <MudIcon Icon="@Icons.Material.Filled.Check" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                    Los datos que contiene serán verificados por la autoridad competente al momento de su presentación y en caso de detectar alguna irregularidad, será comunicado a la Secretaría de la Contraloría.
+                </p> 
+                <p>
+                    <MudIcon Icon="@Icons.Material.Filled.Check" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                    La modificación, alteración, manipulación, tachaduras, enmendaduras, obtención indebida o registro de datos falsos puede constituir un delito, en términos de lo previsto en el artículo 250 y 253 
+                    del Código Penal del Estado Libre y Soberano de Puebla.
+                </p>
+                <p>
+                    <MudIcon Icon="@Icons.Material.Filled.Check" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                    La constancia tendrá una vigencia de treinta días naturales a partir de la fecha de su expedición.
+                </p>
+                <p>
+                    <MudIcon Icon="@Icons.Material.Filled.Check" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                    En caso de que el sistema no le permita imprimir la Constancia de No Inhabilitado deberá acudir personalmente a la Dirección de Responsabilidades y Situación Patrimonial de la Secretaría de la Contraloría.
+                </p>
+            </div>
+        </MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Style="color:white; background-color:#A8113E; width:150px; margin-right:25px; margin-bottom: 8px" OnClick="Submit">Cerrar</MudButton>
+    </DialogActions>
+</MudDialog>
+
+<style>
+    a {
+        color: #A5987E;
+        opacity: 75%;
+    }
+
+    .my-custom-class {
+        backdrop-filter: blur(10px);
+    }
+</style>
+
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}

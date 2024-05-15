@@ -1,0 +1,28 @@
+@keyframes loadingEffect-b-hq0qa7kxll {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    }
+}
+
+.img-loading[b-hq0qa7kxll] {
+    width: 650px;
+    animation: loadingEffect-b-hq0qa7kxll 2.5s infinite;
+}
+
+.content-img[b-hq0qa7kxll]{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+
+@media (max-width: 767.98px) {
+    .img-loading[b-hq0qa7kxll]{
+        width: 420px;
+    }
+}

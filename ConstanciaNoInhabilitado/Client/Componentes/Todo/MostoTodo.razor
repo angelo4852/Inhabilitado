@@ -1,0 +1,29 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@inject NavigationManager navigationManager
+
+<MudGrid Spacing="@spacing" Justify="Justify.FlexStart">
+    @foreach (var menu in MenuTotal)
+    {
+        <MudItem xs="3">
+            <MudCard>
+                <MudCardMedia Image="@menu.Image" Height="200" @onclick="(() => PaginaSiguiente(menu.Url))" Style="cursor:pointer;" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h6" Align="Align.Center">@menu.Title</MudText>
+                        <MudText Typo="Typo.body2" Align="Align.Center">@menu.Description</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+    }
+</MudGrid>
+
+@code
+{
+    private int spacing { set; get; } = 5;
+
+    [Parameter]public List<MenuOpciones> MenuTotal { set; get; }
+
+    private async Task PaginaSiguiente(string url)
+    {
+        navigationManager.NavigateTo($"{url}");
+    }
+}

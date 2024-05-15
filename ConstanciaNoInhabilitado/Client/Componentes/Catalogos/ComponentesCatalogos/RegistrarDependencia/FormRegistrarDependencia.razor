@@ -1,0 +1,14 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+<MudItem xs="5">
+    <MudTextField @bind-Value="RegistraDependencia.Descripcion" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
+</MudItem>
+
+<MudItem xs="3">
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Registra Dependencia</MudButton>
+</MudItem>
+
+@code
+{
+    private RegistraDependencia RegistraDependencia { get; set; } = new();
+}

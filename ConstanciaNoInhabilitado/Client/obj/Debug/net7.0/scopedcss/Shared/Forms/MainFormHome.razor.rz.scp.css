@@ -1,0 +1,38 @@
+[b-jjfc4oppvl] .mud-input-root{
+    text-transform: uppercase !important;
+}
+
+header[b-jjfc4oppvl] {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+
+main[b-jjfc4oppvl] {
+    padding-top: 13rem;
+    padding-bottom: 9rem;
+}
+
+#header[b-jjfc4oppvl] {
+    background: #A2A2A2;
+}
+
+#escudo[b-jjfc4oppvl] {
+    background: #E5E0DA;
+    color: #aeaba2;
+
+}
+
+#informacion[b-jjfc4oppvl]  {
+    background: #E0DACE;
+    color: #aeaba2;
+
+}
+
+a[b-jjfc4oppvl] {
+    text-decoration: none;
+    opacity: 75%;
+    color: #aeaba2;
+}

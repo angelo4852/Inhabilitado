@@ -1,0 +1,19 @@
+.CardStylerFirts[b-rzef2lrm0d], .CardStylerSecond[b-rzef2lrm0d] {
+    width: 7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9rem;
+    margin: 2rem 0rem;
+    animation: CardStyler-b-rzef2lrm0d .45s ease forwards;
+}
+
+.CardStylerFirts[b-rzef2lrm0d]{
+    background-color: #a8113e;
+}
+
+@keyframes CardStyler-b-rzef2lrm0d {
+    to {
+        left: -5.5rem;
+    }
+}

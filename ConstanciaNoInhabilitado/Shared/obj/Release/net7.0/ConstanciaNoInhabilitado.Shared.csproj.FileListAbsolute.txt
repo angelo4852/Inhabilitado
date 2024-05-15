@@ -1,0 +1,11 @@
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\bin\Release\net7.0\ConstanciaNoInhabilitado.Shared.deps.json
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\bin\Release\net7.0\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\bin\Release\net7.0\ConstanciaNoInhabilitado.Shared.pdb
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ConstanciaNoInhabilitado.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ConstanciaNoInhabilitado.Shared.AssemblyInfoInputs.cache
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ConstanciaNoInhabilitado.Shared.AssemblyInfo.cs
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ConstanciaNoInhabilitado.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\refint\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ConstanciaNoInhabilitado.Shared.pdb
+C:\Users\gilberto.peralta\source\repos\ConstanciaNoInhabilitado\ConstanciaNoInhabilitado\Shared\obj\Release\net7.0\ref\ConstanciaNoInhabilitado.Shared.dll

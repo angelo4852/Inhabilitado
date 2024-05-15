@@ -1,0 +1,95 @@
+﻿@inject IJSRuntime JSRuntime
+
+@if(loading){
+    <div class="d-flex justify-content-center align-items-center" style="height:100vh">
+        <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+    </div>
+}else{
+    <div class="content_form">
+        <header>
+            <div id="header">
+                <div class="container">
+                    <div class="d-flex text-white">
+                        <a class="p-2 pt-3 pb-3 flex-grow-1 text-white" style="font-size:30px;">
+                            Constancia de No Inhabilitado
+                        </a>
+                        <div class="p-2">
+                            <a href="javascript:void(0)" @onclick="CargarPagina">
+                                <img src="img/veda/Logo_puebla_gob_veda_gris.svg" alt="Gobierno del estado de puebla" style="width:200px;"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow p-1 bg-body-tertiary rounded">
+                <div class="container">
+                    <div class="d-flex bg-white">
+                        <div class="p-2 pt-3 pb-3 flex-grow-1" style="font-size:18px;">
+                            @ContentBreadcrumbs
+                        </div>
+                        <div class="pt-3 pb-3" style="color:#A8113E;">
+                            @switch (view)
+                            {
+                                case 0:
+                                    <b>Requisitos</b>
+                                    break;
+                                case 1:
+                                <MudTooltip Text="Ver requisitos para este trámite.">
+                                        <b><a style="color:#A8113E;" href="https://ventanilladigital.puebla.gob.mx/ventanilla/" target="_blank"><i class="fa fa-info-circle"></i>&nbsp; Requisitos</a></b>
+                                </MudTooltip>
+                                    
+                                    break;
+                                case 2:                                    
+                                    break;
+                            }                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+           @Main
+        </main>
+
+        <footer>
+            <div class="d-flex justify-content-center" style="">
+                <div id="escudo" class="w-50 d-flex col-6 justify-content-end  p-5 pe-5">
+                    <img src="img/escudo_pueblasvg.svg" style="max-width: 300px; max-height: 200px;">                    
+                </div>       
+                <div id="informacion" class="w-50 ps-5 py-5 col-6">
+                    <div class="container justify-content-around ps-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <MudText Class="fw-bold">Secretaria de Planeación y Finanzas</MudText>
+                                <MudText Class="fw-bold">11 Oriente 2224. Puebla, México.</MudText>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    </div>
+}
+
+@code{
+    [Parameter]
+    public bool loading { set; get; } = false;
+
+    [Parameter]
+    public RenderFragment? Main { get; set; }
+
+    [Parameter]
+    public RenderFragment? ContentBreadcrumbs { set; get; }
+
+    [Parameter]
+    public int? view { set; get; } = 2;
+    // [Parameter]
+    // public bool? LinkRequisitos { set; get; } = false;
+
+    private async Task CargarPagina()
+    {
+        await JSRuntime.InvokeVoidAsync("location.reload");
+    }
+
+}

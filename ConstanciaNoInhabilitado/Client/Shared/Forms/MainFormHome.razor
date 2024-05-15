@@ -1,0 +1,149 @@
+﻿@inject IJSRuntime JSRuntime
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+
+@if(loading){
+    <div class="d-flex justify-content-center align-items-center" style="height:100vh">
+        <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+    </div>
+}else{
+    <div class="content_form">
+        <header>
+            <div id="header">
+                <div class="container">
+                    <div class="d-flex text-white">
+                        <div class="p-2">
+                            <a href="javascript:void(0)" @onclick="CargarPagina">
+                                <img src="img/veda/Logo_puebla_gob_veda_gris.svg" alt="Gobierno del estado de puebla" style="width:200px;" />
+                            </a>
+                        </div>
+                        <div class="p-2" style="margin-inline-start:22vw;">
+                            <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
+                                <b>INICIO</b>
+                            </MudLink>
+                            @* Menu se ADMINISTRACIÓN inicio *@
+                            <MudMenu Label="ADMINISTRACIÓN" Dense="true" Class="@Css">
+                                <MudNavGroup Title="Inhabilitados" Expanded="false">
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitado" IconColor="Color.Success">Registrar Inhabilitado</MudNavLink>
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarInhabilitado" IconColor="Color.Info">Editar Inhabilitado</MudNavLink>
+                                </MudNavGroup>
+                                <MudNavGroup Title="Inhabilitaciones" Expanded="false">
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitacion" IconColor="Color.Success">Agregar Inhabilitación</MudNavLink>
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarInhabilitacion" IconColor="Color.Info">Editar Inhabilitación</MudNavLink>
+                                </MudNavGroup>
+                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/Asistente">Asistente de Registro</MudMenuItem>
+                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/CargarExcel">Carga desde Excel</MudMenuItem>
+                            </MudMenu>
+                            @* Menu se ADMINISTRACIÓN final *@
+
+                            @* Menu se CATÁLOGOS inicio *@
+                            <MudMenu Label="CATÁLOGOS" Dense="true" Class="@Css">
+                                <MudNavGroup Title="Registrar" Expanded="false">
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarDependencia" IconColor="Color.Success">Registrar dependencia</MudNavLink>
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarCausa" IconColor="Color.Success">Registrar causa de inhabilitación</MudNavLink>
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarOrigen" IconColor="Color.Success">Registrar origen de inhabilitación</MudNavLink>
+                                </MudNavGroup>
+                                <MudNavGroup Title="Editar" Expanded="false">
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarDependencia" IconColor="Color.Success">Editar dependencia</MudNavLink>
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarCausa" IconColor="Color.Success">Editar causas de inhabilitación</MudNavLink>
+                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarOrigen" IconColor="Color.Success">Editar origenes de inhabilitación</MudNavLink>
+                                </MudNavGroup>
+                                <MudMenuItem Href="/ConstanciaNoInhabilitado/Admin/VerInhabilitacion"> Ver Inhabilitaciones</MudMenuItem>
+                               
+                            </MudMenu> 
+                            @* Menu se CATÁLOGOS final *@
+
+                            <MudMenu Label="REPORTES" Dense="true" Class="@Css">
+                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/ConsultarConstancias">Consultar Constancias</MudMenuItem>
+                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/ReporteConstancias">Reporte de Constancias</MudMenuItem>
+                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/ReporteInhabilitaciones">Reporte de Inhabilitaciones</MudMenuItem>
+                            </MudMenu>
+                            <MudLink OnClick="CerrarSesion" Class="@Css">
+                                <b>SALIR</b>
+                            </MudLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow p-1 bg-body-tertiary rounded">
+                <div class="container">
+                    <div class="d-flex bg-white">
+                        <div class="p-2 pt-3 pb-3 flex-grow-1" style="font-size:18px;">
+                            @ContentBreadcrumbs
+                        </div>
+                        <div class="pt-3 pb-3" style="color:#A8113E;">
+                            @switch (view)
+                            {
+                                case 0:
+                                    <b>Requisitos</b>
+                                    break;
+                                case 1:
+                                <MudTooltip Text="Ver requisitos para este trámite.">
+                                        <b><a style="color:#A8113E;" href="https://ventanilladigital.puebla.gob.mx/ventanilla/" target="_blank"><i class="fa fa-info-circle"></i>&nbsp; Requisitos</a></b>
+                                </MudTooltip>
+                                    
+                                    break;
+                                case 2:                                    
+                                    break;
+                            }                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+           @Main
+        </main>
+
+        <footer>
+            <div class="d-flex justify-content-center" style="">
+                <div id="escudo" class="w-50 d-flex col-6 justify-content-end  p-5 pe-5">
+                    <img src="img/escudo_pueblasvg.svg" style="max-width: 300px; max-height: 200px;">                    
+                </div>       
+                <div id="informacion" class="w-50 ps-5 py-5 col-6">
+                    <div class="container justify-content-around ps-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <MudText Class="fw-bold">Secretaria de Planeación y Finanzas</MudText>
+                                <MudText Class="fw-bold">11 Oriente 2224. Puebla, México.</MudText>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    </div>
+}
+
+@code{
+    [Parameter]
+    public bool loading { set; get; } = false;
+
+    [Parameter]
+    public RenderFragment? Main { get; set; }
+
+    [Parameter]
+    public RenderFragment? ContentBreadcrumbs { set; get; }
+
+    [Parameter]
+    public int? view { set; get; } = 2;
+    // [Parameter]
+    // public bool? LinkRequisitos { set; get; } = false;
+    private string Css { set; get; } = "pa-md-2 mx-lg-auto";
+
+    private async Task CargarPagina()
+    {
+        await JSRuntime.InvokeVoidAsync("location.reload");
+    }
+
+    private async Task CerrarSesion()
+    {
+        var autenticationExt = (Autentication)authenticationStateProvider;
+        await autenticationExt.ActualizarEstadoAutenticacion(null);
+        navigationManager.NavigateTo("/ConstanciaNoInhabilitado/Admin/Login", true);
+    }
+}

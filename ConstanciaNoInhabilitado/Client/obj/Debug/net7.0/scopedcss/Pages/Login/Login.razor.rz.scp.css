@@ -1,0 +1,46 @@
+
+@keyframes CardStyler-b-7yhwc714s9 {
+    to {
+        left: -5.5rem;
+    }
+}
+
+.CardStylerFirts[b-7yhwc714s9], .CardStylerSecond[b-7yhwc714s9] {
+    width: 7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9rem;
+    margin: 2rem 0rem;
+    animation: CardStyler-b-7yhwc714s9 .45s ease forwards;
+}
+
+.CardStylerFirts[b-7yhwc714s9] {
+    background-color: #a8113e;
+}
+
+.CardStylerSecond[b-7yhwc714s9] {
+    background-color: #750929;
+}
+
+a[b-7yhwc714s9] {
+    color: #A8113E;
+    opacity: 75%;
+}
+
+a:hover[b-7yhwc714s9] {
+    color: #0a58ca;
+}
+
+.SpacePadding[b-7yhwc714s9] {
+    padding: 0 20% 0 20%;
+}
+
+.SpacePaddingInput[b-7yhwc714s9] {
+    padding: 0 25% 0 25%;
+}
+
+
+
+
+

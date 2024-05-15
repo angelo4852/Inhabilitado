@@ -1,0 +1,38 @@
+[b-fzkip0qdip] .mud-input-root{
+    text-transform: uppercase !important;
+}
+
+header[b-fzkip0qdip] {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+
+main[b-fzkip0qdip] {
+    padding-top: 13rem;
+    padding-bottom: 9rem;
+}
+
+#header[b-fzkip0qdip] {
+    background: #A2A2A2;
+}
+
+#escudo[b-fzkip0qdip] {
+    background: #E5E0DA;
+    color: #aeaba2;
+
+}
+
+#informacion[b-fzkip0qdip]  {
+    background: #E0DACE;
+    color: #aeaba2;
+
+}
+
+a[b-fzkip0qdip] {
+    text-decoration: none;
+    opacity: 75%;
+    color: #aeaba2;
+}

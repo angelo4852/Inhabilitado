@@ -1,0 +1,44 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado;
+
+<MudDialog>
+    <TitleContent>
+        <div class="container">
+            <p style="text-align:center; font-size: 1.8rem;">
+                <b>Registrar Dependencia</b>
+            </p>
+        </div>
+    </TitleContent>
+    <DialogContent>
+        <MudGrid Justify="Justify.Center">
+            <MudItem xs="10">
+                <MudTextField @bind-Value="Dependencia" Label="Introduce la descripción de la dependencia" Variant="Variant.Outlined"></MudTextField>
+            </MudItem>   
+            <MudItem xs="5">            
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary">Registar Dependencia</MudButton>
+            </MudItem>
+        </MudGrid>
+    </DialogContent>
+    <DialogActions>
+    </DialogActions>
+</MudDialog>
+
+<style>
+    a {
+        color: #A5987E;
+        opacity: 75%;
+    }
+
+    .my-custom-class {
+        backdrop-filter: blur(10px);
+    }
+</style>
+
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }   
+    private string Dependencia { set; get; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}

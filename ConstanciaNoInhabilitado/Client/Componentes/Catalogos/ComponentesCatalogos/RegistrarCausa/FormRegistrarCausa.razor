@@ -1,0 +1,16 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+
+<MudItem xs="5">
+    <MudTextField @bind-Value="RegistrarCausaInhabilitacion.Descripcion" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
+</MudItem>
+
+
+<MudItem xs="3">
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Registrar Causa de Inhabilitación</MudButton>
+</MudItem>
+
+@code
+{
+    private RegistrarCausaInhabilitacion RegistrarCausaInhabilitacion { get; set; } = new();
+}

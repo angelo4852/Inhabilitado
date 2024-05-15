@@ -1,0 +1,107 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/Login";
+
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using MudBlazor
+
+@inject HttpClient httpClient
+@using ConstanciaNoInhabilitado.Client.Auth
+@using ConstanciaNoInhabilitado.Shared.Entities.Login
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navigationManager
+
+<title>Acceso a Usuarios</title>
+
+@if (MostrarSppinerLogin)
+{
+    <div class="row justify-content-center">
+        <div class="col-md-12 mb-4 SpacePaddingInput text-center">
+            <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+        </div>
+    </div>
+}
+    <MainForm>
+        <ContentBreadcrumbs>
+            <MudLink Href="ConstanciaNoInhabilitado/Default">
+                <b>Inicio</b>
+            </MudLink>
+            <b>/ Administración / </b>
+            <b style="color:#A8113E;">Acceso a Usuarios</b>
+        </ContentBreadcrumbs>       
+        <Main>
+
+        @if (MostrarSppinerLogin)
+        {
+            <div class="row justify-content-center">
+                <div class="col-md-12 mb-4 SpacePaddingInput text-center">
+                    <MudProgressCircular Color="Color.Secondary" Style="height:70px;width:70px;" Indeterminate="true"></MudProgressCircular>
+                    <MudText Typo="Typo.h4">Cargando información ...</MudText>
+                </div>
+            </div>
+        }else
+        {     
+            <EditForm Model="@loguear" OnValidSubmit="@ConsultaUsuario" FormName="form1">
+                <DataAnnotationsValidator />
+                <div class="SpacePadding">
+                    <div class="bg-white shadow-lg p-3 ps-5 mb-5 rounded position-relative overflow-hidden">
+                        <div class="CardStylerFirts"></div>
+                        <div class="d-flex flex-column">
+                            <div class="mb-2">
+                                <p style="font-size: 1.3rem">
+                                    <MudIcon Icon="@Icons.Material.Filled.Person" Style="color:#A8113E; font-size: 2.5rem"></MudIcon>
+                                    Ingresa los siguientes datos:
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-3 SpacePaddingInput">
+                                    <label>Usuario</label><br>
+                                    <MudTextField T="string"
+                                                  Margin="Margin.Dense"
+                                                  Variant="Variant.Outlined"
+                                                  Label="Escriba su Usuario"
+                                                  Required="true"
+                                                  @bind-Value="loguear.Usuario"
+                                                  For="@(()=> loguear.Usuario)" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-3 SpacePaddingInput">
+                                    <label>Constraseña</label><br>
+                                    <MudTextField T="string"
+                                                  Margin="Margin.Dense"
+                                                  Variant="Variant.Outlined"
+                                                  Label="Escriba su Constraseña"
+                                                  Required="true"
+                                                  @bind-Value="loguear.Contrasena"
+                                                  For="@(()=> loguear.Contrasena)" />
+                                </div>
+                            </div>
+                            @if (MostrarErrorDeConsulta)
+                            {
+                                <div class="row">
+                                    <div class="col-md-12 mb-3 SpacePaddingInput">
+                                        <MudAlert Severity="Severity.Error">
+                                            ¡Error!
+                                            ¡Combinacion incorrecta de usuario y contraseña!
+                                        </MudAlert>
+                                    </div>
+                                </div>
+                            }                                                
+                            <div class="row">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <MudButton Variant="Variant.Filled" ButtonType="ButtonType.Submit" Style="width:200px;background-color:#A8113E;color:white;">
+                                        Entrar
+                                    </MudButton>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </EditForm>
+        }
+        </Main>
+    </MainForm>
+
+
+
+

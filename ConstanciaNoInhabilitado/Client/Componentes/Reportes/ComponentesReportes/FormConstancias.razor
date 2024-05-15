@@ -1,0 +1,16 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+
+    <MudItem xs="5">
+    <MudTextField @bind-Value="BuscarConstancia.RFC" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
+    </MudItem>
+
+
+<MudItem xs="3">
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Buscar Constancias</MudButton>
+</MudItem>
+
+@code
+{
+    private BuscarConstancia BuscarConstancia { get; set; } = new();
+}

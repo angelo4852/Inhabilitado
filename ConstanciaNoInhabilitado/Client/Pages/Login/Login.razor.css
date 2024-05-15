@@ -1,0 +1,46 @@
+﻿
+@keyframes CardStyler {
+    to {
+        left: -5.5rem;
+    }
+}
+
+.CardStylerFirts, .CardStylerSecond {
+    width: 7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9rem;
+    margin: 2rem 0rem;
+    animation: CardStyler .45s ease forwards;
+}
+
+.CardStylerFirts {
+    background-color: #a8113e;
+}
+
+.CardStylerSecond {
+    background-color: #750929;
+}
+
+a {
+    color: #A8113E;
+    opacity: 75%;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+.SpacePadding {
+    padding: 0 20% 0 20%;
+}
+
+.SpacePaddingInput {
+    padding: 0 25% 0 25%;
+}
+
+
+
+
+

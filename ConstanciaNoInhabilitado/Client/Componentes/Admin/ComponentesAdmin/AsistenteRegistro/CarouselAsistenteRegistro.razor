@@ -1,0 +1,28 @@
+﻿
+
+
+<MudCarousel Class="mud-width-full" Style="height:400px;" ShowArrows="@arrows" ShowBullets="@bullets"  AutoCycle="@autocycle" TData="object">
+    <MudCarouselItem Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <PasoI/>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <PasoII />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <PasoIII />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+
+@code {
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = false;
+    private Transition transition = Transition.Slide;
+}

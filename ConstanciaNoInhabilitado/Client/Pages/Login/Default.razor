@@ -1,0 +1,97 @@
+﻿@page "/ConstanciaNoInhabilitado/Default";
+
+@inject HttpClient httpClient
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navigationManager
+
+@using ConstanciaNoInhabilitado.Client.Auth
+@using ConstanciaNoInhabilitado.Shared.Entities.Login
+@using Microsoft.AspNetCore.Components.Authorization
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@using MudBlazor;
+
+
+<title>Constancia de No Inhabilitado</title>
+<MainForm>
+    <ContentBreadcrumbs>
+        <b style="color:#A8113E;">Impresión de Constancia de no Inhabilitado</b>
+    </ContentBreadcrumbs>
+    <Main>
+        <CardForm>
+            <Content>
+                <div class="CardStylerFirts"></div>
+                @if (MensajeDeError != string.Empty)
+                {
+                    <div class="row">
+                        <div class="col-md-12 mb-3 SpacePaddingInput">
+                            <MudAlert Severity="Severity.Error">
+                                ¡Error!
+                                @MensajeDeError
+                            </MudAlert>
+                        </div>
+                    </div>
+                }
+                <div class="row">
+                    <div class="text-center">
+                        <MudLink OnClick="MostrarMensaje">
+                            <p style="font-size: 1.3rem">
+                                <MudIcon Icon="@Icons.Material.Filled.Flag" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                                INFORMACIÓN
+                            </p>
+                        </MudLink>
+                    </div>
+                    @if (MostrarSppinerLogin)
+                    {
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 mb-4 SpacePaddingInput text-center">
+                                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-md-12 mb-3 SpacePaddingInput">
+                                <MudTextField T="string"
+                                              Margin="Margin.Dense"
+                                              Variant="Variant.Outlined"
+                                              Label="No. de Referencia"
+                                              Required="true"
+                                              @bind-Value="Reference.Reference"
+                                              For="@(()=> Reference.Reference)" />
+                            </div>|
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3 SpacePaddingInput">
+                                <input id="cap" class="bg-secondary bg-opacity-50" style="width:200px; height:50px; color:darkblue; font-weight: 600; text-align:center; font-size:25px;" type="text" value="@Captcha" readonly>
+                                <button @onclick="GenerateNewCaptcha"><MudIcon Style="color:#9B8D73;" Icon="@Icons.Material.Filled.RestartAlt"></MudIcon></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3 SpacePaddingInput">
+                                <MudTextField T="string"
+                                              Margin="Margin.Dense"
+                                              Variant="Variant.Outlined"
+                                              Label="Ingrese el texto de la imagen"
+                                              Required="true"
+                                              @bind-Value="Reference.Captcha"
+                                              For="@(()=> Reference.Captcha)" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3 text-center">
+                                <MudButton Variant="Variant.Filled" Style="width:200px;background-color:#A8113E;color:white;" OnClick="ValidarInformacion">
+                                    Buscar
+                                </MudButton>
+
+                            </div>
+                        </div>
+                    }
+                </div>
+            </Content>
+        </CardForm>
+    </Main>
+
+</MainForm> 
+

@@ -1,0 +1,68 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado;
+
+<MudDialog>
+    <TitleContent>
+        <div class="container">
+            <p style="text-align:center; font-size: 1.8rem;">
+                <b>Define al inhabilitado</b>
+            </p>
+        </div>
+    </TitleContent>
+    <DialogContent>
+        <MudGrid Justify="Justify.Center">
+            <MudItem xs="10">               
+                <MudTextField @bind-Value="RFC" Label="R.F.C" Variant="Variant.Outlined"></MudTextField>
+                @if (RFC != null)
+                {
+                    <MudSelect T="string" Label="Selecciona la categoría" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="@selectValueCategoria">
+                        @foreach (var item in CategoriasDefault)
+                        {
+                            <MudSelectItem Value=@(@item.Text) />
+                        }
+                    </MudSelect>
+                }              
+            </MudItem>
+             @if (selectValueCategoria == "Servidor Público")
+                {                    
+                     <FormServidorPublico DefineInhabilitado="true"/>                     
+                }
+                else if (selectValueCategoria == "Proovedor o Contratista")
+                {
+                       <FormProveedorContratista DefineInhabilitado="true" />
+                }
+        </MudGrid>        
+    </DialogContent>
+    <DialogActions>
+        @* <MudButton Style="color:white; background-color:#A8113E; width:150px; margin-right:25px; margin-bottom: 8px" OnClick="Submit">Cerrar</MudButton> *@
+    </DialogActions>
+</MudDialog>
+
+<style>
+    a {
+        color: #A5987E;
+        opacity: 75%;
+    }
+
+    .my-custom-class {
+        backdrop-filter: blur(10px);
+    }
+</style>
+
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    private List<CategoriaRegistrarInhabilitado> CategoriasDefault = new List<CategoriaRegistrarInhabilitado>
+    {
+             new CategoriaRegistrarInhabilitado { Value = "1", Text = "Servidor Público"},
+             new CategoriaRegistrarInhabilitado { Value = "2", Text = "Proovedor o Contratista"}
+    };
+
+    private string selectValueCategoria { set; get; }
+    private string RFC { set; get; }
+
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}
