@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConstanciaNoInhabilitado.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b3f4b07bb6ee014a3be6ac3a2d20b4d50c6078e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConstanciaNoInhabilitado.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConstanciaNoInhabilitado.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

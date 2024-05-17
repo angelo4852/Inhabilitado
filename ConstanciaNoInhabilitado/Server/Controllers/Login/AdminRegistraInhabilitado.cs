@@ -18,8 +18,19 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
             //this.servicioRepositorio = servicioRepositorio;
             service = new ServicioRepositorio(configuration);
         }
+        [HttpGet("[action]")]
+        [Route("SelectInhabilitado")]        
+        public async Task<List<ServidorPublico>> SelectInhabilitado()
+        {
+            List<ServidorPublico> servidorPublico = new();
+            var respExiste =  service.SeletFrom();
+            foreach (var item in respExiste.Result) 
+            {
+                servidorPublico.Add(item);
+            }
+            return servidorPublico;
+        }
 
-    
         [HttpPost]
         [Route("Create")]
         // GET: RegistrarInhabilitadoController/Create
@@ -55,6 +66,19 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
             }
             
             return userTaxLogin;
+        }
+
+
+        [HttpPost]
+        [Route("SelectInhabilitadoUpdate")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ServidorPublico> SelectInhabilitadoUpdate(ServidorPublico servidorPublico)
+        {
+            ServidorPublico _servidorPublico = new ServidorPublico();
+            //var respExiste = await service.SelectInhabilitadoUpdate(IdInhabilitado);
+
+
+            return _servidorPublico;
         }
     }
 }

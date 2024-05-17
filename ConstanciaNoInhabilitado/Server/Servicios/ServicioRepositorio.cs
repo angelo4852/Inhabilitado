@@ -34,6 +34,18 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             return resutadoInhabilitado;
         }
 
+
+        public async Task<ServidorPublico> SelectInhabilitadoUpdate(int IdInhabilitado)
+        {
+            using var connection = new SqlConnection(connectionString);
+            var resp = await connection.QueryFirstOrDefaultAsync(@"Select * from Inhabilitado where 
+                                                                IdInhabilitado = @IdInhabilitado ;",
+                                                                new { IdInhabilitado });
+            var jsonResult = JsonConvert.SerializeObject(IdInhabilitado);
+            ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+            return resutadoInhabilitado;
+        }
+
         public async Task<bool> Existe(string nombre, string rfc)
         {
 
@@ -46,6 +58,24 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             return existe == 1;
 
         }
+
+        public async Task<List<ServidorPublico>> SeletFrom()
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var existe =  connection.Query("SELECT * from Inhabilitado where IdUsuario=4").ToList();
+                var jsonResult = JsonConvert.SerializeObject(existe);
+                List<ServidorPublico>? resutadoInhabilitado = JsonConvert.DeserializeObject<List<ServidorPublico>>(jsonResult);
+                return resutadoInhabilitado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            } 
+        }
+
+
 
         public async Task<ServidorPublico> InsertarInhabilitado(ServidorPublico usuarioEntities)
         {

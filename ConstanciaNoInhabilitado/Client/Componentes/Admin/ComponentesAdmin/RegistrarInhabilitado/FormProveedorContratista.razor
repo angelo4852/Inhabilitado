@@ -35,7 +35,7 @@
         }
 
         <MudItem xs="7">
-            <MudSelect T="int" Label="Sexo" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="servidorPublico.idGenero" Required="true">
+            <MudSelect T="int?" Label="Sexo" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="servidorPublico.idGenero" Required="true">
                 @foreach (var item in ListSexo)
                 {
                     <MudSelectItem Value="@(item.Value)">

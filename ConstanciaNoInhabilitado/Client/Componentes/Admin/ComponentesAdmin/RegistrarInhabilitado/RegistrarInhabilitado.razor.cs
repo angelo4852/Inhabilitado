@@ -51,7 +51,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
 
                 else
                 {
-                    var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", servidorPublico);
+                    var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", null);
                     var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
                     servidorPublico.IdInhabilitado = sesionUser.IdInhabilitado;
 

@@ -146,11 +146,11 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         ///  Sexo de Servido Publico
         /// </summary>   
-        public int IdUsuario { get; set; } 
+        public int? IdUsuario { get; set; } 
         /// <summary>
         ///  Sexo de Servido Publico
         /// </summary>   
-        public int idGenero { get; set; }
+        public int? idGenero { get; set; }
 
         public bool banderaExiste { get; set; } = false;
         public string? TypePersonProovedor { get; set; } = string.Empty;

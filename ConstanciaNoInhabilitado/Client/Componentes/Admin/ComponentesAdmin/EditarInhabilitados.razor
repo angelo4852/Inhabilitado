@@ -12,6 +12,9 @@
 @inject NavigationManager navigationManager;
 @attribute [Authorize]
 
+@using System.Net.Http.Json
+@inject HttpClient Http
+
 
 <MainFormHome>
     <ContentBreadcrumbs>
@@ -30,75 +33,78 @@
     <Main>
         <CardForm>
             <Content>
-                <MudGrid Justify="Justify.Center">
-                     <MudItem xs="11">
-                        <MudText Typo="Typo.h5">Modifique la información de un servidor público</MudText>
-                     </MudItem>
-                     <MudItem xs="4">
-                        <MudSelect T="string" Label="Selecciona el criterio de búsqueda" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="@BuscarServidorPublico.TipoCriterioBúsqueda">
-                            @foreach (var item in ListCriterio)
-                            {
-                                <MudSelectItem Value=@(@item.Text)/>
-                            }
-                        </MudSelect>
-                     </MudItem> 
-                     <MudItem xs="5">
-                        <MudTextField @bind-Value="BuscarServidorPublico.Criterio" Label="Introduce el criterio" Variant="Variant.Outlined"></MudTextField>
-                     </MudItem>
-                    <MudItem xs="2">
-                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="ValidarInformacion">Buscar</MudButton>
-                    </MudItem>
-                    @if (ErorresEncontrados.Count() > 0)
-                    {
-                        <MudItem xs="6">
-                            <MudAlert Severity="Severity.Error" Variant="Variant.Outlined">
-                                ¡Error!<br />
-                                @foreach (var item in ErorresEncontrados)
-                                {
-                                    @item <br />
-                                }
-                            </MudAlert>
-                        </MudItem>
-                    }                   
-                </MudGrid>               
+
+
+                @if (Elements is null)
+                {
+                    @* <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+                    <MudProgressLinear Color="Color.Tertiary" Size="Size.Large" Value="75" /> *@
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        <div class="spinner-grow text-secondary" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        <div class="spinner-grow text-success" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        <div class="spinner-grow text-danger" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        <div class="spinner-grow text-warning" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        <div class="spinner-grow text-info" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+
+                        <div class="spinner-grow text-dark" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                    
+
+                }
+               
+                else
+                {
+                    <MudTable Items="@Elements" Dense="false" Hover="true" @ref="table" Filter="new Func<ServidorPublico,bool>(FilterFunc)">
+                        <ToolBarContent>
+                            <MudText Typo="Typo.h6">Inhabilitados</MudText>
+                            <MudSpacer />
+                            <MudTextField T="string" ValueChanged="@(s=>OnSearch(s))" Placeholder="Buscar..." Adornment="Adornment.Start"
+                                          AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                        </ToolBarContent>
+                        <HeaderContent>
+                            <MudTh>Nombre</MudTh>
+                            <MudTh>Apellido Paterno</MudTh>
+                            <MudTh>Apellido Materno</MudTh>
+                            <MudTh>CURP</MudTh>
+                            <MudTh>EDITAR</MudTh>
+
+                        </HeaderContent>
+                        <RowTemplate>
+                            <MudTd DataLabel="Nr">@context.Nombre</MudTd>
+                            <MudTd DataLabel="Sign">@context.ApellidoPaterno</MudTd>
+                            <MudTd DataLabel="Name">@context.ApellidoMaterno</MudTd>
+                            <MudTd DataLabel="Position" HideSmall="_hidePosition">@context.CURP</MudTd>
+                            <MudButton Size="@Size.Small" Variant="@Variant.Filled" OnClick="(()=>Update(context))" Color="@Color.Primary">Editar</MudButton>
+                        </RowTemplate>
+                        <PagerContent>
+                            <MudTablePager />
+                        </PagerContent>
+                    </MudTable>
+                    
+                }
+                
             </Content>
         </CardForm>
 
        
+
+
+
     </Main>
 </MainFormHome>
 
-@code
-{
-    public string TextValue { get; set; }
-    public string selectValueCategoria { get; set; }
-
-    private BuscarServidorPublico BuscarServidorPublico { get; set; } = new();
-
-    private List<CriterioDeBusqueda> ListCriterio = new List<CriterioDeBusqueda>
-    {
-        new CriterioDeBusqueda { Value = "1", Text = "R.F.C." },
-        new CriterioDeBusqueda { Value = "2", Text = "Nombre" },
-        new CriterioDeBusqueda { Value = "3", Text = "Apellido Paterno" },
-        new CriterioDeBusqueda { Value = "4", Text = "Apellido Materno" }
-    };
-
-    private List<string> ErorresEncontrados { get; set; } = new();
-
-    private async Task ValidarInformacion()
-    {
-        ErorresEncontrados.Clear();
-        if (BuscarServidorPublico.TipoCriterioBúsqueda == string.Empty) ErorresEncontrados.Add("Selecciona un criterio de búsqueda");
-        if (BuscarServidorPublico.Criterio == string.Empty) ErorresEncontrados.Add("Introduce el criterio de búsqueda");
-        if (BuscarServidorPublico.TipoCriterioBúsqueda == "R.F.C.") 
-        { 
-            if (BuscarServidorPublico.Criterio.Length != 13) ErorresEncontrados.Add("El RFC introducido no es valido");
-        }
-        if (ErorresEncontrados.Count() == 0) await BuscarServidor();
-    }
-
-    private async Task BuscarServidor()
-    {     
-        
-    }
-}
