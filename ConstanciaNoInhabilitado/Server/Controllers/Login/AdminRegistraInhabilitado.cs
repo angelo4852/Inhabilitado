@@ -47,11 +47,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
             }
             else 
             {
-                userTaxLogin.idBandera = 1;
-
-                userTaxLogin.IdInhabilitado = 0;
-                userTaxLogin.FechaCreacion = DateTime.Now;
-                userTaxLogin.FechaUltimaModificacion = DateTime.Now;
+                userTaxLogin.idBandera = 1;                
                 userTaxLogin.IdUsuario = 4;
                 userTaxLogin.Tipo = 1;
                 var resp = service.InsertarInhabilitado(userTaxLogin);
@@ -113,7 +109,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
                 return servidorPublico;
 
             }
-            else 
+            else
             {
                 var respUpdate = service.UpdateInhabilitado(servidorPublico);
                 servidorPublico.idBandera = 1;
@@ -127,7 +123,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
             }
 
-            
+
             //var respExiste = await service.SelectInhabilitadoUpdate(IdInhabilitado);
             return servidorPublico;
         }

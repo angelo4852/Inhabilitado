@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text;
 
 namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado
 {
@@ -33,12 +35,12 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
 
         //}
 
-        public async Task Insertar()
+        public async Task Insertar(ServidorPublico _servidorPublico)
         {
 
             if (selectValueCategoria.Equals("Servidor Público"))
             {
-                Console.WriteLine("Servidor Público");
+                Console.WriteLine("Servidor Público" + _servidorPublico.Nombre);
                 //servidorPublicoRegistro = servidorPublico;
                 await ValidaInfo(servidorPublico);
                 if (stringsErrores.Count > 0)
@@ -51,24 +53,19 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
 
                 else
                 {
-                    var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", servidorPublico);
-                    var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
-                    servidorPublico.IdInhabilitado = sesionUser.IdInhabilitado;
+                   
+                        _servidorPublico.Tipo = 1;
+                        _servidorPublico.FechaCreacion = DateTime.Now;
+                        _servidorPublico.FechaUltimaModificacion = DateTime.Now;
+                        _servidorPublico.IdUsuario = 4;
+                        _servidorPublico.TypePersonProovedor = "Fisica";
+                        _servidorPublico.genero_valor = "Hombre";
+                        var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", _servidorPublico);
+                        var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
+                        servidorPublico.idBandera = sesionUser.idBandera;
 
-                    if (sesionUser.banderaExiste)
-                    {
-                        bandera = sesionUser.banderaExiste;
-                        idInhabilitado = sesionUser.IdInhabilitado;
-                        sesionUser.Nombre = string.Empty;
-                        sesionUser.ApellidoPaterno = string.Empty;
-                        
-                    }
-                    else
-                    {
-                        bandera = sesionUser.banderaExiste;
-                        idInhabilitado = sesionUser.IdInhabilitado;                       
-                        
-                    }
+
+
                     await LimpiaServidorPublico();
                     
                 }
@@ -93,22 +90,16 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
 
                     else
                     {
+                        _servidorPublico.Tipo = 1;
+                        _servidorPublico.FechaCreacion = DateTime.Now;
+                        _servidorPublico.FechaUltimaModificacion = DateTime.Now;
+                        _servidorPublico.IdUsuario = 4;
+                        _servidorPublico.TypePersonProovedor = "Fisica";
+                        _servidorPublico.genero_valor = "Hombre";
                         var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", servidorPublico);
                         var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
-                        if (sesionUser.banderaExiste)
-                        {
-                            bandera = sesionUser.banderaExiste;
-                            idInhabilitado = sesionUser.IdInhabilitado;
-                            sesionUser.Nombre = string.Empty;
-                            sesionUser.ApellidoPaterno = string.Empty; 
-                            
-                        }
-                        else
-                        {
-                            bandera = sesionUser.banderaExiste;
-                            idInhabilitado = sesionUser.IdInhabilitado;
-                            
-                        }
+                        servidorPublico.idBandera = sesionUser.idBandera;
+
                         await LimpiaServidorPublico();
                        
                     }
@@ -116,9 +107,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
                 else
                 {
                     await ValidaInfoProveedores(servidorPublico);
-                    Console.WriteLine(servidorPublico.TypePersonProovedor);
-                    Console.WriteLine("Entro a proveedores" + " " + servidorPublico.TypePersonProovedor);
-
+                  
                     if (stringsErrores.Count > 0)
                     {
                         var options = new DialogOptions { CloseOnEscapeKey = true };
@@ -129,24 +118,16 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
 
                     else
                     {
+                        _servidorPublico.Tipo = 1;
+                        _servidorPublico.FechaCreacion = DateTime.Now;
+                        _servidorPublico.FechaUltimaModificacion = DateTime.Now;
+                        _servidorPublico.IdUsuario = 4;
+                        _servidorPublico.TypePersonProovedor = "Fisica";
+                        _servidorPublico.genero_valor = "Hombre";
                         var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", servidorPublico);
                         var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
+                        servidorPublico.idBandera = sesionUser.idBandera;
 
-                        if (sesionUser.banderaExiste)
-                        {
-                            bandera = sesionUser.banderaExiste;
-                            idInhabilitado = sesionUser.IdInhabilitado;
-                            sesionUser.Nombre = string.Empty;
-                            sesionUser.ApellidoPaterno = string.Empty;
-                            //await Task.Delay(5000);
-                            //bandera = false;
-                        }
-                        else
-                        {
-                            bandera = sesionUser.banderaExiste;
-                            idInhabilitado = sesionUser.IdInhabilitado;
-                        
-                        }
                         await LimpiaServidorPublico();
                        
                     }
@@ -155,11 +136,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
             }          
 
         }
-
-        private async Task MostrarFormulario()
-        {
-
-        }
+     
 
         public async Task ValidaInfo(ServidorPublico servidorPublico) 
         {
