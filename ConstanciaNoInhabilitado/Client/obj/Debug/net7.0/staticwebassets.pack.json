@@ -1,219 +1,219 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\obj\\Debug\\net7.0\\compressed\\j6y6pr0b4o.gz",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\obj\\Debug\\net7.0\\compressed\\j6y6pr0b4o.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ConstanciaNoInhabilitado.Client.styles.css",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ConstanciaNoInhabilitado.Client.styles.css",
       "PackagePath": "staticwebassets\\ConstanciaNoInhabilitado.Client.styles.css"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\AvisoIntegral_REV.pdf",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\AvisoIntegral_REV.pdf",
       "PackagePath": "staticwebassets\\img\\AvisoIntegral_REV.pdf"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\DirectorAccess.jpg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\DirectorAccess.jpg",
       "PackagePath": "staticwebassets\\img\\DirectorAccess.jpg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\1.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\1.png",
       "PackagePath": "staticwebassets\\img\\Menu\\1.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\10.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\10.png",
       "PackagePath": "staticwebassets\\img\\Menu\\10.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\11.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\11.png",
       "PackagePath": "staticwebassets\\img\\Menu\\11.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\13.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\13.png",
       "PackagePath": "staticwebassets\\img\\Menu\\13.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\17.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\17.png",
       "PackagePath": "staticwebassets\\img\\Menu\\17.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\2.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\2.png",
       "PackagePath": "staticwebassets\\img\\Menu\\2.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\3.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\3.png",
       "PackagePath": "staticwebassets\\img\\Menu\\3.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\4.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\4.png",
       "PackagePath": "staticwebassets\\img\\Menu\\4.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\5.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\5.png",
       "PackagePath": "staticwebassets\\img\\Menu\\5.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\6.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\6.png",
       "PackagePath": "staticwebassets\\img\\Menu\\6.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\7.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\7.png",
       "PackagePath": "staticwebassets\\img\\Menu\\7.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\8.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\8.png",
       "PackagePath": "staticwebassets\\img\\Menu\\8.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\R.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\R.png",
       "PackagePath": "staticwebassets\\img\\R.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\SOMBRAS_02.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\SOMBRAS_02.png",
       "PackagePath": "staticwebassets\\img\\SOMBRAS_02.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\acuerdo-beneficios-fiscales-ffp.pdf",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\acuerdo-beneficios-fiscales-ffp.pdf",
       "PackagePath": "staticwebassets\\img\\acuerdo-beneficios-fiscales-ffp.pdf"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\catalog_services.jpg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\catalog_services.jpg",
       "PackagePath": "staticwebassets\\img\\catalog_services.jpg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\escudo_puebla.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\escudo_puebla.png",
       "PackagePath": "staticwebassets\\img\\escudo_puebla.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\escudo_pueblasvg.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\escudo_pueblasvg.svg",
       "PackagePath": "staticwebassets\\img\\escudo_pueblasvg.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\favicon.ico",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\favicon.ico",
       "PackagePath": "staticwebassets\\img\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\fondo_cielo_mobile.jpg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\fondo_cielo_mobile.jpg",
       "PackagePath": "staticwebassets\\img\\fondo_cielo_mobile.jpg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\fondo_silueta_zaragoza_mobile_Media.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\fondo_silueta_zaragoza_mobile_Media.png",
       "PackagePath": "staticwebassets\\img\\fondo_silueta_zaragoza_mobile_Media.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\gobierno puebla.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\gobierno puebla.png",
       "PackagePath": "staticwebassets\\img\\gobierno puebla.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\loanding.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\loanding.svg",
       "PackagePath": "staticwebassets\\img\\loanding.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\logo_puebla_gob_presente_2023.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\logo_puebla_gob_presente_2023.svg",
       "PackagePath": "staticwebassets\\img\\logo_puebla_gob_presente_2023.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\logo_tienes_ganas_de_puebla.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\logo_tienes_ganas_de_puebla.svg",
       "PackagePath": "staticwebassets\\img\\logo_tienes_ganas_de_puebla.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\master.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\master.png",
       "PackagePath": "staticwebassets\\img\\master.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\more_consulted.jpg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\more_consulted.jpg",
       "PackagePath": "staticwebassets\\img\\more_consulted.jpg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\pleca_logo_footer.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\pleca_logo_footer.png",
       "PackagePath": "staticwebassets\\img\\pleca_logo_footer.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\puebla.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\puebla.svg",
       "PackagePath": "staticwebassets\\img\\puebla.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\silueta_zaragoza.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\silueta_zaragoza.png",
       "PackagePath": "staticwebassets\\img\\silueta_zaragoza.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\sky.mp4",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\sky.mp4",
       "PackagePath": "staticwebassets\\img\\sky.mp4"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\veda\\Logo_puebla_gob_veda_gris.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\veda\\Logo_puebla_gob_veda_gris.svg",
       "PackagePath": "staticwebassets\\img\\veda\\Logo_puebla_gob_veda_gris.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\veda\\tienes_ganas_de_puebla_veda_gris.svg",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\veda\\tienes_ganas_de_puebla_veda_gris.svg",
       "PackagePath": "staticwebassets\\img\\veda\\tienes_ganas_de_puebla_veda_gris.svg"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\visa.png",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\visa.png",
       "PackagePath": "staticwebassets\\img\\visa.png"
     },
     {
-      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\index.html",
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

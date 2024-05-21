@@ -38,8 +38,8 @@
             <MudSelect T="int?" Label="Sexo" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="servidorPublico.idGenero" Required="true">
                 @foreach (var item in ListSexo)
                 {
-                    <MudSelectItem Value="@(item.Value)">
-                        @item.Text
+                    <MudSelectItem Value="@(item.idGenero)">
+                        @item.genero_valor
                     </MudSelectItem>
                 }
             </MudSelect>
@@ -72,9 +72,9 @@
     public ServidorPublico? servidorPublico { set; get; } = new ServidorPublico();
     private List<Sexo> ListSexo = new List<Sexo>
     {
-        new Sexo { Value =1, Text = "Femenino" },
-        new Sexo { Value = 2, Text = "Masculino" },
-        new Sexo { Value = 3, Text = "Otro" }
+        new Sexo { idGenero =1, genero_valor = "Femenino" },
+        new Sexo { idGenero = 2, genero_valor = "Masculino" },
+        new Sexo { idGenero = 3, genero_valor = "Otro" }
     };
     private List<TypePerson> TypePerson = new List<TypePerson>
     {

@@ -6,7 +6,7 @@ using MudBlazor.Services;
 using Blazored.SessionStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using ConstanciaNoInhabilitado.Client.Auth;
-
+using MudBlazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -19,3 +19,5 @@ builder.Services.AddScoped<AuthenticationStateProvider,Autentication>();
 builder.Services.AddAuthorizationCore();
 
 await builder.Build().RunAsync();
+
+

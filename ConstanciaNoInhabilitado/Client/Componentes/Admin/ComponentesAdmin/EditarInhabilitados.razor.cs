@@ -5,6 +5,8 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text;
 using static MudBlazor.CategoryTypes;
+using ConstanciaNoInhabilitado.Client.Shared.Forms;
+using ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs;
 
 namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin
 {
@@ -55,12 +57,8 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin
 
         private async Task CargarServidoresPublicos() 
         {
-            //Elements = await Http!.GetFromJsonAsync<List<ServidorPublico>>($"/api/AdminRegistraInhabilitado/SelectInhabilitado");
-            //_http = await Http!.GetAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitado");
-            //Inhabilitado = await _http.Content.ReadFromJsonAsync<List<ServidorPublico>>();
+           
             var responde_Servidores_publicos = await Http!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitado", null);
-            //_http = await Http!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitado", null);
-
             if (responde_Servidores_publicos.IsSuccessStatusCode)
             {
                 List<ServidorPublico> process = await responde_Servidores_publicos.Content.ReadFromJsonAsync<List<ServidorPublico>>();
@@ -70,6 +68,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin
                     Elements = process;
                 }
             }
+            StateHasChanged();
         }
 
         private async Task ValidarInformacion()
@@ -101,63 +100,64 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin
             return false;
         }
 
-
-
         private void OnSearch(string text)
         {
             searchString = text;
             table.ReloadServerData();
         }
 
-        private async Task Update(ServidorPublico _servidorPublico) 
+        //private async Task Update(ServidorPublico _servidorPublico) 
+        //{
+        //    Console.WriteLine(_servidorPublico.IdInhabilitado);
+        //    OpenDialog(_servidorPublico);
+        //    try 
+        //    {
+        //        Console.WriteLine($"Nombre:{_servidorPublico.Nombre}");
+        //        Console.WriteLine($"ApellidoPaterno:{_servidorPublico.ApellidoPaterno}");
+        //        Console.WriteLine($"ApellidoMaterno:{_servidorPublico.ApellidoMaterno}");
+        //        Console.WriteLine($"CURP:{_servidorPublico.CURP}");
+        //        Console.WriteLine($"RFC:{_servidorPublico.RFC}");
+        //        Console.WriteLine($"Tipo:{_servidorPublico.Tipo}");
+        //        Console.WriteLine($"FechaCreacion:{_servidorPublico.FechaCreacion}");
+        //        Console.WriteLine($"FechaUltimaModificacion:{_servidorPublico.FechaUltimaModificacion}");
+        //        Console.WriteLine($"IdUsuario:{_servidorPublico.IdUsuario}");
+        //        Console.WriteLine($"idGenero:{_servidorPublico.idGenero}");
+        //        Console.WriteLine($"IdInhabilitado:{_servidorPublico.IdInhabilitado}");
+
+        //        if(_servidorPublico.CURP == null) _servidorPublico.CURP=string.Empty;
+        //        if(_servidorPublico.idGenero == null) _servidorPublico.idGenero = 0;
+
+
+        //        string data = JsonSerializer.Serialize(_servidorPublico, new JsonSerializerOptions { WriteIndented = true });
+        //        var content = new StringContent(data, Encoding.UTF8, "application/json");
+        //        Console.WriteLine($"Json:{data}");
+
+        //        //HttpResponseMessage response = await _httpClient!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", content);
+        //        HttpResponseMessage response = await Http!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", content);
+
+        //        //var logueoResponse = await _httpClient!.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", _servidorPublico);
+        //        //_http = await Http!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitado", null);
+
+        //        if (response.IsSuccessStatusCode)
+        //        {
+        //            Console.WriteLine($" Entro al response.IsSuccessStatusCode:true");
+        //        }
+        //        //var logueoResponse = await _httpClient!.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", servidorPublico);
+
+        //        //_http = await _httpClient!.GetAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate?IdInhabilitado={id}");
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"{ex.Message}");            
+        //    }           
+        //}
+        private void OpenDialog(ServidorPublico _servidorPublico)
         {
-            Console.WriteLine(_servidorPublico.IdInhabilitado);
-            try 
-            {
-
-                Console.WriteLine($"Nombre:{_servidorPublico.Nombre}");
-                Console.WriteLine($"ApellidoPaterno:{_servidorPublico.ApellidoPaterno}");
-                Console.WriteLine($"ApellidoMaterno:{_servidorPublico.ApellidoMaterno}");
-                Console.WriteLine($"CURP:{_servidorPublico.CURP}");
-                Console.WriteLine($"RFC:{_servidorPublico.RFC}");
-                Console.WriteLine($"Tipo:{_servidorPublico.Tipo}");
-                Console.WriteLine($"FechaCreacion:{_servidorPublico.FechaCreacion}");
-                Console.WriteLine($"FechaUltimaModificacion:{_servidorPublico.FechaUltimaModificacion}");
-                Console.WriteLine($"IdUsuario:{_servidorPublico.IdUsuario}");
-                Console.WriteLine($"idGenero:{_servidorPublico.idGenero}");
-                Console.WriteLine($"IdInhabilitado:{_servidorPublico.IdInhabilitado}");
-
-                if(_servidorPublico.CURP == null) _servidorPublico.CURP=string.Empty;
-                if(_servidorPublico.idGenero == null) _servidorPublico.idGenero = 0;
-
-
-                string data = JsonSerializer.Serialize(_servidorPublico, new JsonSerializerOptions { WriteIndented = true });
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                Console.WriteLine($"Json:{data}");
-
-                //HttpResponseMessage response = await _httpClient!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", content);
-                HttpResponseMessage response = await Http!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", content);
-
-                //var logueoResponse = await _httpClient!.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", _servidorPublico);
-                //_http = await Http!.PostAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitado", null);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    Console.WriteLine($" Entro al response.IsSuccessStatusCode:true");
-                }
-                //var logueoResponse = await _httpClient!.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate", servidorPublico);
-
-                //_http = await _httpClient!.GetAsync($"/api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate?IdInhabilitado={id}");
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"{ex.Message}");
-            
-            }
-
-            
-        
+            var options = new DialogOptions { ClassBackground = "my-custom-class" };
+            var parameters = new DialogParameters<ModalActualizarInhabilitado>();
+            parameters.Add(p => p.servidorPublico, _servidorPublico);
+            DialogService.Show<ModalActualizarInhabilitado>("Actualizar Inhabilitado", parameters, options);
         }
     }
 }

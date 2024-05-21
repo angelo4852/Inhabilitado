@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "ActualizarInhabilitado",
+    "RelativePath": "api/AdminRegistraInhabilitado/ActualizarInhabilitado",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "servidorPublico",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
     "Method": "Create",
     "RelativePath": "api/AdminRegistraInhabilitado/Create",
     "HttpMethod": "POST",
@@ -9,6 +35,112 @@
     "Parameters": [
       {
         "Name": "userTaxLogin",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "SelectGenero",
+    "RelativePath": "api/AdminRegistraInhabilitado/SelectGenero",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConstanciaNoInhabilitado.Shared.Entities.Login.Sexo, ConstanciaNoInhabilitado.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "SelectGenero",
+    "RelativePath": "api/AdminRegistraInhabilitado/SelectGenero",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConstanciaNoInhabilitado.Shared.Entities.Login.Sexo, ConstanciaNoInhabilitado.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "SelectInhabilitado",
+    "RelativePath": "api/AdminRegistraInhabilitado/SelectInhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico, ConstanciaNoInhabilitado.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "SelectInhabilitado",
+    "RelativePath": "api/AdminRegistraInhabilitado/SelectInhabilitado",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico, ConstanciaNoInhabilitado.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AdminRegistraInhabilitado",
+    "Method": "SelectInhabilitadoUpdate",
+    "RelativePath": "api/AdminRegistraInhabilitado/SelectInhabilitadoUpdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "servidorPublico",
         "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
         "IsRequired": true
       }
@@ -59,19 +191,55 @@
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.RegistrarInhabilitado",
-    "Method": "Create",
-    "RelativePath": "api/RegistrarInhabilitado/Create",
-    "HttpMethod": "POST",
+    "Method": "SelectInhabilitadoUpdate",
+    "RelativePath": "api/RegistrarInhabilitado/SelectInhabilitadoUpdate",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userTaxLogin",
-        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
-        "IsRequired": true
+        "Name": "IdInhabilitado",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.RegistrarInhabilitado",
+    "Method": "SelectInhabilitadoUpdate",
+    "RelativePath": "api/RegistrarInhabilitado/SelectInhabilitadoUpdate",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdInhabilitado",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.ServidorPublico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.WeatherForecastController",

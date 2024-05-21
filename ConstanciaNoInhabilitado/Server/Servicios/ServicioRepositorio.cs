@@ -64,7 +64,7 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             try
             {
                 using var connection = new SqlConnection(connectionString);
-                var existe =  connection.Query("SELECT * from Inhabilitado where IdUsuario=4").ToList();
+                var existe =  connection.Query("SELECT * FROM Inhabilitado INNER JOIN Genero ON Inhabilitado.idGenero = Genero.idGenero").ToList();
                 var jsonResult = JsonConvert.SerializeObject(existe);
                 List<ServidorPublico>? resutadoInhabilitado = JsonConvert.DeserializeObject<List<ServidorPublico>>(jsonResult);
                 return resutadoInhabilitado;
@@ -75,6 +75,21 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             } 
         }
 
+        public async Task<List<Sexo>> SelectGenero()
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var existe = connection.Query("SELECT * from Genero").ToList();
+                var jsonResult = JsonConvert.SerializeObject(existe);
+                List<Sexo>? resutadoInhabilitado = JsonConvert.DeserializeObject<List<Sexo>>(jsonResult);
+                return resutadoInhabilitado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
         public async Task<ServidorPublico> InsertarInhabilitado(ServidorPublico usuarioEntities)
@@ -101,5 +116,29 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             }
 
         }
+
+        public async Task UpdateInhabilitado(ServidorPublico usuarioEntities)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.ExecuteAsync(@"UPDATE Inhabilitado SET Nombre = @Nombre, ApellidoPaterno = @ApellidoPaterno,
+                                                                               ApellidoMaterno = @ApellidoMaterno, RFC = @RFC, CURP= @CURP, Tipo= @Tipo,
+                                                                               FechaCreacion= @FechaCreacion, FechaUltimaModificacion= @FechaUltimaModificacion,
+                                                                               IdUsuario= @IdUsuario, idGenero= @idGenero where IdInhabilitado = @IdInhabilitado", usuarioEntities);
+
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+
+        }
+
+
     }
 }

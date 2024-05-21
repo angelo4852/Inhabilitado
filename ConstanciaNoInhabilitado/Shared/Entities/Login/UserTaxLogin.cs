@@ -107,7 +107,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// Nombre de Servido Publico
         /// </summary>   
-        public int IdInhabilitado { get; set; } = 1;
+        public int IdInhabilitado { get; set; } 
         /// <summary>
         /// Nombre de Servido Publico
         /// </summary>   
@@ -146,14 +146,19 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         ///  Sexo de Servido Publico
         /// </summary>   
-        public int? IdUsuario { get; set; } 
+        public int? IdUsuario { get; set; }
         /// <summary>
         ///  Sexo de Servido Publico
         /// </summary>   
-        public int? idGenero { get; set; }
+        public int? idGenero { get; set; } = 0;
 
         public bool banderaExiste { get; set; } = false;
         public string? TypePersonProovedor { get; set; } = string.Empty;
+
+        public string genero_valor { get; set; }
+
+        public int? idBandera { get; set; } 
+
 
     }
 
@@ -322,11 +327,11 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// Id sexo
         /// </summary>   
-        public int Value { get; set; }
+        public int? idGenero { get; set; }
         /// <summary>
         /// Sexo
         /// </summary>   
-        public string Text { get; set; }
+        public string genero_valor { get; set; }
     }
 
     public class CriterioDeBusqueda
