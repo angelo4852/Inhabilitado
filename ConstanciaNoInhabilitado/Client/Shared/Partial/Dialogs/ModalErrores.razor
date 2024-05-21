@@ -8,11 +8,19 @@
     </TitleContent>
     <DialogContent>
         <MudText>
-            @foreach (var item in listaErrores)
-            {
-                <p>@item</p>
-            
-            }
+            <MudGrid>
+                <MudItem xs="3">
+                    <MudIcon Icon="@Icons.Material.Filled.WarningAmber" Color="Color.Warning" Size="Size.Large"/>
+                </MudItem>
+                <MudItem xs="9">
+                    <ol>
+                        @foreach (var error in listaErrores!)
+                        {
+                            <li>@error</li>
+                        }
+                    </ol>                  
+                </MudItem>
+            </MudGrid>             
         </MudText>
     </DialogContent>
     <DialogActions>

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {}
+    "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
+    "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
+        "projectUniqueName": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
         "projectName": "ConstanciaNoInhabilitado.Client",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
-        "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\obj\\",
+        "projectPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
+        "packagesPath": "C:\\Users\\gilberto.peralta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ECA-SDA-075\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gilberto.peralta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
-                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
+              "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+                "projectPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
               }
             }
           }
@@ -42,11 +43,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -89,7 +85,7 @@
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.0, )",
               "autoReferenced": true
             },
             "MudBlazor": {
@@ -111,7 +107,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.16, 7.0.16]"
+              "version": "[7.0.14, 7.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -119,7 +115,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -128,20 +124,20 @@
         }
       }
     },
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {
+    "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
+        "projectUniqueName": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
         "projectName": "ConstanciaNoInhabilitado.Server",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
-        "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\obj\\",
+        "projectPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
+        "packagesPath": "C:\\Users\\gilberto.peralta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ECA-SDA-075\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gilberto.peralta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -150,17 +146,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
-                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj"
+              "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
+                "projectPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj"
               },
-              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
-                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
+              "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+                "projectPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
               }
             }
           }
@@ -169,11 +166,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -216,24 +208,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+    "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
         "projectName": "ConstanciaNoInhabilitado.Shared",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
-        "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+        "packagesPath": "C:\\Users\\gilberto.peralta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ECA-SDA-075\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gilberto.peralta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -242,6 +234,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -254,11 +247,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -280,7 +268,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -209,9 +209,20 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
     public class RegistrarNuevaInhabilitacion
     {
         /// <summary>
+        /// idUsuario
+        /// </summary>   
+        public int idUsuario { get; set; }
+
+        /// <summary>
+        /// Estatus
+        /// </summary>   
+        public int Estatus { get; set; } = 1;
+
+
+        /// <summary>
         /// inhabilitación en proceso de Servidor Publico
         /// </summary>   
-        public string InhabilitacionProceso { get; set; }
+        public int InhabilitacionProceso { get; set; }
         
         /// <summary>
         /// RFC de Servidor Publico
@@ -226,7 +237,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// Dependencia de Servidor Publico
         /// </summary>   
-        public string Dependencia { get; set; }
+        public int Dependencia { get; set; }
 
         /// <summary>
         /// Puesto de Servidor Publico
@@ -261,32 +272,32 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// Tipo de Inhabilitación de Servidor Publicoq
         /// </summary>   
-        public string TipoInhabilitación { get; set; }
+        public int TipoInhabilitación { get; set; }
 
         /// <summary>
         /// Origen de Inhabilitación de Servidor Publico
         /// </summary>   
-        public string OrigenInhabilitación { get; set; }
+        public int OrigenInhabilitación { get; set; }
 
         /// <summary>
         /// Causa de la Inhabilitación de Servidor Publico
         /// </summary>   
-        public string CausaInhabilitación { get; set; }
+        public int CausaInhabilitación { get; set; }
 
         /// <summary>
         /// Falta Cometida de Servidor Publico
         /// </summary>   
-        public string FaltaCometida { get; set; }
+        public int FaltaCometida { get; set; }
 
         /// <summary>
         /// Tipo de la Sanción de Servidor Publico
         /// </summary>   
-        public string TipoSanción { get; set; }
+        public int TipoSanción { get; set; }
 
         /// <summary>
         /// Tipo Moneda de Servidor Publico
         /// </summary>   
-        public string TipoMoneda { get; set; }
+        public int TipoMoneda { get; set; }
 
         /// <summary>
         /// Monto de Servidor Publico
@@ -296,7 +307,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// Clave del puesto del nivel del Servidor Público de Servidor Publico
         /// </summary>   
-        public string ClaveNivelServidorPúblico { get; set; }
+        public int ClaveNivelServidorPúblico { get; set; }
 
         /// <summary>
         /// Descripción de la Inhabilitación de Servidor Publico
