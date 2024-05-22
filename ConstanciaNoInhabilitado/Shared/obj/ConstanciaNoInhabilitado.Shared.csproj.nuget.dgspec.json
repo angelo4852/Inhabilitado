@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {}
+    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
         "projectName": "ConstanciaNoInhabilitado.Shared",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
         "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

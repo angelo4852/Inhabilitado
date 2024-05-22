@@ -11,7 +11,7 @@
 @inject AuthenticationStateProvider authenticationStateProvider;
 @inject NavigationManager navigationManager;
 @attribute [Authorize]
-
+@inject IDialogService DialogService
 @using System.Net.Http.Json
 @inject HttpClient Http
 
@@ -77,20 +77,29 @@
                                           AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
                         </ToolBarContent>
                         <HeaderContent>
-                            <MudTh>Nombre</MudTh>
-                            <MudTh>Apellido Paterno</MudTh>
-                            <MudTh>Apellido Materno</MudTh>
+                            <MudTh>ID</MudTh>
+                            <MudTh>NOMBRE</MudTh>
+                            <MudTh>APELLIDO PATERNO</MudTh>
+                            <MudTh>APELLIDO MATERNO</MudTh>
                             <MudTh>CURP</MudTh>
+                            <MudTh>RFC</MudTh>
+                            <MudTh>GENERO</MudTh>
                             <MudTh>EDITAR</MudTh>
 
                         </HeaderContent>
                         <RowTemplate>
-                            <MudTd DataLabel="Nr">@context.Nombre</MudTd>
-                            <MudTd DataLabel="Sign">@context.ApellidoPaterno</MudTd>
-                            <MudTd DataLabel="Name">@context.ApellidoMaterno</MudTd>
-                            <MudTd DataLabel="Position" HideSmall="_hidePosition">@context.CURP</MudTd>
-                            <MudButton Size="@Size.Small" Variant="@Variant.Filled" OnClick="(()=>Update(context))" Color="@Color.Primary">Editar</MudButton>
-                        </RowTemplate>
+                            <MudTd DataLabel="Nr">@context.IdInhabilitado</MudTd>
+                            <MudTd DataLabel="Nr">@context.Nombre.ToUpper()</MudTd>
+                            <MudTd DataLabel="Sign">@context.ApellidoPaterno.ToUpper()</MudTd>
+                            <MudTd DataLabel="Name">@context.ApellidoMaterno.ToUpper()</MudTd>
+                            <MudTd DataLabel="Position" HideSmall="_hidePosition">@context.CURP.ToUpper()</MudTd>
+                            <MudTd DataLabel="Position" HideSmall="_hidePosition">@context.RFC.ToUpper()</MudTd>
+
+                            <MudTd DataLabel="Genero">@context.genero_valor.ToUpper()</MudTd>
+                            <MudTd DataLabel="Genero"><MudButton Size="@Size.Small" Variant="@Variant.Filled" OnClick="(()=>OpenDialog(context))" Color="@Color.Primary">Editar</MudButton></MudTd>
+
+@*                             <MudButton Size="@Size.Small" Variant="@Variant.Filled" OnClick="(()=>OpenDialog(context))" Color="@Color.Primary">Editar</MudButton>
+ *@                        </RowTemplate>
                         <PagerContent>
                             <MudTablePager />
                         </PagerContent>

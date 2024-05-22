@@ -33,23 +33,14 @@
         <CardForm>
             <Content>
                 <MudGrid Justify="Justify.Center">
-                    @if (servidorPublico.IdInhabilitado > 1)
+                    @if (servidorPublico.idBandera == 1)
                     {
                         <MudAlert Severity="Severity.Success" Variant="Variant.Filled">El registro se agrego correctamente en la base de datos</MudAlert>
                     }
-                    else if (servidorPublico.IdInhabilitado == 0)
+                    else if (servidorPublico.idBandera == 2)
                     {
                         <MudAlert Severity="Severity.Error" Variant="Variant.Filled">El Inhabilitado ya existe en la base de datos</MudAlert>                        
-                    }
-                   @*  @if (bandera == true && idInhabilitado > 0)
-                    {
-                        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">El registro se agrego correctamente en la base de datos</MudAlert>
-                    }
-                    else if (bandera == false && idInhabilitado == 0)
-                    {
-                        <MudAlert Severity="Severity.Error" Variant="Variant.Filled">El Inhabilitado ya existe en la base de datos</MudAlert>
-                    } *@
-
+                    }                 
                      <MudItem xs="11">
                             <MudText Typo="Typo.h5">Ingrese los siguientes datos</MudText>
                      </MudItem>
@@ -78,4 +69,6 @@
     </Main>
 </MainFormHome>
 
+
+<p>@servidorPublico.idBandera</p>
 <p>@servidorPublico.IdInhabilitado @selectValueCategoria @servidorPublico.TypePersonProovedor</p>

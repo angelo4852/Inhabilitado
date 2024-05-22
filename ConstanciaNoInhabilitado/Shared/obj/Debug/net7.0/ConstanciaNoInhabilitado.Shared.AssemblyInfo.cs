@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConstanciaNoInhabilitado.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b3f4b07bb6ee014a3be6ac3a2d20b4d50c6078e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9318249a32876eb669496b847c4c39cf36c62594")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConstanciaNoInhabilitado.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConstanciaNoInhabilitado.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {}
+    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
+    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
+        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
         "projectName": "ConstanciaNoInhabilitado.Client",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
+        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
         "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\obj\\",
+        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
-                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
+              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
               }
             }
           }
@@ -128,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {
+    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
+        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
         "projectName": "ConstanciaNoInhabilitado.Server",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
+        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
         "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Server\\obj\\",
+        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -156,11 +156,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
-                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj"
+              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj": {
+                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj"
               },
-              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
-                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
+              "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+                "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj"
               }
             }
           }
@@ -220,14 +220,14 @@
         }
       }
     },
-    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
+    "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
         "projectName": "ConstanciaNoInhabilitado.Shared",
-        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+        "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
         "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\Inhabilitado2024\\ConstanciaNoInhabilitado\\ConstanciaNoInhabilitado\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

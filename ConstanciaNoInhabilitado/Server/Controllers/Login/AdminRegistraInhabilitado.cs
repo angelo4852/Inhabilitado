@@ -39,16 +39,15 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
             var respExiste = await service.Existe(userTaxLogin.Nombre, userTaxLogin.RFC);
 
             if (respExiste)
-            {               
+            {
+                userTaxLogin.idBandera = 2;
                 userTaxLogin.banderaExiste = false;
                 userTaxLogin.IdInhabilitado = 0;
                 return userTaxLogin;
             }
             else 
             {
-                userTaxLogin.IdInhabilitado = 0;
-                userTaxLogin.FechaCreacion = DateTime.Now;
-                userTaxLogin.FechaUltimaModificacion = DateTime.Now;
+                userTaxLogin.idBandera = 1;                
                 userTaxLogin.IdUsuario = 4;
                 userTaxLogin.Tipo = 1;
                 var resp = service.InsertarInhabilitado(userTaxLogin);
@@ -76,9 +75,57 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
         {
             ServidorPublico _servidorPublico = new ServidorPublico();
             //var respExiste = await service.SelectInhabilitadoUpdate(IdInhabilitado);
-
-
             return _servidorPublico;
+        }
+
+        [HttpGet("[action]")]
+        [Route("SelectGenero")]
+        public async Task<List<Sexo>> SelectGenero()
+        {
+            List<Sexo> servidorPublico = new();
+            var respExiste = service.SelectGenero();
+            foreach (var item in respExiste.Result)
+            {
+                servidorPublico.Add(item);
+            }
+            return servidorPublico;
+        }
+
+
+        [HttpPost]
+        [Route("ActualizarInhabilitado")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ServidorPublico> ActualizarInhabilitado(ServidorPublico servidorPublico)
+        {
+            ServidorPublico _servidorPublico = new ServidorPublico();
+
+
+            var respExiste = await service.Existe(servidorPublico.Nombre, servidorPublico.RFC);
+
+            if (respExiste)
+            {
+                servidorPublico.banderaExiste = false;
+                servidorPublico.idBandera = 2;
+                return servidorPublico;
+
+            }
+            else
+            {
+                var respUpdate = service.UpdateInhabilitado(servidorPublico);
+                servidorPublico.idBandera = 1;
+
+                if (respUpdate.IsCompletedSuccessfully)
+                {
+                    return _servidorPublico;
+
+                }
+
+
+            }
+
+
+            //var respExiste = await service.SelectInhabilitadoUpdate(IdInhabilitado);
+            return servidorPublico;
         }
     }
 }
