@@ -158,6 +158,112 @@
     ]
   },
   {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregarInhabilitaci\u00F3n",
+    "Method": "CreateInhabilitacion",
+    "RelativePath": "api/AgregarInhabilitaci\u00F3n/CreateInhabilitacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registrarNuevaInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.RegistrarNuevaInhabilitacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.RegistrarNuevaInhabilitacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasCausas",
+    "RelativePath": "api/Catalogos/CargasCausas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasDependencias",
+    "RelativePath": "api/Catalogos/CargasDependencias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasMoneda",
+    "RelativePath": "api/Catalogos/CargasMoneda",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasNivel",
+    "RelativePath": "api/Catalogos/CargasNivel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasOrigen",
+    "RelativePath": "api/Catalogos/CargasOrigen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasTipoFalta",
+    "RelativePath": "api/Catalogos/CargasTipoFalta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasTipoInhabilitacion",
+    "RelativePath": "api/Catalogos/CargasTipoInhabilitacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "CargasTipoSancion",
+    "RelativePath": "api/Catalogos/CargasTipoSancion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Login",
     "Method": "ConsultaUsuario",
     "RelativePath": "api/Login/ConsultaUsuario",

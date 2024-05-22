@@ -1,119 +1,151 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+@inject IDialogService DialogService;
+@inject HttpClient httpClient
 
-
-<MudItem xs="8">
-    <MudSelect T="string" Label="¿Es una inhabilitación en proceso?" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.InhabilitacionProceso">
-        <MudSelectItem Value="@("Si")" />
-        <MudSelectItem Value="@("No")" />
-    </MudSelect>
-</MudItem>
-@if (RegistrarNuevaInhabilitacion.InhabilitacionProceso != null)
+@if (MostrarSpinnerInicial)
 {
-    @if (!DefineInhabilitacion) 
-    {
-        <MudItem xs="5">
-            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.RFC" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
-        </MudItem>
-    }   
-    <MudItem xs="5">
-        <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.AutoridadSancionadora" Label="Introduce la Autoridad Sancionadora" Variant="Variant.Outlined" />
+    <div class="row justify-content-center">
+        <div class="col-md-12 mb-4 SpacePaddingInput text-center">
+            <MudProgressCircular Color="Color.Secondary" Style="height:70px;width:70px;" Indeterminate="true"></MudProgressCircular>
+            <MudText Typo="Typo.h4">Cargando información ...</MudText>
+        </div>
+    </div>
+
+}
+else
+{
+    <MudItem xs="8">
+        <MudSelect T="int" Label="¿Es una inhabilitación en proceso?" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.InhabilitacionProceso">
+            <MudSelectItem Value="0">No</MudSelectItem>
+            <MudSelectItem Value="1">Sí</MudSelectItem>
+        </MudSelect>
     </MudItem>
-    @if (RegistrarNuevaInhabilitacion.InhabilitacionProceso == "No")
+    @if (RegistrarNuevaInhabilitacion!.InhabilitacionProceso != null)
     {
+        @if (!DefineInhabilitacion)
+        {
+            <MudItem xs="5">
+                <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.RFC" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
+            </MudItem>
+        }
         <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona la Dependencia" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.Dependencia">
-                <MudSelectItem Value="@("ITSZ")" />
-                <MudSelectItem Value="@("ITSL")" />
-            </MudSelect>
+            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.AutoridadSancionadora" Label="Introduce la Autoridad Sancionadora" Variant="Variant.Outlined" />
         </MudItem>
+        @if (RegistrarNuevaInhabilitacion.InhabilitacionProceso == 0)
+        {
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona la Dependencia" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.Dependencia">
+                    @foreach (var itemDependencia in Dependencias)
+                    {
+                        <MudSelectItem Value="@itemDependencia.IdDependencia">@itemDependencia.Descripcion</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.Puesto" Label="Introduce el Cargo o Puesto" Variant="Variant.Outlined" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudDatePicker T="DateTime"
+                               Label="Introduce la Fecha de Inicio"
+                               DateFormat="dd/MM/yyyy"
+                               @bind-Date="RegistrarNuevaInhabilitacion.FechaInicio"
+                               For="@(()=>RegistrarNuevaInhabilitacion.FechaInicio)" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudDatePicker T="DateTime"
+                               Label="Introduce la Fecha de Término"
+                               DateFormat="dd/MM/yyyy"
+                               @bind-Date="RegistrarNuevaInhabilitacion.FechaTermino"
+                               For="@(()=>RegistrarNuevaInhabilitacion.FechaTermino)" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.Periodo" Label="Introduce el Periodo" Variant="Variant.Outlined" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudDatePicker T="DateTime"
+                               Label="Introduce la Fecha de Resolución"
+                               DateFormat="dd/MM/yyyy"
+                               @bind-Date="RegistrarNuevaInhabilitacion.FechaResolución"
+                               For="@(()=>RegistrarNuevaInhabilitacion.FechaResolución)" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.ExpedienteLegal" Label="Introduce el Expediente Legal" Variant="Variant.Outlined" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona el Tipo de Inhabilitación" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.TipoInhabilitación">
+                    @foreach (var itemTipoInhabilitacion in ListTipoInhabilitacion)
+                    {
+                        <MudSelectItem Value="@itemTipoInhabilitacion.IdTipoInhabilitacion">@itemTipoInhabilitacion.Descripcion</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona el Origen de Inhabilitación" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.OrigenInhabilitación">
+                    @foreach (var itemOrigen in Origen)
+                    {
+                        <MudSelectItem Value="@itemOrigen.IdOrigenInhabilitacion">@itemOrigen.Descripcion</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona la Causa de la Inhabilitación" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.CausaInhabilitación">
+                    @foreach (var itemCausas in Causas)
+                    {
+                        <MudSelectItem Value="@itemCausas.IdCausaInhabilitacion">@itemCausas.Descripcion</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona la Falta Cometida" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.FaltaCometida">
+                    @foreach (var itemFalta in TipoFalta)
+                    {
+                        <MudSelectItem Value="@itemFalta.idTipoFalta">@itemFalta.tipoFalta_valor</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona Tipo de la Sanción" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.TipoSanción">
+                    @foreach (var itemSancion in TipoSancion)
+                    {
+                        <MudSelectItem Value="@itemSancion.idTipoSancion">@itemSancion.tipoSancion_valor</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Selecciona la Tipo Moneda" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.TipoMoneda">
+                    @foreach (var itemMoneda in Moneda)
+                    {
+                        <MudSelectItem Value="@itemMoneda.idMoneda">@itemMoneda.moneda_valor</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="5">
+                <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.Monto" Label="Monto" Variant="Variant.Outlined" />
+            </MudItem>
+            <MudItem xs="5">
+                <MudSelect T="int" Label="Clave del puesto del nivel del Servidor Público" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="RegistrarNuevaInhabilitacion.ClaveNivelServidorPúblico">
+                    @foreach (var itemNivel in Nivel)
+                    {
+                        <MudSelectItem Value="@itemNivel.idNivel">@itemNivel.Descripcion</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="10">
+                <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.DescripciónInhabilitación" Label="Introduce la Descripción de la Inhabilitación" Variant="Variant.Outlined" Lines="5" />
+            </MudItem>
+        }
         <MudItem xs="5">
-            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.Puesto" Label="Introduce el Cargo o Puesto" Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudDatePicker T="DateTime"
-                           Label="Introduce la Fecha de Inicio"
-                           DateFormat="dd/MM/yyyy"
-                           @bind-Date="RegistrarNuevaInhabilitacion.FechaInicio"
-                           For="@(()=>RegistrarNuevaInhabilitacion.FechaInicio)" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudDatePicker T="DateTime"
-                           Label="Introduce la Fecha de Término"
-                           DateFormat="dd/MM/yyyy"
-                           @bind-Date="RegistrarNuevaInhabilitacion.FechaTermino"
-                           For="@(()=>RegistrarNuevaInhabilitacion.FechaTermino)" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.Periodo" Label="Introduce el Periodo" Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudDatePicker T="DateTime"
-                           Label="Introduce la Fecha de Resolución"
-                           DateFormat="dd/MM/yyyy"
-                           @bind-Date="RegistrarNuevaInhabilitacion.FechaResolución"
-                           For="@(()=>RegistrarNuevaInhabilitacion.FechaResolución)" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.ExpedienteLegal" Label="Introduce el Expediente Legal" Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona el Tipo de Inhabilitación" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.TipoInhabilitación">
-                <MudSelectItem Value="@("Estatal")" />
-                <MudSelectItem Value="@("Municipal")" />
-                <MudSelectItem Value="@("Federal")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona el Origen de Inhabilitación" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.OrigenInhabilitación">
-                <MudSelectItem Value="@("AUDITORIA FEDERAL")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona la Causa de la Inhabilitación" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.CausaInhabilitación">
-                <MudSelectItem Value="@("ABUSO DE AUTORIDAD")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona la Falta Cometida" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.FaltaCometida">
-                <MudSelectItem Value="@("ABUSO DE FUNCIONES")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona Tipo de la Sanción" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.TipoSanción">
-                <MudSelectItem Value="@("MULTADO")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Selecciona la Tipo Moneda" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.TipoMoneda">
-                <MudSelectItem Value="@("Peso Mexicano")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="5">
-            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.Monto" Label="Monto" Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="5">
-            <MudSelect T="string" Label="Clave del puesto del nivel del Servidor Público" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="RegistrarNuevaInhabilitacion.ClaveNivelServidorPúblico">
-                <MudSelectItem Value="@("ALTO")" />
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="10">
-            <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.DescripciónInhabilitación" Label="Introduce la Descripción de la Inhabilitación" Variant="Variant.Outlined" Lines="5" />
+            @if (DefineInhabilitacion)
+            {
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:12vw;" OnClick="GuardarInhabilitación">Establecer Inhabilitación</MudButton>
+            }
+            else
+            {
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:27vw;" OnClick="GuardarInhabilitación">Establecer Inhabilitación</MudButton>
+            }
         </MudItem>
     }
-    <MudItem xs="5">
-        @if (DefineInhabilitacion)
-        {
-            <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:12vw;">Establecer Inhabilitación</MudButton>
-        }else
-        {
-            <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:27vw;">Establecer Inhabilitación</MudButton>
-        }
-    </MudItem>
-}
 
 
-@code
-{
-    [Parameter] public bool DefineInhabilitacion { set; get; } = false;
-    private RegistrarNuevaInhabilitacion RegistrarNuevaInhabilitacion { set; get; } = new();
-}
+}   

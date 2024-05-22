@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QN2ric4DYUbfIMhvxY5ZvWz4SAawgO9QhouAS4annkA8Nn5XLMRh/v/OjnX3bNxlRNhC9Z+xFSrGus+ePh0kgw==",
+  "dgSpecHash": "/dZCJMGF+WcgidYXMNfasEfaydAwlCFy+qa91ME0Fl85gBIBxJlgAD1RkBkNAeMNyOuGwk5tPQJL3qIr04rzXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
+  "projectFilePath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

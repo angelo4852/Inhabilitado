@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7mDYv322jXtzaqwnOAPtWicgXnjkNOJjLbh0sqmftSWaGdp+e/TaBgmwo32dmQNT04OMm4jT9rbkozGfapk7Qg==",
+  "dgSpecHash": "iTorqIOfrXmmzmAjukYZVk/uE1ggutFxN4DOa8q6B2R+aWK4j83fk9+L54Y41NZn9ESY0J/4I2sLIVtQCe8azw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
+  "projectFilePath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\blazored.sessionstorage.2.4.0.nupkg.sha512",
