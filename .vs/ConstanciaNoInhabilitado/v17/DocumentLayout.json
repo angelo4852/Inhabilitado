@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
               "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\InhabilitadoSistema\\ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAIsAAAAeAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-17T16:57:32.945Z",
               "IsPinned": true,
@@ -96,8 +96,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\RegistrarInhabilitado\\RegistrarInhabilitado.razor",
               "ViewState": "AQIAABYAAAAAAAAAAAApwCgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T19:36:01.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T19:36:01.127Z"
             },
             {
               "$type": "Document",
@@ -109,8 +108,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AdminRegistraInhabilitado.cs",
               "ViewState": "AQIAAFIAAAAAAAAAAAA2wGYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T23:55:39.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T23:55:39.225Z"
             },
             {
               "$type": "Document",
@@ -122,8 +120,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\RegistrarInhabilitado\\RegistrarInhabilitado.razor.cs",
               "ViewState": "AQIAAEAAAAAAAAAAAAAYwGwAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T00:03:29.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T00:03:29.138Z"
             },
             {
               "$type": "Document",
@@ -135,8 +132,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\EditarInhabilitados.razor",
               "ViewState": "AQIAACEAAAAAAAAAAAAnwFoAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-17T17:25:02.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T17:25:02.135Z"
             },
             {
               "$type": "Document",
@@ -148,8 +144,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Shared\\MainLayout.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T23:47:01.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T23:47:01.972Z"
             },
             {
               "$type": "Document",
@@ -161,8 +156,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorio.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAqwDAAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T16:50:51.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T16:50:51.445Z"
             },
             {
               "$type": "Document",
@@ -174,8 +168,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\EditarInhabilitados.razor.cs",
               "ViewState": "AQIAAH8AAAAAAAAAAAAUwJkAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T20:16:28.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T20:16:28.276Z"
             },
             {
               "$type": "Document",
@@ -187,8 +180,7 @@
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\RegistrarInhabilitado.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T16:51:32.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T16:51:32.536Z"
             },
             {
               "$type": "Document",
