@@ -1,6 +1,7 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
 @using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 @inject IDialogService DialogService;
+@inject ISnackbar Snackbar
 @inject HttpClient httpClient
 
 @if (MostrarSpinnerInicial)
@@ -146,6 +147,4 @@ else
             }
         </MudItem>
     }
-
-
-}   
+}
