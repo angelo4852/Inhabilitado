@@ -235,10 +235,10 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 		/// </summary>   
 		public int InhabilitacionProceso { get; set; }
 
-		/// <summary>
-		/// RFC de Servidor Publico
-		/// </summary>   
-		public string RFC { get; set; }
+        /// <summary>
+        /// RFC de Servidor Publico
+        /// </summary>   
+        public string RFC { get; set; } = "ROPY740314PD2";
 
 		/// <summary>
 		/// Autoridad Sancionadora de Servidor Publico

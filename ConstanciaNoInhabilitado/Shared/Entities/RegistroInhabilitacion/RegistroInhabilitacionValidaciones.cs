@@ -38,7 +38,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion
 						if (RegistrarNuevaInhabilitacion.InhabilitacionProceso == 0)
 						{
 							inhabilitacion.IdInhabilitacion = 0;
-							inhabilitacion.IdInhabilitado = inhabilitado[0]._idUsuario;
+							inhabilitacion.IdInhabilitado = inhabilitado[0].IdInhabilitado;
 							inhabilitacion.ExpedienteLegal = RegistrarNuevaInhabilitacion.ExpedienteLegal.ToUpper();
 							inhabilitacion.IdDependencia = Convert.ToInt32(RegistrarNuevaInhabilitacion.Dependencia);
 							inhabilitacion.Cargo = RegistrarNuevaInhabilitacion.Puesto;
@@ -58,7 +58,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion
 						else
 						{
 							inhabilitacion.IdInhabilitacion = 0;
-							inhabilitacion.IdInhabilitado = inhabilitado[0]._idUsuario;
+							inhabilitacion.IdInhabilitado = inhabilitado[0].IdInhabilitado;
 							inhabilitacion.ExpedienteLegal = "En proceso";
 							inhabilitacion.IdDependencia = 92;
 							inhabilitacion.Cargo = "No definido";

@@ -44,3 +44,15 @@ C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\
 C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\refint\ConstanciaNoInhabilitado.Shared.dll
 C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.pdb
 C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ref\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\bin\Debug\net7.0\ConstanciaNoInhabilitado.Shared.deps.json
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\bin\Debug\net7.0\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\bin\Debug\net7.0\ConstanciaNoInhabilitado.Shared.pdb
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.AssemblyInfoInputs.cache
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.AssemblyInfo.cs
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.sourcelink.json
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\refint\ConstanciaNoInhabilitado.Shared.dll
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ConstanciaNoInhabilitado.Shared.pdb
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\obj\Debug\net7.0\ref\ConstanciaNoInhabilitado.Shared.dll
