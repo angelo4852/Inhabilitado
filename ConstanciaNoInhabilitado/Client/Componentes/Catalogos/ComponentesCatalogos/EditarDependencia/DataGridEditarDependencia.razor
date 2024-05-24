@@ -4,7 +4,7 @@
 @inject ISnackbar Snackbar
 
 
-<MudDataGrid T="Dependencia" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple"
+<MudDataGrid T="Dependencia" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged" Style="width:65vw;">
     <ToolBarContent>
         <MudSpacer />
@@ -115,7 +115,7 @@ else if (_elements.idBandera == 0)
             return true;
 
         return false;
-    };
+    };   
 
     // events
     void RowClicked(DataGridRowClickEventArgs<Dependencia> args)
