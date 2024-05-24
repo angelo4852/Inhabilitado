@@ -16,7 +16,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 		private readonly IServicioRepositorioCatalogos servicioRepositorio;
 		private readonly ServicioRepositorioCatalogos service;
 
-		public Catalogos(IConfiguration configuration)
+        public Catalogos(IConfiguration configuration)
 		{
 			service = new ServicioRepositorioCatalogos(configuration);
 		}
@@ -148,5 +148,25 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 				throw ex;
 			}
 		}
-	}
+       
+
+        [HttpPost]
+        [Route("ActualizarDependencia")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ActionResult> ActualizarDependencia(Dependencia causasInhabilitacion)
+        {
+            try
+            {
+                Dependencia listaOrigenes = await service.UpdateDependencia(causasInhabilitacion);
+                
+
+                return Ok(listaOrigenes);
+			}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+    }
 }

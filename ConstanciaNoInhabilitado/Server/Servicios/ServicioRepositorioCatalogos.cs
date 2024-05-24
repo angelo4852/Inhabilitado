@@ -212,5 +212,27 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
 				throw ex;
 			}
 		}
-	}
+
+        public async Task<Dependencia> UpdateDependencia(Dependencia usuarioEntities)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.ExecuteAsync(@"UPDATE Dependencia SET Descripcion = @Descripcion  where IdDependencia = @IdDependencia", usuarioEntities);
+                usuarioEntities.idBandera = id;
+
+                return usuarioEntities;
+
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+
+        }
+    }
 }

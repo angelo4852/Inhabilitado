@@ -11,9 +11,14 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Catalogos
 		public int IdDependencia { set; get; }
 		public string? Descripcion { set; get; }
 		public string? siglas { set; get; }
-	}
+        public string? Value { set; get; }
+        public bool Acciones { get; set; }
+		public int idBandera { set; get; } = 2;
 
-	public class OrigenInhabilitacion
+
+    }
+
+    public class OrigenInhabilitacion
 	{
 		public int IdOrigenInhabilitacion { set; get; }
 		public string? Descripcion { set; get; }

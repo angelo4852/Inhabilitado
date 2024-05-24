@@ -1,6 +1,10 @@
-﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Catalogos
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@inject HttpClient Http
+@inject ISnackbar Snackbar
 
-<MudDataGrid T="DependenciasInhabilitacion" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple"
+
+<MudDataGrid T="Dependencia" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged" Style="width:65vw;">
     <ToolBarContent>
         <MudSpacer />
@@ -8,7 +12,7 @@
                       AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
     </ToolBarContent>
     <Columns>
-        <PropertyColumn Property="x => x.Value" Title="Nr" Sortable="false" Filterable="false" />
+        <PropertyColumn Property="x => x.IdDependencia" Title="Id" Sortable="false" Filterable="false" />
         <TemplateColumn Title="Descripción">
             <CellTemplate>
                 @if (!context.Item.Acciones)
@@ -30,49 +34,71 @@
                 }
                 else
                 {
-                    <MudButton Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Update">Actualizar</MudButton>
+                    <MudButton Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Update" OnClick="(p=>UdateDependencia(_elements))">Actualizar</MudButton>
                     <MudButton Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Close" OnClick="() => CancelarCausa(context.Item)">Cancelar</MudButton>
                 }
             </CellTemplate>
         </TemplateColumn>
     </Columns>
     <PagerContent>
-        <MudDataGridPager T="DependenciasInhabilitacion" />
+        <MudDataGridPager T="Dependencia" />
     </PagerContent>
 </MudDataGrid>
 
+
+@if (_elements.idBandera == 1)
+{
+    <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
+
+}
+else if (_elements.idBandera == 0)
+{
+    <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+}
+
+
+
 @code {
-    private List<DependenciasInhabilitacion> Elements = new List<DependenciasInhabilitacion>();
+
+    private List<Dependencia> Elements { set; get; }
     private string _searchString;
     private bool _sortNameByLength;
     private List<string> _events = new();
+    private Dependencia _elements { set; get; } = new();
+
 
     protected override async Task OnInitializedAsync()
     {
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "ADSCRITA AL AYUNTAMIENTO DE AHUACATLÁN, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE AHUATLAN, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE AHUEHUETITLA, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE AMIXTLAN, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE ATZITZIHUACÁN, PUEBLA, ADMINISTRACIÓN 2011-2014" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE CHIAUTLA, PUEBLA." });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE CHICHIQUILA, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE CORONANGO PUEBLA 2011-2014" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE CUAPIAXTLA DE MADERO, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE DOMINGO ARENAS, PUEBLA" });
-        Elements.Add(new DependenciasInhabilitacion { Value = "1", Descripcion = "AYUNTAMIENTO DE GENERAL FELIPE ANGELES, PUEBLA" });
+        await CargarServidoresPublicos();
+    }
+    private async Task CargarServidoresPublicos()
+    {
+
+        var responde_Servidores_publicos = await Http!.PostAsync($"/api/Catalogos/CargasDependencias", null);
+        if (responde_Servidores_publicos.IsSuccessStatusCode)
+        {
+            List<Dependencia> process = await responde_Servidores_publicos.Content.ReadFromJsonAsync<List<Dependencia>>();
+
+            if (process.Count > 0)
+            {
+                Elements = process;
+            }
+        }
+        StateHasChanged();
     }
 
-    private async Task EditarCausa(DependenciasInhabilitacion causasInhabilitacion)
+    private async Task EditarCausa(Dependencia causasInhabilitacion)
     {
+        _elements = causasInhabilitacion;       
         causasInhabilitacion.Acciones = true;
     }
-    private async Task CancelarCausa(DependenciasInhabilitacion causasInhabilitacion)
+    private async Task CancelarCausa(Dependencia causasInhabilitacion)
     {
         causasInhabilitacion.Acciones = false;
     }
 
     // custom sort by name length
-    private Func<DependenciasInhabilitacion, object> _sortBy => x =>
+    private Func<Dependencia, object> _sortBy => x =>
     {
         if (_sortNameByLength)
             return x.Descripcion.Length;
@@ -80,7 +106,7 @@
             return x.Descripcion;
     };
     // quick filter - filter globally across multiple columns with the same input
-    private Func<DependenciasInhabilitacion, bool> _quickFilter => x =>
+    private Func<Dependencia, bool> _quickFilter => x =>
     {
         if (string.IsNullOrWhiteSpace(_searchString))
             return true;
@@ -89,21 +115,38 @@
             return true;
 
         return false;
-    };
+    };   
 
     // events
-    void RowClicked(DataGridRowClickEventArgs<DependenciasInhabilitacion> args)
+    void RowClicked(DataGridRowClickEventArgs<Dependencia> args)
     {
         _events.Insert(0, $"Event = RowClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}");
     }
 
-    void RowRightClicked(DataGridRowClickEventArgs<DependenciasInhabilitacion> args)
+    void RowRightClicked(DataGridRowClickEventArgs<Dependencia> args)
     {
         _events.Insert(0, $"Event = RowRightClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}");
     }
 
-    void SelectedItemsChanged(HashSet<DependenciasInhabilitacion> items)
+    void SelectedItemsChanged(HashSet<Dependencia> items)
     {
         _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}");
     }
+
+    private async Task UdateDependencia(Dependencia causasInhabilitacion)
+    {
+        var logueoResponse = await Http.PostAsJsonAsync<Dependencia>("/api/Catalogos/ActualizarDependencia", causasInhabilitacion);
+        var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<Dependencia>();
+
+        _elements.idBandera = sesionUser.idBandera;
+        if (_elements.idBandera == 2)
+        {
+            causasInhabilitacion.Acciones = true;
+        }
+        else if (_elements.idBandera == 1)
+        {
+            causasInhabilitacion.Acciones = false;
+        }
+    }
+
 }
