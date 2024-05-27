@@ -137,7 +137,7 @@ else if (_elements.idBandera == 0)
     {
         var logueoResponse = await Http.PostAsJsonAsync<Dependencia>("/api/Catalogos/ActualizarDependencia", causasInhabilitacion);
         var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<Dependencia>();
-
+        _elements.idBandera = 3;
         _elements.idBandera = sesionUser.idBandera;
         if (_elements.idBandera == 2)
         {

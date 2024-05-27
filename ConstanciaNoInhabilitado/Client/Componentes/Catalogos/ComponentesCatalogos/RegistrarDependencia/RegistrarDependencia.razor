@@ -2,6 +2,7 @@
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
 @using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using ConstanciaNoInhabilitado.Shared.Entities.Catalogos
 @using MudBlazor
 @using ConstanciaNoInhabilitado.Client.Auth;
 @using Microsoft.AspNetCore.Authorization;
@@ -9,6 +10,9 @@
 @using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
 @inject AuthenticationStateProvider authenticationStateProvider;
 @inject NavigationManager navigationManager;
+@inject HttpClient http;
+@inject ISnackbar Snackbar
+
 @attribute [Authorize]
 
 
@@ -29,18 +33,47 @@
     <Main>
         <CardForm>
             <Content>
+                
                 <MudGrid Justify="Justify.Center">
+                    @if (_dependencia.idBandera == 1)
+                    {
+                        <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
+
+                    }
+                    else if (_dependencia.idBandera == 2)
+                    {
+                        <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+
+                    }
                     <MudItem xs="11">
                         <MudText Typo="Typo.h5">
                             Ingrese la siguiente información
                         </MudText>                        
                     </MudItem>
-                    <FormRegistrarDependencia />
+                    <FormRegistrarDependencia _dependencia="_dependencia" eventCallback="Insertar" />
                 </MudGrid>
             </Content>
         </CardForm>
     </Main>
 </MainFormHome>
+
+
 @code {
+    public Dependencia? _dependencia { get; set; } = new();
+
+    public async Task Insertar()
+    {
+        var resp = await http.PostAsJsonAsync<Dependencia>("api/Catalogos/RegistrarDependencia", _dependencia);
+        var deserialiado = await resp.Content.ReadFromJsonAsync<Dependencia>();
+        _dependencia.idBandera = deserialiado.idBandera;
+
+        if (_dependencia.idBandera == 1)
+        {
+            _dependencia.Descripcion = string.Empty;
+
+        }
+    }
 
 }
+
+

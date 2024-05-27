@@ -185,6 +185,22 @@
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "ActualizarCausa",
+    "RelativePath": "api/Catalogos/ActualizarCausa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "causasInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.CausasInhabilitacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
     "Method": "ActualizarDependencia",
     "RelativePath": "api/Catalogos/ActualizarDependencia",
     "HttpMethod": "POST",
@@ -277,6 +293,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "RegistrarCausa",
+    "RelativePath": "api/Catalogos/RegistrarCausa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "causaInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.CausasInhabilitacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "RegistrarDependencia",
+    "RelativePath": "api/Catalogos/RegistrarDependencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registroDependencia",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Catalogos.Dependencia",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

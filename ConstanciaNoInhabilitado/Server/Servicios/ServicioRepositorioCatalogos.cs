@@ -220,12 +220,72 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
                 using var connection = new SqlConnection(connectionString);
                 var id = await connection.ExecuteAsync(@"UPDATE Dependencia SET Descripcion = @Descripcion  where IdDependencia = @IdDependencia", usuarioEntities);
                 usuarioEntities.idBandera = id;
-
                 return usuarioEntities;
-
                 //var jsonResult = JsonConvert.SerializeObject(id);
                 //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
                 //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+        }
+
+        public async Task<CausasInhabilitacion> UpdateCausa(CausasInhabilitacion usuarioEntities)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.ExecuteAsync(@"UPDATE CausaInhabilitacion SET Descripcion = @Descripcion  where IdCausaInhabilitacion = @IdCausaInhabilitacion", usuarioEntities);
+                usuarioEntities.idBandera = id;
+                return usuarioEntities;
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+        }
+
+        public async Task<Dependencia> RegistrarDependencia(Dependencia registraDependencia)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.QuerySingleAsync<int>($@" INSERT INTO Dependencia VALUES (@Descripcion,@siglas) 
+                                                                    SELECT SCOPE_IDENTITY();", registraDependencia);
+
+                registraDependencia.IdDependencia = id;
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+                return registraDependencia;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+
+        }
+
+        public async Task<CausasInhabilitacion> RegistrarCausa(CausasInhabilitacion registraDependencia)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.QuerySingleAsync<int>($@" INSERT INTO CausaInhabilitacion VALUES (@Descripcion) 
+                                                                    SELECT SCOPE_IDENTITY();", registraDependencia);
+
+                registraDependencia.IdCausaInhabilitacion = id;
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+                return registraDependencia;
             }
             catch (Exception e)
             {

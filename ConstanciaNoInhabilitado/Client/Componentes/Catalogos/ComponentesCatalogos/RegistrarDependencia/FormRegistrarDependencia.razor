@@ -1,14 +1,25 @@
-﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Catalogos
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
 
 <MudItem xs="5">
-    <MudTextField @bind-Value="RegistraDependencia.Descripcion" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
+    <MudTextField @bind-Value="_dependencia.Descripcion" Label="Introduce el nombre de la Dependencia" Variant="Variant.Outlined" />
 </MudItem>
 
 <MudItem xs="3">
-    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Registra Dependencia</MudButton>
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;" OnClick="callEvent">Registra Dependencia</MudButton>
 </MudItem>
 
 @code
 {
-    private RegistraDependencia RegistraDependencia { get; set; } = new();
+    [Parameter]
+    public Dependencia? _dependencia { set; get; } = new Dependencia();
+
+    [Parameter]
+    public EventCallback<Dependencia> eventCallback { set; get; }
+
+
+    private async Task callEvent()
+    {
+        await eventCallback.InvokeAsync(_dependencia);
+    }
 }
