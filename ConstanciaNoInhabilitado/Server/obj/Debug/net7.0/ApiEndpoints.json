@@ -185,6 +185,22 @@
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "ActualizarDependencia",
+    "RelativePath": "api/Catalogos/ActualizarDependencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "causasInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Catalogos.Dependencia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
     "Method": "CargasCausas",
     "RelativePath": "api/Catalogos/CargasCausas",
     "HttpMethod": "POST",

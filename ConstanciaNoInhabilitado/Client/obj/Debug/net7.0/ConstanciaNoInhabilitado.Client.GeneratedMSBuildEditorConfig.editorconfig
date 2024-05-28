@@ -30,6 +30,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQWRtaW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponenteCatalino.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZUNhdGFsaW5vLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponenteCatalinoMetodo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZUNhdGFsaW5vTWV0b2RvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarInhabilitación/AgregarInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBZ3JlZ2FySW5oYWJpbGl0YWNpw7NuXEFncmVnYXJJbmhhYmlsaXRhY2nDs24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,24 +54,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xDYXJvdXNlbEFzaXN0ZW50ZVJlZ2lzdHJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoI.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSS5yYXpvcg==
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoIII/PasoIII.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSUlJXFBhc29JSUkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoII.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSUkucmF6b3I=
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoII/PasoII.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSUlcUGFzb0lJLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoIII.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSUlJLnJhem9y
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoI/PasoI.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSVxQYXNvSS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/CargarDesdeExcel.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxDYXJnYXJEZXNkZUV4Y2VsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitación.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxFZGl0YXJJbmhhYmlsaXRhY2nDs24ucmF6b3I=
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitación/EditarInhabilitación.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxFZGl0YXJJbmhhYmlsaXRhY2nDs25cRWRpdGFySW5oYWJpbGl0YWNpw7NuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitados.razor]
@@ -212,6 +220,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalDefineLaInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbERlZmluZUxhSW5oYWJpbGl0YWNpw7NuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalEditarInhabilitación.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbEVkaXRhckluaGFiaWxpdGFjacOzbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gilberto.peralta/Documents/NoInhabitado/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalErrores.razor]

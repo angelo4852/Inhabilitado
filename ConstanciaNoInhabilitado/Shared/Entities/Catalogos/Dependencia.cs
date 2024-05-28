@@ -62,6 +62,20 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Catalogos
 		public string? tipoSancion_clave { set; get; }
 		public string? tipoSancion_valor { set; get; }
 	}
+
+	public enum Genero 
+	{
+        Femenino = 1,
+        Masculino,
+        Otro
+    }
+
+    public enum TipoPersona
+    {
+        Fisica = 1,
+        Moral,
+        Otro
+    }
 }
 
 

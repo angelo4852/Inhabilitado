@@ -1,0 +1,41 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.AgregarInhabilitación;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+
+<MudDialog>
+    <TitleContent>
+        <div class="container">
+            <p style="text-align:center; font-size: 1.8rem;">
+                <b>Editar Inhabilitación</b>
+            </p>
+        </div>
+    </TitleContent>
+    <DialogContent>
+        <MudGrid Justify="Justify.Center">
+            <FormAgregarInhabilitación DefineInhabilitacion="true" MostrarFormatoEditarInhabilitacion="true" EditarInhabilitacion="EditarInhabilitacion" ActualizacionCorrecta="Submit" />
+        </MudGrid>
+    </DialogContent>
+    <DialogActions>
+    </DialogActions>
+</MudDialog>
+
+<style>
+    a {
+        color: #A5987E;
+        opacity: 75%;
+    }
+
+    .my-custom-class {
+        backdrop-filter: blur(10px);
+    }
+</style>
+
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public InhabilitacionADD EditarInhabilitacion { set; get; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}

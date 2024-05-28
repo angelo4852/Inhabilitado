@@ -44,6 +44,12 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 
     public class Session 
     {
+
+        /// <summary>
+        /// Id de usuario BD
+        /// </summary>       
+        public int IdUser { get; set; }
+
         /// <summary>
         /// Nombre de Usuario o RFC
         /// </summary>       

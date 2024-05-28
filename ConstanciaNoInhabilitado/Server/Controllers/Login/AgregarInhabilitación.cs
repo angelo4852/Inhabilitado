@@ -1,5 +1,6 @@
 ﻿using ConstanciaNoInhabilitado.Server.Interfaces;
 using ConstanciaNoInhabilitado.Server.Servicios;
+using ConstanciaNoInhabilitado.Shared.Entities.Catalogos;
 using ConstanciaNoInhabilitado.Shared.Entities.Login;
 using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 using Microsoft.AspNetCore.Http;
@@ -21,17 +22,17 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
         [HttpPost]
         [Route("CreateInhabilitacion")]
-        public async Task<Inhabilitacion> CreateInhabilitacion(Inhabilitacion inhabilitacion)
+        public async Task<InhabilitacionDTO> CreateInhabilitacion(InhabilitacionDTO inhabilitacionDTO)
         {
             try
             {
-                var inhabilitacionResponde = await _service.AgregarInhabilitacion(inhabilitacion);
+                var inhabilitacionResponde = await _service.AgregarInhabilitacion(inhabilitacionDTO);
                 return inhabilitacionResponde;
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Console.WriteLine(ex.Message);
+                return inhabilitacionDTO;
             }
         }
 
@@ -41,14 +42,50 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
         {
             try
             {
-                Inhabilitado inhabilitadoResponde = await _service.GetInhabilitado(rfc);
+                Inhabilitado inhabilitadoResponde = new();
+                var inhabilitado = await _service.GetInhabilitado(rfc);
+                if (inhabilitado is not null) inhabilitadoResponde = inhabilitado;
                 return inhabilitadoResponde;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
+
+        [HttpPost]
+        [Route("GetInhabilitaciones")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ActionResult> GetInhabilitaciones()
+        {
+            try
+            {
+                List<InhabilitacionADD> listaDependencias = await _service.GetInhabilitaciones();
+                return Ok(listaDependencias);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpPost]
+        [Route("ActualizarInhabilitacion")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ActionResult> ActualizarInhabilitacion(InhabilitacionUpdate InhabilitacionUpdate)
+        {
+            try
+            {
+                InhabilitacionUpdate inhabilitacionUpdateResponde = new();
+                inhabilitacionUpdateResponde = await _service.ActualizarInhabilitacion(InhabilitacionUpdate);
+                return Ok(inhabilitacionUpdateResponde);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

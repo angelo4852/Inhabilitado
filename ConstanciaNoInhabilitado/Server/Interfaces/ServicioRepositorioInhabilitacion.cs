@@ -6,8 +6,9 @@ namespace ConstanciaNoInhabilitado.Server.Interfaces
 {
     public interface IServicioRepositorioInhabilitacion
     {
-        Task<Inhabilitacion> AgregarInhabilitacion(Inhabilitacion Inhabilitacion);
-        Task<InhabilitacionDTO> ContruirInhabilitacionDTO(Inhabilitacion Inhabilitacion);
+        Task<InhabilitacionDTO> AgregarInhabilitacion(InhabilitacionDTO InhabilitacionDTO);       
         Task<Inhabilitado> GetInhabilitado(string RFC);
+        Task<List<InhabilitacionADD>> GetInhabilitaciones();
+        Task<InhabilitacionUpdate> ActualizarInhabilitacion(InhabilitacionUpdate InhabilitacionUpdate);
     }
 }

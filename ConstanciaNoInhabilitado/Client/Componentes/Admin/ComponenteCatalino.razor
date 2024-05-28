@@ -1,0 +1,38 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using System.Text.Json
+@using System.Text
+@inject ISnackbar Snackbar
+@inject HttpClient httpClient;
+
+<MudDialog DefaultFocus="DefaultFocus.LastChild">
+    <DialogContent>
+        <MudForm @bind-IsValid="Success">
+            <MudTextField T="string"
+                          Margin="Margin.Dense"
+                          Variant="Variant.Text"
+                          Label="Ingrese el RFC"
+                          Required="true"
+                          RequiredError="Es campo del RFC es un campo obligatorio"
+                          Immediate="true"
+                          @bind-Value="Rfc"
+                          OnlyValidateIfDirty="true" />
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="@Cancel">@("Cancelar")</MudButton>
+        <MudButton Color="Color.Primary" Disabled="!Success" OnClick="@Submit">@("Continuar")</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+
+    private bool Success { set; get; }
+    private string? Rfc { get; set; }
+
+
+    [CascadingParameter] MudDialogInstance? MudDialog { get; set; }
+
+    void Submit() => MudDialog?.Close(DialogResult.Ok(Rfc));
+    void Cancel() => MudDialog.Cancel();
+
+}

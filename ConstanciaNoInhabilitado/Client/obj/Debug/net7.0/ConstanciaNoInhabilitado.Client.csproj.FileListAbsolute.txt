@@ -3456,13 +3456,6 @@ C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\
 C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\refint\ConstanciaNoInhabilitado.Client.dll
 C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.pdb
 C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInahabilitado\2.2\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ref\ConstanciaNoInhabilitado.Client.dll
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.csproj.AssemblyReference.cache
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.AssemblyInfoInputs.cache
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.AssemblyInfo.cs
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.csproj.CoreCompileInputs.cache
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.sourcelink.json
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\bin\Debug\net7.0\wwwroot\_framework\blazor.boot.json
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -4089,6 +4082,13 @@ C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabi
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\bin\Debug\net7.0\icudt_no_CJK.dat
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\bin\Debug\net7.0\ConstanciaNoInhabilitado.Shared.dll
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\bin\Debug\net7.0\ConstanciaNoInhabilitado.Shared.pdb
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.csproj.AssemblyReference.cache
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.AssemblyInfoInputs.cache
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.AssemblyInfo.cs
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.csproj.CoreCompileInputs.cache
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\ConstanciaNoInhabilitado.Client.sourcelink.json
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\blazor.build.boot-extension.json
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\blazor.boot.json
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Client\obj\Debug\net7.0\staticwebassets.build.json
