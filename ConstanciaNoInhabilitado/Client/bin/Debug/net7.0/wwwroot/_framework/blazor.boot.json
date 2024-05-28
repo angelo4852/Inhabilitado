@@ -1,7 +1,7 @@
 {
   "entryAssembly": "ConstanciaNoInhabilitado.Client",
   "resources": {
-    "hash": "sha256-7rHATb30w10MI6r86iO+SArJ0jWN7Y5thFEPWm/k3zY=",
+    "hash": "sha256-213sKMaqbhGpyemjOJBy8TInSqEPaPkd4u/XjzTmOzk=",
     "runtime": {
       "dotnet.7.0.16.ddz5xdh08c.js": "sha256-4BiArKugJJtpQrznGF5zWfmJ2TB98+p6rKsyoqhtMk4=",
       "dotnet.timezones.blat": "sha256-rwyJqJu36keQwNmm/O1XV7tnkkVldIOK8GIjn4gTUt4=",
@@ -209,11 +209,11 @@
       "netstandard.dll": "sha256-c9xgB5oQro5/rBTTHeD+4cqLi9QOB+6fhaP3jmkeGo4=",
       "System.Private.CoreLib.dll": "sha256-FGXoQzMt7mcWfUZbWXoXgg8tPIt7PF+QZoXXBQWegAQ=",
       "ConstanciaNoInhabilitado.Shared.dll": "sha256-1biKTn8dWLy/MPSdNWx5r68R5n5iTgLZGfjvXYrsXJs=",
-      "ConstanciaNoInhabilitado.Client.dll": "sha256-GmcKOgaamJ3vPOg/3jGihFlmtn4xqyGrodUFgHhxCKE="
+      "ConstanciaNoInhabilitado.Client.dll": "sha256-Q2GJLbCFTW5uFj5UGp51Va+C8tDoJNLU0ZXu2itQtkE="
     },
     "pdb": {
       "ConstanciaNoInhabilitado.Shared.pdb": "sha256-H+jHQogj3pbtFWDnXDqu1GnovwwJ3CoP3/UCW3+BcsM=",
-      "ConstanciaNoInhabilitado.Client.pdb": "sha256-Uipf5NHmfIjr2m/o/o0E/g6oxwk+VatKuO3F/uNV0p0="
+      "ConstanciaNoInhabilitado.Client.pdb": "sha256-5Ak1XLjUTGZcbuZFxxSSUm1fGGo9tk88paiz3PE5fYc="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
