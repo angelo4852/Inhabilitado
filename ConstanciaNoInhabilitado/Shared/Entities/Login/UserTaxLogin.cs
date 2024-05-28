@@ -421,20 +421,26 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 
     public class CausasInhabilitacion
     {
+        public int IdCausaInhabilitacion { get; set; } 
+
         /// <summary>
         /// Id de la causa
         /// </summary>   
-        public string Value { get; set; }
+        public string? Value { get; set; } = string.Empty;
 
         /// <summary>
         /// Descripcion de la causa
         /// </summary>   
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; } 
 
         /// <summary>
         /// Muestra la opcion de actualizar y cancelar
         /// </summary>   
-        public bool Acciones { get; set; }
+        public bool Acciones { get; set; } = false;
+
+        public int? idBandera { get; set; } = 3;
+
+        
     }
 
     public class OrigenesInhabilitacion

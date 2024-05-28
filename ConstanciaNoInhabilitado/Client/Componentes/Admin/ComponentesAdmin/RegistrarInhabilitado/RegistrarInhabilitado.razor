@@ -85,6 +85,7 @@
                         </MudItem>
                     </MudGrid>
 
+<<<<<<< HEAD
                     @if (selectValueCategoria == "Servidor Público")
                     {
                         <FormServidorPublico servidorPublico="servidorPublico" eventCallback="Insertar" />
@@ -108,3 +109,19 @@
 }
 
 
+=======
+                @if (selectValueCategoria == "Servidor Público")
+                {
+                    <FormServidorPublico servidorPublico="servidorPublico" eventCallback="Insertar" />
+                }
+                else if (selectValueCategoria == "Proovedor o Contratista")
+                {
+                    <FormProveedorContratista servidorPublico="servidorPublico" eventCallback="Insertar" />
+                }
+            </Content>
+        </CardForm>
+
+       
+    </Main>
+</MainFormHome>
+>>>>>>> origin/inhabilitadoAngel

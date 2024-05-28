@@ -157,9 +157,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
         {
             try
             {
-                Dependencia listaOrigenes = await service.UpdateDependencia(causasInhabilitacion);
-                
-
+                Dependencia listaOrigenes = await service.UpdateDependencia(causasInhabilitacion);              
                 return Ok(listaOrigenes);
 			}
             catch (Exception ex)
@@ -167,6 +165,70 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
                 throw ex;
             }
         }
+
+        [HttpPost]
+        [Route("RegistrarDependencia")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ActionResult> RegistrarDependencia(Dependencia registroDependencia)
+        {
+            try
+            {
+                Dependencia listaOrigenes = await service.RegistrarDependencia(registroDependencia);
+
+				if (listaOrigenes.IdDependencia > 0)
+				{
+					listaOrigenes.idBandera = 1;
+
+				}
+				else 
+				{
+					listaOrigenes.idBandera = 2;
+				
+				}
+                return Ok(listaOrigenes);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpPost]
+        [Route("RegistrarCausa")]
+        public async Task<ActionResult> RegistrarCausa(CausasInhabilitacion causaInhabilitacion) 
+		{
+            CausasInhabilitacion causaInhabilitacion1 = await service.RegistrarCausa(causaInhabilitacion);
+
+            if (causaInhabilitacion1.IdCausaInhabilitacion > 0)
+            {
+                causaInhabilitacion1.idBandera = 1;
+
+            }
+            else
+            {
+                causaInhabilitacion1.idBandera = 2;
+
+            }
+            return Ok(causaInhabilitacion1);
+        }
+
+        [HttpPost]
+        [Route("ActualizarCausa")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ActionResult> ActualizarCausa(CausasInhabilitacion causasInhabilitacion)
+        {
+            try
+            {
+                CausasInhabilitacion listaOrigenes = await service.UpdateCausa(causasInhabilitacion);
+                return Ok(listaOrigenes);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
     }
 }

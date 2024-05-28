@@ -1,6 +1,7 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
-
-<MudDataGrid T="CausasInhabilitacion" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" 
+@inject HttpClient Http
+@inject ISnackbar Snackbar
+<MudDataGrid T="CausasInhabilitacion" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged" Style="width:65vw;">
     <ToolBarContent>
         <MudSpacer />
@@ -8,7 +9,7 @@
                       AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
     </ToolBarContent>
     <Columns>
-        <PropertyColumn Property="x => x.Value" Title="Nr" Sortable="false" Filterable="false" />
+        <PropertyColumn Property="x => x.IdCausaInhabilitacion" Title="Nr" Sortable="false" Filterable="false" />
           <TemplateColumn Title="Descripción">
               <CellTemplate>
                 @if (!context.Item.Acciones)
@@ -30,7 +31,7 @@
                 }
                 else
                 {
-                    <MudButton Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Update">Actualizar</MudButton>
+                    <MudButton Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Update" OnClick="(p => UdateDependencia(_elements))">Actualizar</MudButton>
                     <MudButton Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Close" OnClick="() => CancelarCausa(context.Item)">Cancelar</MudButton>
                 }             
             </CellTemplate>
@@ -40,24 +41,54 @@
         <MudDataGridPager T="CausasInhabilitacion" />
     </PagerContent>
 </MudDataGrid>
+@if (_elements.idBandera == 1)
+{
+    <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
+
+}
+else if (_elements.idBandera == 0)
+{
+    <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+}
+
+
 
 @code {
     private List<CausasInhabilitacion> Elements = new List<CausasInhabilitacion>();
     private string _searchString;
     private bool _sortNameByLength;
     private List<string> _events = new();
+    private CausasInhabilitacion _elements { set; get; } = new();
 
     protected override async Task OnInitializedAsync()
     {
-        Elements.Add(new CausasInhabilitacion { Value = "1", Descripcion = "ABUSO DE AUTORIDAD" });
-        Elements.Add(new CausasInhabilitacion { Value = "2", Descripcion = "ABUSO DE FUNCIONES" });
-        Elements.Add(new CausasInhabilitacion { Value = "3", Descripcion = "COHECHO O EXTORSIÓN" });
-        Elements.Add(new CausasInhabilitacion { Value = "4", Descripcion = "ENRIQUECIMIENTO ILICITO" });
-        Elements.Add(new CausasInhabilitacion { Value = "5", Descripcion = "INCUMPLIMIENTO DE DECLARACIÓN DE SITUACIÓN PATRIMONIAL" });
+        await CargarServidoresPublicos();
+        // Elements.Add(new CausasInhabilitacion { Value = "1", Descripcion = "ABUSO DE AUTORIDAD" });
+        // Elements.Add(new CausasInhabilitacion { Value = "2", Descripcion = "ABUSO DE FUNCIONES" });
+        // Elements.Add(new CausasInhabilitacion { Value = "3", Descripcion = "COHECHO O EXTORSIÓN" });
+        // Elements.Add(new CausasInhabilitacion { Value = "4", Descripcion = "ENRIQUECIMIENTO ILICITO" });
+        // Elements.Add(new CausasInhabilitacion { Value = "5", Descripcion = "INCUMPLIMIENTO DE DECLARACIÓN DE SITUACIÓN PATRIMONIAL" });
     }
+    private async Task CargarServidoresPublicos()
+    {
+
+        var responde_Servidores_publicos = await Http!.PostAsync($"/api/Catalogos/CargasCausas", null);
+        if (responde_Servidores_publicos.IsSuccessStatusCode)
+        {
+            List<CausasInhabilitacion> process = await responde_Servidores_publicos.Content.ReadFromJsonAsync<List<CausasInhabilitacion>>();
+
+            if (process.Count > 0)
+            {
+                Elements = process;
+            }
+        }
+        StateHasChanged();
+    }
+
 
     private async Task EditarCausa(CausasInhabilitacion causasInhabilitacion)
     {
+        _elements = causasInhabilitacion;
         causasInhabilitacion.Acciones = true;
     }
     private async Task CancelarCausa(CausasInhabilitacion causasInhabilitacion)
@@ -76,6 +107,7 @@
     // quick filter - filter globally across multiple columns with the same input
     private Func<CausasInhabilitacion, bool> _quickFilter => x =>
     {
+        _elements.idBandera = 3;
         if (string.IsNullOrWhiteSpace(_searchString))
             return true;
 
@@ -99,5 +131,22 @@
     void SelectedItemsChanged(HashSet<CausasInhabilitacion> items)
     {
         _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}");
+    }
+
+    private async Task UdateDependencia(CausasInhabilitacion causasInhabilitacion)
+    {
+        var logueoResponse = await Http.PostAsJsonAsync<CausasInhabilitacion>("/api/Catalogos/ActualizarCausa", causasInhabilitacion);
+        var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<CausasInhabilitacion>();
+        _elements.idBandera = 3;
+
+        _elements.idBandera = sesionUser.idBandera;
+        if (_elements.idBandera == 2)
+        {
+            causasInhabilitacion.Acciones = true;
+        }
+        else if (_elements.idBandera == 1)
+        {
+            causasInhabilitacion.Acciones = false;
+        }
     }
 }
