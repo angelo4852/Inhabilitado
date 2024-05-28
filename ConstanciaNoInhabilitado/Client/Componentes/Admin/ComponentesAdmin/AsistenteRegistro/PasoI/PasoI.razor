@@ -1,8 +1,10 @@
 ﻿@using ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs
+@using ConstanciaNoInhabilitado.Shared.Entities.Catalogos;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 @inject IDialogService dialogService 
 
 <MudGrid Justify="Justify.Center">
-    <MudItem xs="10">
+    <MudItem xs="6">
         <MudText Typo="Typo.h5">Paso I.</MudText>
         <MudText Typo="Typo.h6" Style="color:#A8113E;">Definir al Inhabilitado.</MudText>
         <br />
@@ -23,24 +25,20 @@
         <MudText Typo="Typo.body1">
             <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowRight"></MudIcon>
             Si no existe proceda a introducir los datos solicitados para el nuevo registro y de clic en Registrar.
-        </MudText>      
+        </MudText>             
         <br />
         <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;" OnClick="Inhabilitado">Iniciar</MudButton>
-    </MudItem>   
-</MudGrid>
-
-@code {
-
-    public async Task Inhabilitado()
+    </MudItem>
+    @if (inhabilitado is not null)
     {
-        var options = new DialogOptions()
-            {
-                FullWidth = true,
-                MaxWidth = MaxWidth.Medium,
-                DisableBackdropClick = true,
-                ClassBackground = "filterBackground",
-                CloseButton = true
-            };
-        await dialogService.ShowAsync<ModalDefineInhabilitado>("Simple Dialog", options);
-    }
-}
+        <MudItem xs="6">
+            <MudText Typo="Typo.h5">Detalle.</MudText>
+            <MudText Typo="Typo.h6" Style="color:#A8113E;">Detalle del inhabilitado.</MudText>
+            <br />
+            <MudText Typo="Typo.subtitle1"><b>Nombre: </b>@inhabilitado.ApellidoPaterno @inhabilitado.ApellidoMaterno @inhabilitado.Nombre</MudText>
+                <MudText Typo="Typo.subtitle1"><b>RFC: </b>@inhabilitado.RFC</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Sexo:</b> @(inhabilitado.IdGenero == (int)Genero.Femenino ? Genero.Femenino : inhabilitado.IdGenero == (int)Genero.Masculino ? Genero.Masculino : inhabilitado.IdGenero == (int)Genero.Otro ? Genero.Otro : Genero.Otro)</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Tipo:</b> @(inhabilitado.Tipo == ((int)TipoPersona.Fisica).ToString() ? TipoPersona.Fisica : TipoPersona.Moral)</MudText>
+            </MudItem>
+    }    
+</MudGrid>

@@ -30,10 +30,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
 
         private string selectValueCategoria { set; get; }
 
-        //protected override async Task OnInitializedAsync()
-        //{
-
-        //}
+        [Parameter]public bool MostrarModal {  get; set; }
 
         public async Task Insertar(ServidorPublico _servidorPublico)
         {

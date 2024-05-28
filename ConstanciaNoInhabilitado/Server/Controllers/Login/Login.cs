@@ -33,7 +33,8 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
             Session session = new Session();                     
             var resp = await service.login(userTaxLogin);
             if (resp != null)
-            {                
+            {
+               session.IdUser = (int)resp.IdUsuario!;
                session.User = resp.Nombre;
                session.Correo = resp.CorreoElectronico;
                session.Rol = (string)resp.IdRolUsuario;                

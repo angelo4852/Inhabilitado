@@ -1,0 +1,118 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/EditarInhabilitacion"
+
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@attribute [Authorize]
+@inject IDialogService DialogService;
+@inject ISnackbar Snackbar
+@inject HttpClient httpClient
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage
+@inject IDialogService dialogService
+
+
+
+<MainFormHome>
+    <ContentBreadcrumbs>
+        <MudLink Href="ConstanciaNoInhabilitado/Default">
+            <b>Inicio</b>
+        </MudLink>
+        <b>/</b>
+        <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
+            <b>Administración</b>
+        </MudLink>
+        <b>/</b>
+        <b style="color:#A8113E;">
+            Editar Inhabilitación
+        </b>
+    </ContentBreadcrumbs> 
+
+    <Main>
+        @if (MostrarSppinerLogin)
+        {
+            <div class="row justify-content-center">
+                <div class="col-md-12 mb-4 SpacePaddingInput text-center">
+                    <MudProgressCircular Color="Color.Secondary" Style="height:70px;width:70px;" Indeterminate="true"></MudProgressCircular>
+                    <MudText Typo="Typo.h4">Cargando información ...</MudText>
+                </div>
+            </div>
+        }
+        else
+        {
+            <CardForm>
+                <Content>
+                    <MudGrid Justify="Justify.Center">
+                        <MudItem xs="11">
+                            <MudText Typo="Typo.h5">Para modificar una inhabilitación introduzca el R.F.C. asociado a esta</MudText>
+                        </MudItem>
+                    </MudGrid>
+
+                    <MudDataGrid T="InhabilitacionADD" MultiSelection="true" Items="@inhabilitacionBDs" QuickFilter="@_quickFilter"
+                                 Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" Filterable="false" SortMode="@SortMode.None">
+                        <ToolBarContent>
+                            <MudText Typo="Typo.h6">Inhabilitaciones</MudText>
+                            <MudSpacer />
+                            <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
+                                          AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                        </ToolBarContent>
+                        <Columns>
+                            <HierarchyColumn T="InhabilitacionADD" />
+                            <PropertyColumn Property="x => x.IdInhabilitacion" Title="Id" Sortable="false" Filterable="false" />
+                            <PropertyColumn Property="x => x.NombreInhabilitado + ' ' + x.ApellidoPaternoInhabilitado + ' ' + x.ApellidoMaternoInhabilitado" Title="Nombre Completo" />
+                            <PropertyColumn Property="x => x.RFC" Title="RFC" />
+                            <PropertyColumn Property="x => x.ExpedienteLegal" Title="Expediente Legal" />
+                            <PropertyColumn Property="x => x.Dependencia" Title="Dependencia" />
+                            <TemplateColumn>
+                                <CellTemplate>
+                                    <MudStack Row>
+                                     <MudButton Variant="Variant.Filled" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Edit" OnClick="() => EditarCausa(context.Item)">Editar</MudButton>
+                                 </MudStack>
+                             </CellTemplate>
+                         </TemplateColumn>
+                     </Columns>
+                     <ChildRowContent>
+                         <MudCard>
+                             <MudCardContent>
+                                 <MudGrid>
+                                     <MudItem xs="2"><b>Fecha inicio:</b> @context.Item.FechaInicio</MudItem>
+                                            <MudItem xs="2"><b>Fecha termino:</b> @context.Item.FechaTermino</MudItem>
+                                            <MudItem xs="3"><b>Cargo:</b> @context.Item.Cargo</MudItem>
+                                            <MudItem xs="3"><b>Fecha resolucion:</b> @context.Item.FechaResolucion</MudItem>
+                                            <MudItem xs="4"><b>Autoridad: </b>@context.Item.Autoridad</MudItem>
+                                            <MudItem xs="4"><b>Descripcion:</b> @context.Item.Descripcion</MudItem>
+                                            <MudItem xs="4"><b>Periodo:</b> @context.Item.Periodo</MudItem>
+                                            @* <MudItem xs="3">Tipo: @context.Item.Tipo</MudItem> *@
+                                            <MudItem xs="3"><b>Tipo inhabilitacion:</b> @context.Item.TipoInhabilitacion</MudItem>
+                                            <MudItem xs="3"><b>Origen inhabilitacion:</b> @context.Item.OrigenInhabilitacion</MudItem>
+                                            <MudItem xs="3"><b>Causa inhabilitacion: </b>@context.Item.CausaInhabilitacion</MudItem>
+                                            <MudItem xs="3"><b>Nombre completo usuario:</b> @context.Item.NombreCompletoUsuario</MudItem>
+                                            <MudItem xs="3"><b>Estatus: </b>@context.Item.Estatus</MudItem>
+                                            <MudItem xs="3"><b>En proceso:</b> @context.Item.EnProceso</MudItem>
+                                            <MudItem xs="3"><b>Tipo falta: </b>@context.Item.TipoFalta</MudItem>
+                                            <MudItem xs="3"><b>Tipo sancion:</b> @context.Item.TipoSancion</MudItem>
+                                            <MudItem xs="3"><b>Monto: </b>@context.Item.Monto</MudItem>
+                                            <MudItem xs="3"><b>Moneda:</b> @context.Item.Moneda</MudItem>
+                                            <MudItem xs="3"><b>Siglas:</b> @context.Item.Siglas</MudItem>
+                                            <MudItem xs="3"><b>Nivel: </b>@context.Item.Nivel</MudItem>
+                                        </MudGrid>
+                                    </MudCardContent>
+                                </MudCard>
+                            </ChildRowContent>
+                            <PagerContent>
+                                <MudDataGridPager T="InhabilitacionADD" />
+                            </PagerContent>
+                        </MudDataGrid>
+
+                    </Content>
+                </CardForm>
+        }
+      
+    </Main>
+</MainFormHome>

@@ -44,6 +44,12 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 
     public class Session 
     {
+
+        /// <summary>
+        /// Id de usuario BD
+        /// </summary>       
+        public int IdUser { get; set; }
+
         /// <summary>
         /// Nombre de Usuario o RFC
         /// </summary>       
@@ -211,105 +217,121 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         public string Criterio { get; set; } = string.Empty;
     }
 
-    public class RegistrarNuevaInhabilitacion
-    {
-        /// <summary>
-        /// inhabilitación en proceso de Servidor Publico
-        /// </summary>   
-        public string InhabilitacionProceso { get; set; }
-        
+	public class RegistrarNuevaInhabilitacion
+	{
+
+		/// <summary>
+		/// idUsuario
+		/// </summary>   
+		public int idInhabilitacion { get; set; } = 0;
+
+		/// <summary>
+		/// idUsuario
+		/// </summary>   
+		public int idUsuario { get; set; }
+
+		/// <summary>
+		/// Estatus
+		/// </summary>   
+		public int Estatus { get; set; } = 1;
+
+
+		/// <summary>
+		/// inhabilitación en proceso de Servidor Publico
+		/// </summary>   
+		public int InhabilitacionProceso { get; set; }
+
         /// <summary>
         /// RFC de Servidor Publico
         /// </summary>   
-        public string RFC { get; set; }
+        public string RFC { get; set; } = "ROPY740314PD2";
 
-        /// <summary>
-        /// Autoridad Sancionadora de Servidor Publico
-        /// </summary>   
-        public string AutoridadSancionadora { get; set; }
+		/// <summary>
+		/// Autoridad Sancionadora de Servidor Publico
+		/// </summary>   
+		public string AutoridadSancionadora { get; set; }
 
-        /// <summary>
-        /// Dependencia de Servidor Publico
-        /// </summary>   
-        public string Dependencia { get; set; }
+		/// <summary>
+		/// Dependencia de Servidor Publico
+		/// </summary>   
+		public int Dependencia { get; set; }
 
-        /// <summary>
-        /// Puesto de Servidor Publico
-        /// </summary>   
-        public string Puesto { get; set; }
+		/// <summary>
+		/// Puesto de Servidor Publico
+		/// </summary>   
+		public string Puesto { get; set; }
 
-        /// <summary>
-        /// Fecha de Inicio de Servidor Publico
-        /// </summary>   
-        public DateTime? FechaInicio { get; set; }
+		/// <summary>
+		/// Fecha de Inicio de Servidor Publico
+		/// </summary>   
+		public DateTime? FechaInicio { get; set; }
 
-        /// <summary>
-        /// Fecha de Término de Servidor Publico
-        /// </summary>   
-        public DateTime? FechaTermino { get; set; }
+		/// <summary>
+		/// Fecha de Término de Servidor Publico
+		/// </summary>   
+		public DateTime? FechaTermino { get; set; }
 
-        /// <summary>
-        /// Periodo de Servidor Publico
-        /// </summary>   
-        public string Periodo { get; set; }
+		/// <summary>
+		/// Periodo de Servidor Publico
+		/// </summary>   
+		public string Periodo { get; set; }
 
-        /// <summary>
-        /// Fecha de Resolución de Servidor Publico
-        /// </summary>   
-        public DateTime? FechaResolución { get; set; }
+		/// <summary>
+		/// Fecha de Resolución de Servidor Publico
+		/// </summary>   
+		public DateTime? FechaResolución { get; set; }
 
-        /// <summary>
-        /// Expediente Legal de Servidor Publico
-        /// </summary>   
-        public string ExpedienteLegal { get; set; }
+		/// <summary>
+		/// Expediente Legal de Servidor Publico
+		/// </summary>   
+		public string ExpedienteLegal { get; set; }
 
-        /// <summary>
-        /// Tipo de Inhabilitación de Servidor Publicoq
-        /// </summary>   
-        public string TipoInhabilitación { get; set; }
+		/// <summary>
+		/// Tipo de Inhabilitación de Servidor Publicoq
+		/// </summary>   
+		public int TipoInhabilitación { get; set; }
 
-        /// <summary>
-        /// Origen de Inhabilitación de Servidor Publico
-        /// </summary>   
-        public string OrigenInhabilitación { get; set; }
+		/// <summary>
+		/// Origen de Inhabilitación de Servidor Publico
+		/// </summary>   
+		public int OrigenInhabilitación { get; set; }
 
-        /// <summary>
-        /// Causa de la Inhabilitación de Servidor Publico
-        /// </summary>   
-        public string CausaInhabilitación { get; set; }
+		/// <summary>
+		/// Causa de la Inhabilitación de Servidor Publico
+		/// </summary>   
+		public int CausaInhabilitación { get; set; }
 
-        /// <summary>
-        /// Falta Cometida de Servidor Publico
-        /// </summary>   
-        public string FaltaCometida { get; set; }
+		/// <summary>
+		/// Falta Cometida de Servidor Publico
+		/// </summary>   
+		public int FaltaCometida { get; set; }
 
-        /// <summary>
-        /// Tipo de la Sanción de Servidor Publico
-        /// </summary>   
-        public string TipoSanción { get; set; }
+		/// <summary>
+		/// Tipo de la Sanción de Servidor Publico
+		/// </summary>   
+		public int TipoSanción { get; set; }
 
-        /// <summary>
-        /// Tipo Moneda de Servidor Publico
-        /// </summary>   
-        public string TipoMoneda { get; set; }
+		/// <summary>
+		/// Tipo Moneda de Servidor Publico
+		/// </summary>   
+		public int TipoMoneda { get; set; }
 
-        /// <summary>
-        /// Monto de Servidor Publico
-        /// </summary>   
-        public decimal Monto { get; set; }
+		/// <summary>
+		/// Monto de Servidor Publico
+		/// </summary>   
+		public decimal Monto { get; set; }
 
-        /// <summary>
-        /// Clave del puesto del nivel del Servidor Público de Servidor Publico
-        /// </summary>   
-        public string ClaveNivelServidorPúblico { get; set; }
+		/// <summary>
+		/// Clave del puesto del nivel del Servidor Público de Servidor Publico
+		/// </summary>   
+		public int ClaveNivelServidorPúblico { get; set; }
 
-        /// <summary>
-        /// Descripción de la Inhabilitación de Servidor Publico
-        /// </summary>   
-        public string DescripciónInhabilitación { get; set; }
-    }
-
-    public class TypePerson
+		/// <summary>
+		/// Descripción de la Inhabilitación de Servidor Publico
+		/// </summary>   
+		public string DescripciónInhabilitación { get; set; }
+	}
+	public class TypePerson
     {
         /// <summary>
         /// Id TypePerson

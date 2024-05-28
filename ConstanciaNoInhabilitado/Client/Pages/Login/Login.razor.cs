@@ -7,9 +7,16 @@ namespace ConstanciaNoInhabilitado.Client.Pages.Login
 {
     public partial class Login
     {
-        public UserTaxLogin loguear { get; set; } = new UserTaxLogin();
+        public UserTaxLogin loguear { get; set; } = new();
+       
         private bool MostrarSppinerLogin { get; set; }
         private bool MostrarErrorDeConsulta { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            loguear.Usuario = "angel.hernandezj";
+            loguear.Contrasena = "e10adc3949ba59abbe56e057f20f883e";
+        }
 
         private async Task ConsultaUsuario()
         {
