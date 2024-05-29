@@ -217,6 +217,22 @@
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "ActualizarOrigen",
+    "RelativePath": "api/Catalogos/ActualizarOrigen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "origenInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.OrigenesInhabilitacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
     "Method": "CargasCausas",
     "RelativePath": "api/Catalogos/CargasCausas",
     "HttpMethod": "POST",
@@ -293,6 +309,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
+    "Method": "RegistraOrigen",
+    "RelativePath": "api/Catalogos/RegistraOrigen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "causaInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.OrigenesInhabilitacion",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

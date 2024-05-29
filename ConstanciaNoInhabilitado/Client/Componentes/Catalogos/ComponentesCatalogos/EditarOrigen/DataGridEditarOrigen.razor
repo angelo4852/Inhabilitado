@@ -1,4 +1,8 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using System.Text.Json
+@using System.Text
+@inject HttpClient Http
+@inject ISnackbar Snackbar
 
 <MudDataGrid T="OrigenesInhabilitacion" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged" Style="width:65vw;">
@@ -30,7 +34,7 @@
                 }
                 else
                 {
-                    <MudButton Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Update">Actualizar</MudButton>
+                    <MudButton Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Update" OnClick="(p => UpdateOrigen(_elements))">Actualizar</MudButton>
                     <MudButton Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Close" OnClick="() => CancelarCausa(context.Item)">Cancelar</MudButton>
                 }
             </CellTemplate>
@@ -41,26 +45,44 @@
     </PagerContent>
 </MudDataGrid>
 
+@if (_elements.idBandera == 1)
+{
+    <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
+
+}
+else if (_elements.idBandera == 0)
+{
+    <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+}
 @code {
     private List<OrigenesInhabilitacion> Elements = new List<OrigenesInhabilitacion>();
     private string _searchString;
     private bool _sortNameByLength;
     private List<string> _events = new();
+    private OrigenesInhabilitacion _elements { set; get; } = new();
 
     protected override async Task OnInitializedAsync()
     {
-        Elements.Add(new OrigenesInhabilitacion { Value = "1", Descripcion = "AUDITORÍA" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "2", Descripcion = "AUDITORIA FEDERAL" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "3", Descripcion = "AUDITORÍA SUPERIOR DE LA FEDERACIÓN	" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "4", Descripcion = "DENUNCIA CIUDADANA	" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "5", Descripcion = "DENUNCIA DE SERVIDOR PÚBLICO	" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "6", Descripcion = "INCUMPLIMIENTO DE DECLARACIÓN DE SITUACIÓN PATRIMONIAL	" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "7", Descripcion = "OTRO" });
-        Elements.Add(new OrigenesInhabilitacion { Value = "8", Descripcion = "QUEJA CIUDADANA	" });
+        var llenaLista = await Http.PostAsJsonAsync<List<OrigenesInhabilitacion>>("api/Catalogos/CargasOrigen", null);
+        var respuesta = await llenaLista.Content.ReadFromJsonAsync<List<OrigenesInhabilitacion>>();
+
+        if (respuesta.Count > 0)
+        {
+            Elements = respuesta;
+
+        }
+        else
+        {           
+
+
+        }
+
     }
 
     private async Task EditarCausa(OrigenesInhabilitacion causasInhabilitacion)
     {
+        _elements = causasInhabilitacion;
+
         causasInhabilitacion.Acciones = true;
     }
     private async Task CancelarCausa(OrigenesInhabilitacion causasInhabilitacion)
@@ -102,5 +124,32 @@
     void SelectedItemsChanged(HashSet<OrigenesInhabilitacion> items)
     {
         _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}");
+    }
+
+    public async Task UpdateOrigen(OrigenesInhabilitacion origenesInhabilitacion)
+    {
+        var respuesta = await Http.PostAsJsonAsync<OrigenesInhabilitacion>("api/Catalogos/ActualizarOrigen", origenesInhabilitacion);
+        var sesionUser = await respuesta.Content.ReadFromJsonAsync<OrigenesInhabilitacion>();
+        string data = JsonSerializer.Serialize(sesionUser, new JsonSerializerOptions { WriteIndented = true });
+               var content = new StringContent(data, Encoding.UTF8, "application/json");
+               Console.WriteLine($"Json:{data}");
+
+
+
+        // sesionUser.idBandera = sesionUser.idBandera;
+
+        // Console.WriteLine(sesionUser);
+
+        _elements.idBandera = 3;
+
+        _elements.idBandera = sesionUser.idBandera;
+        if (sesionUser.idBandera == 2)
+        {
+            origenesInhabilitacion.Acciones = true;
+        }
+        else if (sesionUser.idBandera == 1)
+        {
+            origenesInhabilitacion.Acciones = false;
+        }
     }
 }

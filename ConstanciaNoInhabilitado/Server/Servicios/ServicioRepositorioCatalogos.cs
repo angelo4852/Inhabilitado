@@ -294,5 +294,47 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             }
 
         }
+
+
+        public async Task<OrigenesInhabilitacion> RegistraOrigen(OrigenesInhabilitacion registraDependencia)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.QuerySingleAsync<int>($@" INSERT INTO OrigenInhabilitacion VALUES (@Descripcion) 
+                                                                    SELECT SCOPE_IDENTITY();", registraDependencia);
+
+                registraDependencia.IdOrigenInhabilitacion = id;
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+                return registraDependencia;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+
+        }
+
+        public async Task<OrigenesInhabilitacion> UpdateOrigen(OrigenesInhabilitacion usuarioEntities)
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var id = await connection.ExecuteAsync(@"UPDATE OrigenInhabilitacion SET Descripcion = @Descripcion  where IdOrigenInhabilitacion = @IdOrigenInhabilitacion", usuarioEntities);
+                usuarioEntities.idBandera = id;
+                return usuarioEntities;
+                //var jsonResult = JsonConvert.SerializeObject(id);
+                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
+                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+        }
     }
 }

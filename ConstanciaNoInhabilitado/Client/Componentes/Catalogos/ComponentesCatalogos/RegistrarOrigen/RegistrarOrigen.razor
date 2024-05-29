@@ -2,6 +2,7 @@
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
 @using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using ConstanciaNoInhabilitado.Shared.Entities.Login
 @using MudBlazor
 @using ConstanciaNoInhabilitado.Client.Auth;
 @using Microsoft.AspNetCore.Authorization;
@@ -10,7 +11,8 @@
 @inject AuthenticationStateProvider authenticationStateProvider;
 @inject NavigationManager navigationManager;
 @attribute [Authorize]
-
+@inject HttpClient Http
+@inject ISnackbar Snackbar
 
 <MainFormHome>
     <ContentBreadcrumbs>
@@ -35,13 +37,31 @@
                             Ingrese los siguientes datos
                         </MudText>
                     </MudItem>
-                    <FormRegistrarOrigen />
+                    <FormRegistrarOrigen RegistrarOrigenInhabilitacion="_RegistrarOrigenInhabilitacion" eventCallback="Registrar" />
                 </MudGrid>
             </Content>
         </CardForm>
     </Main>
 </MainFormHome>
+ @if (_RegistrarOrigenInhabilitacion.idBandera == 1)
+{
+    <p onclick="((@Snackbar.Add("El registro se agrego correctamente en la base de datos", Severity.Success))"></p>
 
+}
+else if (_RegistrarOrigenInhabilitacion.idBandera == 2)
+{
+    <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+
+}
 @code {
+    public OrigenesInhabilitacion _RegistrarOrigenInhabilitacion { get; set; } = new();
 
+    public async Task Registrar()
+    {
+        var resp = await Http.PostAsJsonAsync<OrigenesInhabilitacion>("api/Catalogos/RegistraOrigen", _RegistrarOrigenInhabilitacion);
+        var respuesta = await resp.Content.ReadFromJsonAsync<OrigenesInhabilitacion>();
+
+        _RegistrarOrigenInhabilitacion = respuesta;
+        Console.WriteLine("Hola como estas");    
+    }
 }

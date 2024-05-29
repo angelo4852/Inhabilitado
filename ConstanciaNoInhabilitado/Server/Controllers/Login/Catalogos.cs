@@ -229,6 +229,40 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
         }
 
 
+        [HttpPost]
+        [Route("RegistraOrigen")]
+        public async Task<ActionResult> RegistraOrigen(OrigenesInhabilitacion causaInhabilitacion)
+        {
+            OrigenesInhabilitacion causaInhabilitacion1 = await service.RegistraOrigen(causaInhabilitacion);
+
+            if (causaInhabilitacion1.IdOrigenInhabilitacion > 0)
+            {
+                causaInhabilitacion1.idBandera = 1;
+
+            }
+            else
+            {
+                causaInhabilitacion1.idBandera = 2;
+
+            }
+            return Ok(causaInhabilitacion1);
+        }
+
+        [HttpPost]
+        [Route("ActualizarOrigen")]
+        // GET: RegistrarInhabilitadoController/Create
+        public async Task<ActionResult> ActualizarOrigen(OrigenesInhabilitacion origenInhabilitacion)
+        {
+            try
+            {
+                OrigenesInhabilitacion listaOrigenes = await service.UpdateOrigen(origenInhabilitacion);
+                return Ok(listaOrigenes);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 }

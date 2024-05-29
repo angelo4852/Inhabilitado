@@ -439,20 +439,24 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 
     public class OrigenesInhabilitacion
     {
+        public int IdOrigenInhabilitacion { get; set; }
+
         /// <summary>
         /// Id de la Origenes
         /// </summary>   
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// Descripcion de la Origenes
         /// </summary>   
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
 
         /// <summary>
         /// Muestra la opcion de actualizar y cancelar
         /// </summary>   
         public bool Acciones { get; set; }
+        public int? idBandera { get; set; } = 3;
+
     }
 
     public class DependenciasInhabilitacion

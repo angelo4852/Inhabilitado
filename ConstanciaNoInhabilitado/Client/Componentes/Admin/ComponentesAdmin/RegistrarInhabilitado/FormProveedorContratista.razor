@@ -1,4 +1,6 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using static MudBlazor.CategoryTypes
+@inject HttpClient httpClient;
 
 <MudGrid Justify="Justify.Center">
     <MudItem xs="7">
@@ -65,17 +67,13 @@
 
 @code {
     [Parameter] public bool DefineInhabilitado { set; get; } = false;
-   
+
     [Parameter]
     public EventCallback<ServidorPublico> eventCallback { set; get; }
     [Parameter]
     public ServidorPublico? servidorPublico { set; get; } = new ServidorPublico();
-    private List<Sexo> ListSexo = new List<Sexo>
-    {
-        new Sexo { idGenero =1, genero_valor = "Femenino" },
-        new Sexo { idGenero = 2, genero_valor = "Masculino" },
-        new Sexo { idGenero = 3, genero_valor = "Otro" }
-    };
+    private List<Sexo> ListSexo { get; set; } = new();
+
     private List<TypePerson> TypePerson = new List<TypePerson>
     {
         new TypePerson { Value = "1", Text = "Fisica" },
@@ -84,6 +82,14 @@
 
     private async Task callEvent()
     {
+
+        var resp = await httpClient.PostAsJsonAsync<List<Sexo>>("api/AdmisRegistraInhabilitado/Sexo",null);
+        var respuesta = await resp.Content.ReadFromJsonAsync<List<Sexo>>();
+
+        // ListSexo = respuesta;
+
+        respuesta.AddRange(ListSexo);
+        Console.WriteLine(servidorPublico);
         await eventCallback.InvokeAsync(servidorPublico);
     }
 }
