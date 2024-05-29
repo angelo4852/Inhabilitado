@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarorigen\\datagrideditarorigen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinahabilitado\\2.2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\datagrideditardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\datagrideditardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinahabilitado\\2.2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarcausa\\datagrideditarcausa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarcausa\\datagrideditarcausa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinahabilitado\\2.2\\inhabilitado\\constancianoinhabilitado\\server\\controllers\\login\\catalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\controllers\\login\\catalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinahabilitado\\2.2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\datagrideditardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\datagrideditardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinahabilitado\\2.2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\registrarcausa\\formregistrarcausa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -101,7 +101,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EditarCausa.razor",
               "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarCausa\\EditarCausa.razor",
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarCausa\\EditarCausa.razor",
@@ -114,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegistrarInhabilitado.razor.cs",
               "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\RegistrarInhabilitado\\RegistrarInhabilitado.razor.cs",
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\RegistrarInhabilitado\\RegistrarInhabilitado.razor.cs",
@@ -127,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormRegistrarDependencia.razor",
               "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\RegistrarDependencia\\FormRegistrarDependencia.razor",
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\RegistrarDependencia\\FormRegistrarDependencia.razor",
@@ -146,20 +146,20 @@
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor",
               "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor*",
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor*",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAUwIoAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-29T18:21:27.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "DataGridEditarDependencia.razor",
               "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
               "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
               "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAUwFsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAACPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-27T20:04:21.018Z",
               "EditorCaption": ""
@@ -178,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DataGridEditarCausa.razor",
               "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarCausa\\DataGridEditarCausa.razor",
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarCausa\\DataGridEditarCausa.razor",
@@ -204,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Catalogos.cs",
               "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInahabilitado\\2.2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
               "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",

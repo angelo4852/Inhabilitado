@@ -4,7 +4,7 @@
 @inject HttpClient Http
 @inject ISnackbar Snackbar
 
-<MudDataGrid T="OrigenesInhabilitacion" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple"
+<MudDataGrid T="OrigenesInhabilitacion" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged" Style="width:65vw;">
     <ToolBarContent>
         <MudSpacer />
@@ -12,7 +12,7 @@
                       AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
     </ToolBarContent>
     <Columns>
-        <PropertyColumn Property="x => x.Value" Title="Nr" Sortable="false" Filterable="false" />
+        <PropertyColumn Property="x => x.IdOrigenInhabilitacion" Title="Nr" Sortable="false" Filterable="false" />
         <TemplateColumn Title="Descripción">
             <CellTemplate>
                 @if (!context.Item.Acciones)
