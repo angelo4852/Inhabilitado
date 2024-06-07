@@ -13,13 +13,10 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
     {
         [Parameter]
         public ServidorPublico servidorPublico { set; get; } = new ServidorPublico();
-        public ServidorPublico servidorPublicoRegistro { set; get; } = new ServidorPublico();
+        public ServidorPublico servidorPublicoRegistroAsistente { set; get; } = new ServidorPublico();
         private int idInhabilitado { get; set; }
         private string nombreInhabilitado { get; set; }
         private bool bandera { get; set; } = true;
-
-
-
         private List<string> stringsErrores { get; set; } = new List<string>();  
         private List<CategoriaRegistrarInhabilitado> Categorias { set; get; }
         private List<CategoriaRegistrarInhabilitado> CategoriasDefault = new List<CategoriaRegistrarInhabilitado>
@@ -27,10 +24,25 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
              new CategoriaRegistrarInhabilitado { Value = "1", Text = "Servidor Público"},
              new CategoriaRegistrarInhabilitado { Value = "2", Text = "Proovedor o Contratista"}
         };
-
         private string selectValueCategoria { set; get; }
-
         [Parameter]public bool MostrarModal {  get; set; }
+        [Parameter]public EventCallback<ServidorPublico> _servidorPublicoCallBack { get; set; }
+        [Parameter]public string RFCModal { get; set; }
+        private Session SessionUser { set; get; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            await CargarInformacion();
+        }
+        private async Task CargarInformacion() 
+        {
+            servidorPublico.RFC = RFCModal;
+            SessionUser = await _sessionStorage.GetItemAsync<Session>("sesionUser");
+        }
+        private async Task VerificaSiSeCreoElInhabilitado(ServidorPublico servidorPublico) 
+        {
+            if (MostrarModal & servidorPublico.idBandera == 1) await _servidorPublicoCallBack.InvokeAsync(servidorPublico);
+        }
 
         public async Task Insertar(ServidorPublico _servidorPublico)
         {
@@ -49,21 +61,18 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
                 }
 
                 else
-                {
-                   
+                {                  
                         _servidorPublico.Tipo = 1;
                         _servidorPublico.FechaCreacion = DateTime.Now;
                         _servidorPublico.FechaUltimaModificacion = DateTime.Now;
-                        _servidorPublico.IdUsuario = 4;
+                        _servidorPublico.IdUsuario = SessionUser.IdUser;
                         _servidorPublico.TypePersonProovedor = "Fisica";
                         _servidorPublico.genero_valor = "Hombre";
                         var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", _servidorPublico);
                         var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
                         servidorPublico.idBandera = sesionUser.idBandera;
-
-
-
-                    await LimpiaServidorPublico();
+                        await VerificaSiSeCreoElInhabilitado(sesionUser);
+                        await LimpiaServidorPublico();
                     
                 }
 
@@ -90,12 +99,13 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
                         _servidorPublico.Tipo = 1;
                         _servidorPublico.FechaCreacion = DateTime.Now;
                         _servidorPublico.FechaUltimaModificacion = DateTime.Now;
-                        _servidorPublico.IdUsuario = 4;
+                        _servidorPublico.IdUsuario = SessionUser.IdUser;
                         _servidorPublico.TypePersonProovedor = "Fisica";
                         _servidorPublico.genero_valor = "Hombre";
                         var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", servidorPublico);
                         var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
                         servidorPublico.idBandera = sesionUser.idBandera;
+                        await VerificaSiSeCreoElInhabilitado(sesionUser);
 
                         await LimpiaServidorPublico();
                        
@@ -112,21 +122,19 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Reg
                         parameters.Add(p => p.listaErrores, stringsErrores);
                         DialogService.Show<ModalErrores>("Simple Dialog", parameters, options);
                     }
-
                     else
                     {
                         _servidorPublico.Tipo = 1;
                         _servidorPublico.FechaCreacion = DateTime.Now;
                         _servidorPublico.FechaUltimaModificacion = DateTime.Now;
-                        _servidorPublico.IdUsuario = 4;
+                        _servidorPublico.IdUsuario = SessionUser.IdUser;
                         _servidorPublico.TypePersonProovedor = "Fisica";
                         _servidorPublico.genero_valor = "Hombre";
                         var logueoResponse = await httpClient.PostAsJsonAsync<ServidorPublico>("/api/AdminRegistraInhabilitado/Create", servidorPublico);
                         var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<ServidorPublico>();
                         servidorPublico.idBandera = sesionUser.idBandera;
-
-                        await LimpiaServidorPublico();
-                       
+                        await VerificaSiSeCreoElInhabilitado(sesionUser);
+                        await LimpiaServidorPublico();                       
                     }
                 }
                 

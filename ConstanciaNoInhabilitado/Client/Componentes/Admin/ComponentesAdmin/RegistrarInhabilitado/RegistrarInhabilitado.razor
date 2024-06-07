@@ -7,6 +7,7 @@
 @using Microsoft.AspNetCore.Authorization;
 @using Microsoft.AspNetCore.Components.Authorization;
 @using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage
 @inject HttpClient httpClient;
 @inject IDialogService DialogService
 @inject AuthenticationStateProvider authenticationStateProvider;
@@ -24,7 +25,7 @@
         else if (servidorPublico.idBandera == 2)
         {
             <MudAlert Severity="Severity.Error" Variant="Variant.Filled">El Inhabilitado ya existe en la base de datos</MudAlert>
-        }    
+        }
         <MudItem xs="7">
             <MudSelect T="string" Label="Selecciona la categoría" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="@selectValueCategoria">
                 @foreach (var item in CategoriasDefault)
@@ -37,13 +38,14 @@
 
     @if (selectValueCategoria == "Servidor Público")
     {
-        <FormServidorPublico servidorPublico="servidorPublico" eventCallback="Insertar" DefineInhabilitado="true"/>
+        <FormServidorPublico servidorPublico="servidorPublico" eventCallback="Insertar" DefineInhabilitado="true" />
     }
     else if (selectValueCategoria == "Proovedor o Contratista")
     {
         <FormProveedorContratista servidorPublico="servidorPublico" eventCallback="Insertar" DefineInhabilitado="true" />
     }
-}else
+}
+else
 {
     <MainFormHome>
         <ContentBreadcrumbs>

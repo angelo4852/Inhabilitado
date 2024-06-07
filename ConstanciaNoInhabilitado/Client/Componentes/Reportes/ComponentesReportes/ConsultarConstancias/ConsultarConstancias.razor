@@ -1,4 +1,4 @@
-﻿@page "/ConstanciaNoInhabilitado/Admin/ReporteConstancias"
+﻿@page "/ConstanciaNoInhabilitado/Admin/ConsultarConstancias"
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
 @using ConstanciaNoInhabilitado.Client.Componentes.Menu;
@@ -11,7 +11,6 @@
 @inject NavigationManager navigationManager;
 @attribute [Authorize]
 
-
 <MainFormHome>
     <ContentBreadcrumbs>
         <MudLink Href="ConstanciaNoInhabilitado/Default">
@@ -23,7 +22,7 @@
         </MudLink>
         <b>/</b>
         <b style="color:#A8113E;">
-            Reporte de Constancias Expedidas
+            Consulta de Constancias
         </b>
     </ContentBreadcrumbs>
     <Main>
@@ -31,16 +30,13 @@
             <Content>
                 <MudGrid Justify="Justify.Center">
                     <MudItem xs="11">
-                        <MudText Typo="Typo.h5">Establezca el intervalo de tiempo para generar el reporte</MudText>
+                        <MudText Typo="Typo.h5">
+                            Para obtener las constancias emitidas a una persona, ingresa lo siguiente:
+                        </MudText>
                     </MudItem>
-                    <FormDeReportes/>
+                    <FormConstancias/>
                 </MudGrid>
             </Content>
         </CardForm>
     </Main>
 </MainFormHome>
-
-@code
-{
-
-}     

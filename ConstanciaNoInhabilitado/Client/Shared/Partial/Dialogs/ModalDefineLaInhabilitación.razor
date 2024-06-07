@@ -1,6 +1,7 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
 @using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado;
 @using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.AgregarInhabilitación;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 
 <MudDialog>
     <TitleContent>
@@ -12,7 +13,7 @@
     </TitleContent>
     <DialogContent>
         <MudGrid Justify="Justify.Center">
-            <FormAgregarInhabilitación DefineInhabilitacion="true"/>
+            <FormAgregarInhabilitación DefineInhabilitacion="true" RegistroCorrectoModalAsistente="EnviarInhabilitacion" InhabilitadoRFC="InhabilitadoModalDefineInhabilitacion" ValidarInformacionDeModalInhabilitacionAsistente="true"/>
         </MudGrid>
     </DialogContent>
     <DialogActions>
@@ -33,7 +34,14 @@
 @code {
 
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter]
+    public Inhabilitado InhabilitadoModalDefineInhabilitacion { set; get; }
     private string Dependencia { set; get; }
+
+    private async Task EnviarInhabilitacion(InhabilitacionDTO inhabilitacionDTO)
+    {
+        MudDialog.Close(DialogResult.Ok(inhabilitacionDTO));
+    }
 
     void Submit() => MudDialog.Close(DialogResult.Ok(true));
     void Cancel() => MudDialog.Cancel();

@@ -1,4 +1,4 @@
-﻿@page "/ConstanciaNoInhabilitado/Admin/VerInhabilitacion"
+﻿@page "/ConstanciaNoInhabilitado/Admin/ReporteConstancias"
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
 @using ConstanciaNoInhabilitado.Client.Componentes.Menu;
@@ -23,31 +23,19 @@
         </MudLink>
         <b>/</b>
         <b style="color:#A8113E;">
-            Consultar Inhabilitaciones
+            Reporte de Constancias Expedidas
         </b>
     </ContentBreadcrumbs>
     <Main>
         <CardForm>
             <Content>
                 <MudGrid Justify="Justify.Center">
-                     <MudItem xs="11">
-                        <MudText Typo="Typo.h5">Introduza el RFC de la persona</MudText>
-                     </MudItem>
-                     <MudItem xs="5">
-                        <MudTextField @bind-Value="RFC" Label="R.F.C" Variant="Variant.Outlined"></MudTextField>
-                     </MudItem>
-                    <MudItem xs="6">                       
-                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Buscar Inhabilitaciones</MudButton>
+                    <MudItem xs="11">
+                        <MudText Typo="Typo.h5">Establezca el intervalo de tiempo para generar el reporte</MudText>
                     </MudItem>
-                </MudGrid>               
+                    <FormDeReportes/>
+                </MudGrid>
             </Content>
         </CardForm>
-
-       
     </Main>
 </MainFormHome>
-
-@code
-{
-    private string RFC { get; set; }
-}          

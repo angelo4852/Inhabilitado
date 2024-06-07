@@ -1,5 +1,6 @@
 ﻿using ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs;
 using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+using Microsoft.AspNetCore.Components;
 using MudBlazor;
 
 namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.AsistenteRegistro.PasoI
@@ -7,6 +8,8 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Asi
     partial class PasoI
     {
         private Inhabilitado inhabilitado { set; get; }
+
+        [Parameter] public EventCallback<Inhabilitado> EventCallbackInhabilitado {  get; set; }
 
         public async Task Inhabilitado()
         {
@@ -31,7 +34,8 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Asi
                     List<Inhabilitado> inhabilitados = new();
                     inhabilitados.AddRange((List<Inhabilitado>)responde);
                     inhabilitado = inhabilitados.First();
-                    Console.WriteLine($" RFC {inhabilitado.RFC}");
+                    await EventCallbackInhabilitado.InvokeAsync(inhabilitado);
+                    Console.WriteLine($" Nombre {inhabilitado.Nombre} {inhabilitado.ApellidoPaterno} {inhabilitado.ApellidoMaterno} RFC: {inhabilitado.RFC} ");
                 }
             }
             catch (Exception ex)

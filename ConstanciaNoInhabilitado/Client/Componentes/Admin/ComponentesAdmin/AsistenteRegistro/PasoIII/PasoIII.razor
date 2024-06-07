@@ -1,15 +1,76 @@
-﻿<MudGrid Justify="Justify.Center">
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+@inject ISnackbar Snackbar
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+
+<MudGrid Justify="Justify.Center">
     <MudItem xs="10">
         <MudText Typo="Typo.h5">Paso III.</MudText>
         <MudText Typo="Typo.h6" Style="color:#A8113E;">Confirmar y Establecer la inhabilitación.</MudText>
         <br />
         <MudText Typo="Typo.subtitle1">Si ya revisó la información de la persona y su inhabilitación puede proceder a establecerla. Recuerde que no es posible modificar algunos datos posteriormente.</MudText>       
         <br />
-        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;">Establecer Inhabilitación</MudButton>
-        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;">Repetir proceso</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;" OnClick="RegistrarInhabilitacionDTO">Establecer Inhabilitación</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;" OnClick="RepetirProceso">Repetir proceso</MudButton>
     </MudItem>
 </MudGrid>
 
 @code {
+    [Parameter] public InhabilitacionDTO inhabilitacionDTOAsignarPasoIII { set; get; }
 
+    protected override async Task OnInitializedAsync()
+    {
+        if (inhabilitacionDTOAsignarPasoIII is not null) Console.WriteLine($"InhabilitadoPasoII {inhabilitacionDTOAsignarPasoIII.RFC}");
+    }
+
+    private async Task RepetirProceso()
+    {
+        navigationManager.NavigateTo(navigationManager.Uri, forceLoad: true);
+    }
+
+    private async Task RegistrarInhabilitacionDTO()
+    {
+        if (inhabilitacionDTOAsignarPasoIII is not null)
+        {
+            try
+            {
+                HttpResponseMessage inhabilitadoResponde = await httpClient.PostAsJsonAsync<InhabilitacionDTO>($"api/AgregarInhabilitación/CreateInhabilitacion", inhabilitacionDTOAsignarPasoIII);
+
+                if (inhabilitadoResponde.IsSuccessStatusCode)
+                {
+                    InhabilitacionDTO? responde = await inhabilitadoResponde.Content.ReadFromJsonAsync<InhabilitacionDTO>();
+                    if (responde != null)
+                    {
+                        Console.WriteLine($"IdInhabilitacion {responde.IdInhabilitacion}");
+                        if (responde.IdInhabilitacion > 0)
+                        {
+                            Snackbar.Add($"RFC {inhabilitacionDTOAsignarPasoIII.RFC} se registro correctamente.", Severity.Success);
+                            //ReiniciarCampos();
+                        }
+                        else
+                        {
+                            Snackbar.Add($"Error con el RFC {inhabilitacionDTOAsignarPasoIII.RFC} al registrar.", Severity.Error);
+                        }
+
+                    }
+                    else
+                    {
+                        Snackbar.Add($"Error con el RFC {inhabilitacionDTOAsignarPasoIII.RFC} al registrar.", Severity.Error);
+                    }
+                }
+                else
+                {
+                    Snackbar.Add("Error: no se encontro el metodo en la busqueda de api.", Severity.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        else
+        {
+            Snackbar.Add("Error: falta informacion en la inhabilitación, verifique el paso anterior por favor.", Severity.Error);
+        }
+    }
 }

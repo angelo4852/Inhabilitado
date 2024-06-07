@@ -2,6 +2,7 @@
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
 @using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using ConstanciaNoInhabilitado.Shared.Entities.Login
 @using MudBlazor
 @using ConstanciaNoInhabilitado.Client.Auth;
 @using Microsoft.AspNetCore.Authorization;
@@ -10,6 +11,8 @@
 @inject AuthenticationStateProvider authenticationStateProvider;
 @inject NavigationManager navigationManager;
 @attribute [Authorize]
+@inject HttpClient Http
+@inject ISnackbar Snackbar
 
 
 <MainFormHome>
@@ -35,13 +38,37 @@
                             Ingrese los siguientes datos
                         </MudText>
                     </MudItem>
-                    <FormRegistrarCausa/>
+                    <FormRegistrarCausa RegistrarCausaInhabilitacion="_registrarCausaInhabilitacion" eventCallback="Insertar" />
                 </MudGrid>
             </Content>
         </CardForm>
     </Main>
 </MainFormHome>
+ @if (_registrarCausaInhabilitacion.idBandera == 1)
+{
+    <p onclick="((@Snackbar.Add("El registro se agrego correctamente en la base de datos", Severity.Success))"></p>
 
+}
+else if (_registrarCausaInhabilitacion.idBandera == 2)
+{
+    <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+
+}
 @code {
+
+
+    [Parameter]
+    public CausasInhabilitacion? _registrarCausaInhabilitacion { get; set; } = new();
+
+    public async Task Insertar()
+    {
+
+        var resp = await Http.PostAsJsonAsync<CausasInhabilitacion>("api/Catalogos/RegistrarCausa", _registrarCausaInhabilitacion);
+        var resouesta = await resp.Content.ReadFromJsonAsync<CausasInhabilitacion>();
+
+        _registrarCausaInhabilitacion = resouesta;
+        Console.WriteLine("entro a insertar Causa" + _registrarCausaInhabilitacion.Descripcion);
+
+    }
 
 }

@@ -30,7 +30,7 @@ else
    
     @if (RegistrarNuevaInhabilitacion!.InhabilitacionProceso != null)
     {
-        @if (!DefineInhabilitacion || !MostrarFormatoEditarInhabilitacion)
+        @if (!DefineInhabilitacion )
         {
             <MudItem xs="5">
                 <MudTextField @bind-Value="RegistrarNuevaInhabilitacion.RFC" Label="Introduce el R.F.C." Variant="Variant.Outlined" />
@@ -160,8 +160,7 @@ else
             }else
             {
                 <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:19vw;" OnClick="ModificarInhabilitacion">Actualizar Inhabilitación</MudButton>
-            }
-            
+            }            
         </MudItem>
     }
 }

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\ConstanciaNoInhabilitado.Client.styles.css"
     },
     {
+      "Id": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\constancias\\constancia1.gif",
+      "PackagePath": "staticwebassets\\constancias\\constancia1.gif"
+    },
+    {
       "Id": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
