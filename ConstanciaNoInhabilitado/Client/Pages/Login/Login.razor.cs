@@ -29,7 +29,7 @@ namespace ConstanciaNoInhabilitado.Client.Pages.Login
                 if (logueoResponse.IsSuccessStatusCode) 
                 {
                     var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<Session>();
-                    if (sesionUser.Rol == "0")
+                    if (sesionUser!.IdUser == 0)
                     {
                         MostrarErrorDeConsulta = true;
                     }
