@@ -15,8 +15,7 @@
     <DialogContent>
         <MudGrid Justify="Justify.Center">
             <MudItem xs="6">               
-                <MudTextField @bind-Value="Rfc" Label="R.F.C" Variant="Variant.Outlined" OnBlur="Buscar"></MudTextField>
-               
+                <MudTextField @bind-Value="Rfc" Label="R.F.C" Variant="Variant.Outlined" OnBlur="Buscar"></MudTextField>               
             </MudItem>
             @if (Inhabilitados is not null)
             {
@@ -37,7 +36,7 @@
             }
             @if (MostrarParteAgregarNuevoServidorPublico)
             {
-                <RegistrarInhabilitado MostrarModal="true" ></RegistrarInhabilitado>
+                <RegistrarInhabilitado MostrarModal="true" _servidorPublicoCallBack="SubmitServidor" RFCModal="Rfc"></RegistrarInhabilitado>
             }
         </MudGrid>        
     </DialogContent>
@@ -56,7 +55,3 @@
     }
 </style>
 
-
-@code {
-   
-}

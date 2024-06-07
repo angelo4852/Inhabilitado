@@ -21,7 +21,10 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
     partial class FormAgregarInhabilitación
     {
         [Parameter] public bool DefineInhabilitacion { set; get; } = false;
+        [Parameter] public bool ValidarInformacionDeModalInhabilitacionAsistente { set; get; }
         [Parameter] public EventCallback ActualizacionCorrecta { set; get; }
+        [Parameter] public EventCallback<InhabilitacionDTO> RegistroCorrectoModalAsistente { set; get; }
+        [Parameter] public Inhabilitado InhabilitadoRFC {  set; get; } 
         private RegistrarNuevaInhabilitacion RegistrarNuevaInhabilitacion { set; get; } = new();
         private List<string> ErroresEncontrados { set; get; } = new();
         private List<Dependencia> Dependencias { set; get; } = new();
@@ -38,12 +41,20 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
         [Parameter] public InhabilitacionADD EditarInhabilitacion { set; get; } 
         protected override async Task OnInitializedAsync()
         {
+            await CargarInformacion();
+        }
+        private async Task CargarInformacion() 
+        {
             MostrarSpinnerInicial = true;
             await SessionUser();
             await CargarCatalogos();
+            await CargarRfcModal(); 
             MostrarSpinnerInicial = false;
         }
-
+        private async Task CargarRfcModal() 
+        {
+            if (InhabilitadoRFC is not null) RegistrarNuevaInhabilitacion.RFC = InhabilitadoRFC.RFC;
+        }
         private async Task SessionUser() 
         {
             Session = await _sessionStorage.GetItemAsync<Session>("sesionUser");
@@ -375,8 +386,9 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
 
                         var errores = await ValidarDatos(inhabilitacionDTO, listaErrores);
                         if (errores.Count() == 0)
-                        {
-                            await RegistrarInhabilitado(inhabilitacionDTO);
+                        {                            
+                            if (ValidarInformacionDeModalInhabilitacionAsistente) await RegistroCorrectoModalAsistente.InvokeAsync(inhabilitacionDTO);
+                            else await RegistrarInhabilitado(inhabilitacionDTO);
                         }
                     }
                     else
@@ -493,7 +505,6 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
                         if (responde.IdInhabilitacion > 0)
                         {
                             Snackbar.Add($"RFC {RegistrarNuevaInhabilitacion.RFC} se registro correctamente.", Severity.Success);
-                            //Existoso
                             ReiniciarCampos();
                         }
                         else

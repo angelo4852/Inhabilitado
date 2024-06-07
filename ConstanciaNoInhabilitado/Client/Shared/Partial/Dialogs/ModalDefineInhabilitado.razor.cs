@@ -9,13 +9,11 @@ namespace ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs
     partial class ModalDefineInhabilitado
     {
         [CascadingParameter] MudDialogInstance MudDialog { get; set; }
-
         private List<CategoriaRegistrarInhabilitado> CategoriasDefault = new List<CategoriaRegistrarInhabilitado>
         {
                  new CategoriaRegistrarInhabilitado { Value = "1", Text = "Servidor Público"},
                  new CategoriaRegistrarInhabilitado { Value = "2", Text = "Proovedor o Contratista"}
         };
-
         private string _rfc;
         private string Rfc
         {
@@ -26,11 +24,7 @@ namespace ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs
             }
         }
         private bool MostrarParteAgregarNuevoServidorPublico {  get; set; }
-
-        private string selectValueCategoria { set; get; }
-
         List<Inhabilitado> Inhabilitados { set; get; } = new();
-
         private async Task Buscar()
         {
             try
@@ -58,6 +52,13 @@ namespace ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs
             }
           
             //return inhabilitado;
+        }
+        private async Task SubmitServidor(ServidorPublico servidorPublico) 
+        {
+            //Rfc = servidorPublico.RFC;
+            await Buscar();
+            await Task.Delay(1000);
+            Submit();
         }
         void Submit() => MudDialog.Close(DialogResult.Ok(Inhabilitados));
         void Cancel() => MudDialog.Cancel();

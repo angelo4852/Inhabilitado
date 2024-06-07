@@ -1,4 +1,5 @@
-﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+﻿@using ConstanciaNoInhabilitado.Client.Componentes.Catalogos.ComponentesCatalogos.RegistrarDependencia
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
 @using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado;
 
 <MudDialog>
@@ -10,12 +11,9 @@
         </div>
     </TitleContent>
     <DialogContent>
-        <MudGrid Justify="Justify.Center">
-            <MudItem xs="10">
-                <MudTextField @bind-Value="Dependencia" Label="Introduce la descripción de la dependencia" Variant="Variant.Outlined"></MudTextField>
-            </MudItem>   
-            <MudItem xs="5">            
-                <MudButton Variant="Variant.Filled" Color="Color.Secondary">Registar Dependencia</MudButton>
+        <MudGrid Justify="Justify.Center">           
+            <MudItem xs="11">
+                <RegistrarDependencia ModalDependencia="true" CerrarModalCallBack="Submit"></RegistrarDependencia>
             </MudItem>
         </MudGrid>
     </DialogContent>

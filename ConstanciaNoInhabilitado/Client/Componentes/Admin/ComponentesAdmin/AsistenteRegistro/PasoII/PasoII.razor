@@ -1,8 +1,10 @@
 ﻿@using ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+
 @inject IDialogService dialogService
 
 <MudGrid Justify="Justify.Center">
-    <MudItem xs="10">
+    <MudItem xs="6">
         <MudText Typo="Typo.h5">Paso II.</MudText>
         <MudText Typo="Typo.h6" Style="color:#A8113E;">Definir la Inhabilitación.</MudText>
         <br />
@@ -24,32 +26,24 @@
         <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;" OnClick="Dependencia">Registrar Dependencia</MudButton>
         <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:15vw;" OnClick="Inhabilitacion">Registrar Inhabilitación</MudButton>
     </MudItem>
+    @if (InhabilitacionDTOResponde is not null)
+    {
+        <MudItem xs="6">
+            <MudText Typo="Typo.h5">Detalle.</MudText>
+            <MudText Typo="Typo.h6" Style="color:#A8113E;">Detalle del inhabilitado.</MudText>
+            <br />
+            <MudText Typo="Typo.subtitle1"><b>Expediente Legal: </b>@InhabilitacionDTOResponde.ExpedienteLegal</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Dependencia: </b>@InhabilitacionDTOResponde.IdDependencia</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Puesto:</b> @InhabilitacionDTOResponde.Cargo</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Fecha Resolucion:</b> @InhabilitacionDTOResponde.FechaResolucion</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Fecha Inicio:</b> @InhabilitacionDTOResponde.FechaInicio</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Fecha Termino:</b> @InhabilitacionDTOResponde.FechaTermino</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Periodo:</b>@InhabilitacionDTOResponde.Periodo </MudText>
+                <MudText Typo="Typo.subtitle1"><b>Autoridad Sancionadora:</b>@InhabilitacionDTOResponde.Autoridad </MudText>
+                <MudText Typo="Typo.subtitle1"><b>Tipo de Inhabilitación:</b>@InhabilitacionDTOResponde.IdTipoInhabilitacion </MudText>
+                <MudText Typo="Typo.subtitle1"><b>Origen de la Inhabilitación:</b>@InhabilitacionDTOResponde.IdOrigenInhabilitacion </MudText>
+                <MudText Typo="Typo.subtitle1"><b>Causa de la Inhabilitación:</b> @InhabilitacionDTOResponde.IdCausaInhabilitacion</MudText>
+                <MudText Typo="Typo.subtitle1"><b>Descripcion:</b>@InhabilitacionDTOResponde.Descripcion </MudText>
+            </MudItem>
+    }
 </MudGrid>
-
-@code {
-    public async Task Dependencia()
-    {
-        var options = new DialogOptions()
-            {
-                FullWidth = true,
-                MaxWidth = MaxWidth.Small,
-                DisableBackdropClick = true,
-                ClassBackground = "filterBackground",
-                CloseButton = true
-            };
-        await dialogService.ShowAsync<ModalRegistrarDependencia>("Simple Dialog", options);
-    }
-
-    public async Task Inhabilitacion()
-    {
-        var options = new DialogOptions()
-            {
-                FullWidth = true,
-                MaxWidth = MaxWidth.Medium,
-                DisableBackdropClick = true,
-                ClassBackground = "filterBackground",
-                CloseButton = true
-            };
-        await dialogService.ShowAsync<ModalDefineLaInhabilitación>("Simple Dialog", options);
-    }
-}

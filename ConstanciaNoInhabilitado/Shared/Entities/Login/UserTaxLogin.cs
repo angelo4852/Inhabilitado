@@ -244,7 +244,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// RFC de Servidor Publico
         /// </summary>   
-        public string RFC { get; set; } = "ROPY740314PD2";
+        public string RFC { get; set; }
 
 		/// <summary>
 		/// Autoridad Sancionadora de Servidor Publico

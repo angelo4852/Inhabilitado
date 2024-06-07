@@ -12,65 +12,85 @@
 @inject NavigationManager navigationManager;
 @inject HttpClient http;
 @inject ISnackbar Snackbar
-
 @attribute [Authorize]
 
+@if (ModalDependencia)
+{
+    <MudGrid Justify="Justify.Center">
+        @* @if (_dependencia!.idBandera == 1)
+        {
+            <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
+        }
+        else if (_dependencia.idBandera == 2)
+        {
+            <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+        }    *@   
+        <FormRegistrarDependencia _dependencia="_dependencia" eventCallback="Insertar" ModalDependencia="true"/>
+    </MudGrid>
+}else
+{
+    <MainFormHome>
+        <ContentBreadcrumbs>
+            <MudLink Href="ConstanciaNoInhabilitado/Default">
+                <b>Inicio</b>
+            </MudLink>
+            <b>/</b>
+            <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
+                <b>Administración</b>
+            </MudLink>
+            <b>/</b>
+            <b style="color:#A8113E;">
+                Registrar Dependencias
+            </b>
+        </ContentBreadcrumbs>
+        <Main>
+            <CardForm>
+                <Content>
 
-<MainFormHome>
-    <ContentBreadcrumbs>
-        <MudLink Href="ConstanciaNoInhabilitado/Default">
-            <b>Inicio</b>
-        </MudLink>
-        <b>/</b>
-        <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
-            <b>Administración</b>
-        </MudLink>
-        <b>/</b>
-        <b style="color:#A8113E;">
-            Registrar Dependencias
-        </b>
-    </ContentBreadcrumbs>
-    <Main>
-        <CardForm>
-            <Content>
-                
-                <MudGrid Justify="Justify.Center">
-                    @if (_dependencia.idBandera == 1)
-                    {
-                        <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
-
-                    }
-                    else if (_dependencia.idBandera == 2)
-                    {
-                        <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
-
-                    }
-                    <MudItem xs="11">
-                        <MudText Typo="Typo.h5">
-                            Ingrese la siguiente información
-                        </MudText>                        
-                    </MudItem>
-                    <FormRegistrarDependencia _dependencia="_dependencia" eventCallback="Insertar" />
-                </MudGrid>
-            </Content>
-        </CardForm>
-    </Main>
-</MainFormHome>
-
+                    <MudGrid Justify="Justify.Center">
+                        @if (_dependencia!.idBandera == 1)
+                        {
+                            <p onclick="((@Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success))"></p>
+                        }
+                        else if (_dependencia.idBandera == 2)
+                        {
+                            <p onclick="((@Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error))"></p>
+                        }
+                        <MudItem xs="11">
+                            <MudText Typo="Typo.h5">
+                                Ingrese la siguiente información
+                            </MudText>
+                        </MudItem>
+                        <FormRegistrarDependencia _dependencia="_dependencia" eventCallback="Insertar" />
+                    </MudGrid>
+                </Content>
+            </CardForm>
+        </Main>
+    </MainFormHome>
+}
 
 @code {
+    [Parameter] public bool ModalDependencia { set; get; }
     public Dependencia? _dependencia { get; set; } = new();
+    [Parameter]
+    public EventCallback CerrarModalCallBack { set; get; }
 
     public async Task Insertar()
     {
-        var resp = await http.PostAsJsonAsync<Dependencia>("api/Catalogos/RegistrarDependencia", _dependencia);
+        var resp = await http.PostAsJsonAsync<Dependencia>("api/Catalogos/RegistrarDependencia", _dependencia!);
         var deserialiado = await resp.Content.ReadFromJsonAsync<Dependencia>();
         _dependencia.idBandera = deserialiado.idBandera;
 
         if (_dependencia.idBandera == 1)
         {
+            Snackbar.Add("El registro se actualizo correctamente en la base de datos", Severity.Success);
             _dependencia.Descripcion = string.Empty;
-
+            await Task.Delay(1000);
+            await CerrarModalCallBack.InvokeAsync();
+        }
+        else
+        {
+            Snackbar.Add("Uppp´s ocurrio un problema, el registro no se actualizo en la base de datos", Severity.Error);
         }
     }
 

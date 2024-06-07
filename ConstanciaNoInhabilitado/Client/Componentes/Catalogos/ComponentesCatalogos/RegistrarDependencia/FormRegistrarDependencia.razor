@@ -1,13 +1,25 @@
 ﻿@using ConstanciaNoInhabilitado.Shared.Entities.Catalogos
 @using ConstanciaNoInhabilitado.Shared.Entities.Login;
 
-<MudItem xs="5">
-    <MudTextField @bind-Value="_dependencia.Descripcion" Label="Introduce el nombre de la Dependencia" Variant="Variant.Outlined" />
-</MudItem>
 
-<MudItem xs="3">
-    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;" OnClick="callEvent">Registra Dependencia</MudButton>
-</MudItem>
+@if (ModalDependencia)
+{
+    <MudItem xs="12">
+        <MudTextField @bind-Value="_dependencia.Descripcion" Label="Introduce el nombre de la Dependencia" Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="6">
+        <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="callEvent">Registrar Dependencia</MudButton>
+    </MudItem>
+}else
+{
+    <MudItem xs="5">
+        <MudTextField @bind-Value="_dependencia.Descripcion" Label="Introduce el nombre de la Dependencia" Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="3">
+        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;" OnClick="callEvent">Registrar Dependencia</MudButton>
+    </MudItem>
+}
+
 
 @code
 {
@@ -16,7 +28,7 @@
 
     [Parameter]
     public EventCallback<Dependencia> eventCallback { set; get; }
-
+    [Parameter] public bool ModalDependencia { set; get; }
 
     private async Task callEvent()
     {
