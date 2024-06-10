@@ -35,7 +35,8 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.CargaMasiva
         public int? USU { get; set; }
         public int? TIP { get; set; }
         public bool SeInserto { get; set; }
-    }
+    }  
+
     public class InhabilitacionCarga
     {
         public int? IdInhabilitacion { get; set; }
