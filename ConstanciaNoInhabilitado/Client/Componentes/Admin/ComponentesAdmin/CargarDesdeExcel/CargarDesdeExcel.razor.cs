@@ -81,6 +81,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Car
         {
             try
             {               
+                
                 HttpResponseMessage inhabilitadoResponde = await httpClient.PostAsJsonAsync<CargaMasivaExcelDTO>($"api/CargaMasivaArchivoExcel/RegistrarCargaMasicaExcel", CargaMasivaData);
 
                 if (inhabilitadoResponde.IsSuccessStatusCode)

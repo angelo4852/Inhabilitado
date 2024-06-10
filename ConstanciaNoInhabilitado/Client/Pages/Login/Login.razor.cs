@@ -14,8 +14,8 @@ namespace ConstanciaNoInhabilitado.Client.Pages.Login
 
         protected override async Task OnInitializedAsync()
         {
-            loguear.Usuario = "angel.hernandezj";
-            loguear.Contrasena = "e10adc3949ba59abbe56e057f20f883e";
+            //loguear.Usuario = "angel.hernandezj";
+            //loguear.Contrasena = "e10adc3949ba59abbe56e057f20f883e";
         }
 
         private async Task ConsultaUsuario()
@@ -29,7 +29,7 @@ namespace ConstanciaNoInhabilitado.Client.Pages.Login
                 if (logueoResponse.IsSuccessStatusCode) 
                 {
                     var sesionUser = await logueoResponse.Content.ReadFromJsonAsync<Session>();
-                    if (sesionUser.Rol == "0")
+                    if (sesionUser!.IdUser == 0)
                     {
                         MostrarErrorDeConsulta = true;
                     }
