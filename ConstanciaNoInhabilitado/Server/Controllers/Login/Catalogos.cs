@@ -11,9 +11,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 	[ApiController]
 	public class Catalogos : ControllerBase
 	{
-		private readonly string connectionString;
-		List<UsuarioEntities> InhabilitadoList = new List<UsuarioEntities>();
-		private readonly IServicioRepositorioCatalogos servicioRepositorio;
 		private readonly ServicioRepositorioCatalogos service;
 
         public Catalogos(IConfiguration configuration)
@@ -23,7 +20,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasDependencias")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasDependencias()
 		{
 			try
@@ -39,7 +35,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasCausas")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasCausas()
 		{
 			try
@@ -55,7 +50,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasOrigen")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasOrigen()
 		{
 			try
@@ -71,7 +65,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasMoneda")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasMoneda()
 		{
 			try
@@ -87,7 +80,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasNivel")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasNivel()
 		{
 			try
@@ -103,7 +95,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasTipoFalta")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasTipoFalta()
 		{
 			try
@@ -119,7 +110,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasTipoInhabilitacion")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasTipoInhabilitacion()
 		{
 			try
@@ -135,7 +125,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 		[HttpPost]
 		[Route("CargasTipoSancion")]
-		// GET: RegistrarInhabilitadoController/Create
 		public async Task<ActionResult> CargasTipoSancion()
 		{
 			try
@@ -152,7 +141,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
         [HttpPost]
         [Route("ActualizarDependencia")]
-        // GET: RegistrarInhabilitadoController/Create
         public async Task<ActionResult> ActualizarDependencia(Dependencia causasInhabilitacion)
         {
             try
@@ -168,7 +156,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
         [HttpPost]
         [Route("RegistrarDependencia")]
-        // GET: RegistrarInhabilitadoController/Create
         public async Task<ActionResult> RegistrarDependencia(Dependencia registroDependencia)
         {
             try
@@ -214,7 +201,6 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
         [HttpPost]
         [Route("ActualizarCausa")]
-        // GET: RegistrarInhabilitadoController/Create
         public async Task<ActionResult> ActualizarCausa(CausasInhabilitacion causasInhabilitacion)
         {
             try
