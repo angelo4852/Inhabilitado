@@ -22,7 +22,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Constancia
 
     public class ConstanciaBusqueda
     {
-        public string? Criterio { get; set; } 
-        public int? Tipo { get; set; } 
+        public string? Criterio { get; set; }
+        public int? Tipo { get; set; }
     }
 }
