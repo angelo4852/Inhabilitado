@@ -94,6 +94,11 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// Tipo Menu Admin, Catalogos, Reporte
         /// </summary>   
         public TipoMenu TipoMenu { get; set; }
+
+        /// <summary>
+        /// Tipo Usuario  Administrador = 1,Supervisor ,Analista , Ninguno
+        /// </summary>  
+        public List<TipoUsuario> TipoUser { get; set; }
     }
 
     public class CategoriaRegistrarInhabilitado 
@@ -483,5 +488,13 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         Admin = 1,
         Catalogo,
         Reporte
+    }
+
+    public enum TipoUsuario
+    {
+        Administrador = 1,
+        Supervisor,
+        Analista,
+        Ninguno
     }
 }
