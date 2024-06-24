@@ -1,50 +1,11 @@
 ﻿using ClosedXML.Excel;
 using ConstanciaNoInhabilitado.Client.Interfaces;
 using ConstanciaNoInhabilitado.Shared.Entities.CargaMasiva;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 public class FileService : IFileService
 {
-    public async Task<List<InhabilitacionCarga>> GetInhabilitacion(List<CargaMasivaExcel> cargaMasivaExcels)
-    {
-        List<InhabilitacionCarga> inhabilitacionCargas = new();
-        foreach (var carga in cargaMasivaExcels) 
-        {
-            InhabilitacionCarga inhabilitacionCarga = new InhabilitacionCarga 
-            {
-                Dependencia = carga.Dependencia,
-                Autoridad = carga.AutoridadSancionadora,
-                Cargo = carga.Puesto,
-                Periodo = carga.Periodo,
-                FechaResolucion = carga.FechaNotificacion.ToString(),
-                FechaNotificacion = carga.FechaNotificacion.ToString(),
-                FechaInicio = carga.FechaInicio.ToString(),
-                FechaFin = carga.FechaFin.ToString(),                
-            };
-            inhabilitacionCargas.Add(inhabilitacionCarga);
-        }
-
-        return inhabilitacionCargas;
-    }
-
-    public async Task<List<InhabilitadoCarga>> GetInhabilitado(List<CargaMasivaExcel> cargaMasivaExcels, int IdUsuario)
-    {
-        List<InhabilitadoCarga> inhabilitadoCargas = new();
-        foreach (var carga in cargaMasivaExcels)
-        {
-            InhabilitadoCarga inhabilitadoCarga = new InhabilitadoCarga 
-            {
-                NOMB = carga.Nombre,
-                AP_PAT = carga.ApellidoPaterno,
-                AP_MAT = carga.ApellidoMaterno,
-                R_F_C = $"{carga.RFC!.Trim()}{carga.Homo!.Trim()}",
-                USU = IdUsuario,
-                TIP = 1
-            };
-            inhabilitadoCargas.Add(inhabilitadoCarga);
-        }
-        return inhabilitadoCargas;
-    }
-
+    private List<string> _ErroresEncontradosDeFormatoArchivo { get; set; } = new();
     public async Task<CargaMasivaExcelDTO> ProcessFile(byte[] fileContent, int IdUsuario)
     {
         CargaMasivaExcelDTO cargaMasivaExcels = new();
@@ -54,6 +15,10 @@ public class FileService : IFileService
             using var stream = new MemoryStream(fileContent);
             using var workbook = new XLWorkbook(stream);
             var worksheet = workbook.Worksheets.First();
+
+            await ValidarFormatoExcel(worksheet);
+
+            if (_ErroresEncontradosDeFormatoArchivo.Count() > 0) { cargaMasivaExcels.ErroresDeLaCarga.AddRange(_ErroresEncontradosDeFormatoArchivo); return cargaMasivaExcels; }
 
             foreach (var row in worksheet.RowsUsed().Skip(6))
             {
@@ -81,10 +46,254 @@ public class FileService : IFileService
         catch (Exception ex)
         {
             // Manejo de errores más detallado
-            Console.WriteLine($"Error al procesar el archivo: {ex.Message}");
-            throw new InvalidDataException("El archivo proporcionado no es un archivo Excel válido o está corrupto.", ex);
+            cargaMasivaExcels.ErroresDeLaCarga.Add($"El archivo proporcionado no es un archivo Excel válido o está corrupto.{ex.Message}");
+            //throw new InvalidDataException("El archivo proporcionado no es un archivo Excel válido o está corrupto.", ex);
         }
 
         return cargaMasivaExcels;
+    }
+
+    private async Task ValidarFormatoExcel(IXLWorksheet xLWorksheet) 
+    {
+        try
+        {
+            _ErroresEncontradosDeFormatoArchivo = new();
+            bool encabezadoFaltante = false;
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("DEPENDENCIA", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }                
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'DEPENDENCIA'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("RFC", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else 
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'RFC'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("HOMO", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'HOMO'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("APELLIDO PATERNO", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'APELLIDO PATERNO'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("APELLIDO MATERNO", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'APELLIDO MATERNO'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("NOMBRE", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'NOMBRE'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("AUTORIDAD SANCIONADORA", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'AUTORIDAD SANCIONADORA'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("PUESTO", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'PUESTO'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("PERIODO", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'PERIODO'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("FECHA RESOLUCION", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'FECHA RESOLUCION'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("FECHA NOTIFICACION", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'FECHA NOTIFICACION'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("FECHA INICIO", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'FECHA INICIO'");
+                //return cargaMasivaExcels;
+            }
+
+            foreach (var headerRow in xLWorksheet.RowsUsed().Take(6)) // Ajusta el rango de filas según sea necesario
+            {
+                if (headerRow.Cells().Any(cell => cell.GetValue<string>().Trim().Equals("FECHA FIN", StringComparison.OrdinalIgnoreCase)))
+                {
+                    encabezadoFaltante = true;
+                }
+                else
+                {
+                    encabezadoFaltante = false;
+                }
+            }
+
+            if (!encabezadoFaltante)
+            {
+                _ErroresEncontradosDeFormatoArchivo.Add($"El archivo proporcionado no contiene el encabezado 'FECHA FIN'");
+                //return cargaMasivaExcels;
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidDataException("Error al buscar los encabezados", ex);
+        }
+       
     }
 }

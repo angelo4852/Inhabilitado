@@ -80,24 +80,38 @@
                     {
                         <MudItem xs="11">
                             <MudExpansionPanels>
-                                <MudExpansionPanel Text="Se cargaron los siguientes datos." MaxHeight="220">
-                                    <MudAlert Severity="Severity.Success">
-                                        <p>El proceso ha finalizado</p>
-                                        <p>Registros detectados del archivo: @CargaMasivaData.CargaMasivaExcel.Count()</p>
-                                        <p>Registros insertados correctamente: @($"{CargaMasivaData.InhabilitadoCarga.Where(i => i.SeInserto).Count() + CargaMasivaData.InhabilitacionCarga.Where(i => i.SeInserto).Count()}")</p>
-                                        <p>Registros no insertados: @($"{CargaMasivaData.InhabilitadoCarga.Where(i => i.SeInserto == false).Count() + CargaMasivaData.InhabilitacionCarga.Where(i => i.SeInserto == false).Count()}")</p>
-                                        <p>Registros que requiere información: @CargaMasivaData.CargaMasivaExcel.Where(c => c.FaltaInformacion).Count()</p>
-                                    </MudAlert>
-                                </MudExpansionPanel>
-                                <MudExpansionPanel Text="Revise los siguientes registros" MaxHeight="@MaxHeight">
-                                    <MudAlert Severity="Severity.Warning">
-                                        <p>Error al procesar los datos</p>
-                                        @foreach (var error in CargaMasivaData.ErroresDeLaCarga)
-                                        {
-                                            <p>@error</p>
-                                        }
-                                    </MudAlert>
-                                </MudExpansionPanel>
+                                @if (MostrarRescultadosCargaMasivaFormatoArchivo)
+                                {
+                                    <MudExpansionPanel Text="Revise el formato del archivo excel." MaxHeight="MaxHeight">
+                                        <MudAlert Severity="Severity.Error">
+                                            <p>Error al procesar los datos por el formato de archivo</p>
+                                            @foreach (var error in CargaMasivaData.ErroresDeLaCarga)
+                                            {
+                                                <p>@error</p>
+                                            }
+                                        </MudAlert>
+                                    </MudExpansionPanel>
+                                }else
+                                {
+                                    <MudExpansionPanel Text="Se cargaron los siguientes datos." MaxHeight="220">
+                                        <MudAlert Severity="Severity.Success">
+                                            <p>El proceso ha finalizado</p>
+                                            <p>Registros detectados del archivo: @CargaMasivaData.CargaMasivaExcel.Count()</p>
+                                            <p>Registros insertados correctamente: @($"{CargaMasivaData.InhabilitadoCarga.Where(i => i.SeInserto).Count() + CargaMasivaData.InhabilitacionCarga.Where(i => i.SeInserto).Count()}")</p>
+                                            <p>Registros no insertados: @($"{CargaMasivaData.InhabilitadoCarga.Where(i => i.SeInserto == false).Count() + CargaMasivaData.InhabilitacionCarga.Where(i => i.SeInserto == false).Count()}")</p>
+                                            <p>Registros que requiere información: @CargaMasivaData.CargaMasivaExcel.Where(c => c.FaltaInformacion).Count()</p>
+                                        </MudAlert>
+                                    </MudExpansionPanel>
+                                    <MudExpansionPanel Text="Revise los siguientes registros" MaxHeight="@MaxHeight">
+                                        <MudAlert Severity="Severity.Warning">
+                                            <p>Error al procesar los datos</p>
+                                            @foreach (var error in CargaMasivaData.ErroresDeLaCarga)
+                                            {
+                                                <p>@error</p>
+                                            }
+                                        </MudAlert>
+                                    </MudExpansionPanel>
+                                } 
                             </MudExpansionPanels>
                         </MudItem>
                     }
