@@ -3,87 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarorigen\\datagrideditarorigen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarorigen\\datagrideditarorigen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\interfaces\\iserviciorepositorioagregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\interfaces\\iserviciorepositorioagregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarorigen\\editarorigen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editarorigen\\editarorigen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\editardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\editardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\datagrideditardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\catalogos\\componentescatalogos\\editardependencia\\datagrideditardependencia.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\admin\\componentesadmin\\agregarusuario\\editarusuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\admin\\componentesadmin\\agregarusuario\\editarusuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\admin\\componentesadmin\\agregarusuario\\agregarusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\admin\\componentesadmin\\agregarusuario\\agregarusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\controllers\\login\\agregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\controllers\\login\\agregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\servicios\\serviciorepositoriocatalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\servicios\\serviciorepositoriocatalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\servicios\\serviciorepositorioagregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\servicios\\serviciorepositorioagregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C906148F-78C7-4A3D-BD6F-57693C1494FD}|ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\shared\\entities\\login\\usertaxlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C906148F-78C7-4A3D-BD6F-57693C1494FD}|ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj|solutionrelative:constancianoinhabilitado\\shared\\entities\\login\\usertaxlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\controllers\\login\\agregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\controllers\\login\\agregausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\componentes\\admin\\componentesadmin\\agregarusuario\\agregarusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\componentes\\admin\\componentesadmin\\agregarusuario\\agregarusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\controllers\\login\\catalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\controllers\\login\\catalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\servicios\\serviciorepositorioinhabilitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\servicios\\serviciorepositorioinhabilitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\shared\\partial\\dialogs\\modalactualizarinhabilitado.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\shared\\partial\\dialogs\\modalactualizarinhabilitado.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ECA-SDA-075\\AppData\\Local\\SourceServer\\93c0142f1f00b9d43dcf7e602e834618397b7fac74e58c0d0afc22eea5826838\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\server\\controllers\\registrarinhabilitado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3583594-3A2A-488E-87A3-984E71648DB8}|ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj|solutionrelative:constancianoinhabilitado\\server\\controllers\\registrarinhabilitado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\pages\\login\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\pages\\login\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\pages\\login\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\pages\\login\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\shared\\forms\\mainform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\shared\\forms\\mainform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|c:\\users\\eca-sda-075\\documents\\proyectos\\proyectoinhabilitadov2\\inhabilitado\\constancianoinhabilitado\\client\\pages\\login\\default.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{558C8563-E6D3-446E-AC23-B351C1648E1F}|ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj|solutionrelative:constancianoinhabilitado\\client\\pages\\login\\default.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,266 +39,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataGridEditarOrigen.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\DataGridEditarOrigen.razor",
+              "Title": "IServicioRepositorioAgregaUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Interfaces\\IServicioRepositorioAgregaUsuario.cs",
+              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Interfaces\\IServicioRepositorioAgregaUsuario.cs",
+              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Interfaces\\IServicioRepositorioAgregaUsuario.cs",
+              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Interfaces\\IServicioRepositorioAgregaUsuario.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T18:47:47.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditarOrigen.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\EditarOrigen.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\EditarOrigen.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\EditarOrigen.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarOrigen\\EditarOrigen.razor",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T18:47:44.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataGridEditarDependencia.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\DataGridEditarDependencia.razor",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T18:47:19.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditarUsuarios.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\EditarUsuarios.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\EditarUsuarios.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\EditarUsuarios.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\EditarUsuarios.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T18:45:22.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ServicioRepositorioInhabilitacion.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioInhabilitacion.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioInhabilitacion.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioInhabilitacion.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioInhabilitacion.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAwwEMAAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T20:33:51.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Catalogos.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
-              "ViewState": "AQIAAPQAAAAAAAAAAADwv/0AAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T20:44:53.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ServicioRepositorioAgregaUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwCcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T20:13:04.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AgregaUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T20:25:53.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AgregarUsuario.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-12T20:21:24.406Z",
+              "WhenOpened": "2024-06-20T23:11:38.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EditarDependencia.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\EditarDependencia.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\EditarDependencia.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\EditarDependencia.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Catalogos\\ComponentesCatalogos\\EditarDependencia\\EditarDependencia.razor",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwDAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T19:54:13.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserTaxLogin.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\Entities\\Login\\UserTaxLogin.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Shared\\Entities\\Login\\UserTaxLogin.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\Entities\\Login\\UserTaxLogin.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Shared\\Entities\\Login\\UserTaxLogin.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAUwBgAAAASAAAA",
+              "Title": "ServicioRepositorioAgregaUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
+              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
+              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
+              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioAgregaUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T16:57:28.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-20T22:58:52.813Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ModalActualizarInhabilitado.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Shared\\Partial\\Dialogs\\ModalActualizarInhabilitado.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T23:39:44.492Z"
+              "DocumentIndex": 3,
+              "Title": "AgregaUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
+              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
+              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
+              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\AgregaUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T22:58:49.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\appsettings.json",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\appsettings.json",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-11T23:00:52.141Z"
+              "DocumentIndex": 1,
+              "Title": "ServicioRepositorioCatalogos.cs",
+              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioCatalogos.cs",
+              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioCatalogos.cs",
+              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioCatalogos.cs",
+              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Servicios\\ServicioRepositorioCatalogos.cs",
+              "ViewState": "AQIAABYBAAAAAAAAAAAuwDUBAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T22:54:15.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\appsettings.Development.json",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAACDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-11T23:00:54.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "Catalogos.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\AppData\\Local\\SourceServer\\93c0142f1f00b9d43dcf7e602e834618397b7fac74e58c0d0afc22eea5826838\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\93c0142f1f00b9d43dcf7e602e834618397b7fac74e58c0d0afc22eea5826838\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\AppData\\Local\\SourceServer\\93c0142f1f00b9d43dcf7e602e834618397b7fac74e58c0d0afc22eea5826838\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs [Solo lectura]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\93c0142f1f00b9d43dcf7e602e834618397b7fac74e58c0d0afc22eea5826838\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs [Solo lectura]",
-              "ViewState": "AQIAAIEAAAAAAAAAAADwv5gAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
+              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
+              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
+              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\Login\\Catalogos.cs",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAowNoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T23:33:12.177Z"
+              "WhenOpened": "2024-06-20T22:51:39.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Shared\\MainLayout.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Shared\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Shared\\MainLayout.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Shared\\MainLayout.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "AgregarUsuario.razor",
+              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
+              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
+              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
+              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Componentes\\Admin\\ComponentesAdmin\\AgregarUsuario\\AgregarUsuario.razor",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAewIYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T23:47:01.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RegistrarInhabilitado.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\RegistrarInhabilitado.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Server\\Controllers\\RegistrarInhabilitado.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\Controllers\\RegistrarInhabilitado.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Server\\Controllers\\RegistrarInhabilitado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T16:51:32.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MainForm.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Shared\\Forms\\MainForm.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Shared\\Forms\\MainForm.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Shared\\Forms\\MainForm.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Shared\\Forms\\MainForm.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T23:47:39.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Login.razor",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor",
-              "ViewState": "AQIAABgAAAAAAAAAAIBJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T23:47:57.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Login.razor.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Login.razor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T23:48:02.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Default.razor.cs",
-              "DocumentMoniker": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Default.razor.cs",
-              "RelativeDocumentMoniker": "ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Default.razor.cs",
-              "ToolTip": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Default.razor.cs",
-              "RelativeToolTip": "ConstanciaNoInhabilitado\\Client\\Pages\\Login\\Default.razor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T22:44:34.61Z"
+              "WhenOpened": "2024-06-20T22:45:32.998Z"
             }
           ]
         }

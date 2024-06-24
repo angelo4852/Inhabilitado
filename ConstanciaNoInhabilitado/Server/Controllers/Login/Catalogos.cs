@@ -214,6 +214,21 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
             }
         }
 
+        [HttpPost]
+        [Route("ListaRol")]
+        public async Task<ActionResult> ListaRol()
+        {
+            try
+            {
+                List<RolUsuario> listaOrigenes = await service.ObtenerRolUsuario();
+                return Ok(listaOrigenes);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
 
     }

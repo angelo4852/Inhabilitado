@@ -1,0 +1,180 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/AgregaUsuario";
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage
+@inject HttpClient httpClient;
+@inject IDialogService DialogService
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@inject ISnackbar Snackbar
+@inject IDialogService _dialogService;
+@inject IDialogService DialogService;
+@attribute [Authorize]
+
+ <MainFormHome>
+       
+        <Main>
+            <CardForm>
+                <Content>
+                <MudGrid Justify="Justify.Center">
+                    <MudItem xs="7">
+                        <MudTextField @bind-Value="_usuario.Nombre" Label="Nombre" Variant="Variant.Outlined" Required="true"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="7">
+                        <MudTextField @bind-Value="_usuario.ApellidoPaterno" Label="Apellido Paterno" Variant="Variant.Outlined" Required="true"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="7">
+                        <MudTextField @bind-Value="_usuario.ApellidoMaterno" Label="Apellido Materno" Variant="Variant.Outlined" Required="true"></MudTextField>
+                    </MudItem>
+                  
+                    <MudItem xs="7">
+                        <MudTextField @bind-Value="_usuario.CorreoElectronico" Label="Correo Electronico" Variant="Variant.Outlined" Required="true"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="7">
+                        <MudTextField @bind-Value="_usuario.Usuario" Label="Usuario" Variant="Variant.Outlined" Required="true"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="7">
+                        <MudTextField @bind-Value="_usuario.Contrasena" Label="Contraseña" Variant="Variant.Outlined" Required="true"></MudTextField>
+                    </MudItem>                  
+                    
+                    <MudItem xs="7">
+                        <MudSelect T="int" Label="Rol" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="_usuario.IdRolUsuario" Required="true">
+                            @foreach (var item in ListSexo)
+                            {
+                                <MudSelectItem Value="@(item.IdRolUsuario)">
+                                    @item.Descripcion
+                                </MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="7">
+                        @if (DefineInhabilitado)
+                        {
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="AgregaUsuario">Establecer Inhabilitado</MudButton>
+                        }
+                        else
+                        {
+
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="AgregaUsuario">Guardar Registro</MudButton>
+                        }
+                    </MudItem>
+                </MudGrid>
+
+                </Content>
+            </CardForm>
+
+
+        </Main>
+    </MainFormHome>
+
+
+
+@code {
+    [Parameter] 
+    public bool DefineInhabilitado { set; get; } = false;
+    [Parameter]
+    public Usuarios? _usuario { set; get; } = new Usuarios();  
+    private List<RolUsuario> ListSexo = new List<RolUsuario>();
+    private List<Usuarios> ListUsuario = new List<Usuarios>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ListaRol();
+        await ListaUsuario();
+    }
+
+    public async Task AgregaUsuario()
+    {
+        _usuario.FechaCreacion = DateTime.Now;
+        _usuario.FechaModificacion = DateTime.Now;
+        _usuario.IdUsuarioModifica = 5;
+
+        var response = await httpClient.PostAsJsonAsync<Usuarios>("api/AgregaUsuario/AgregaUsuarios", _usuario);
+        var respuestaUsuario = await response.Content.ReadFromJsonAsync<Usuarios>();
+        if (response.IsSuccessStatusCode)
+        {
+            if (respuestaUsuario.IdRolUsuario > 0)
+            {
+
+                Snackbar.Clear();
+                Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+                Snackbar.Configuration.ShowCloseIcon = false;
+                Snackbar.Add("Usuario agregado correctamente", Severity.Success, config =>
+                {
+                    config.Icon = Icons.Material.Filled.SdCardAlert;
+                    config.IconColor = Color.Primary;
+                    config.IconSize = Size.Large;
+                    Limpiar();
+                });
+
+            }
+
+        }else
+        {
+            Snackbar.Clear();
+            Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+            Snackbar.Configuration.ShowCloseIcon = false;
+            Snackbar.Add("Ocurrio un error intenta mas tarde", Severity.Error, config =>
+            {
+                config.Icon = Icons.Material.Filled.SdCardAlert;
+                config.IconColor = Color.Primary;
+                config.IconSize = Size.Large;
+                Limpiar();
+            });
+            
+            
+        }
+        Console.WriteLine(response);
+    }
+    public async Task<List<RolUsuario>> ListaRol()
+    {
+        var response = await httpClient.PostAsJsonAsync<List<RolUsuario>>("/api/Catalogos/ListaRol", null);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var list = await response.Content.ReadFromJsonAsync<List<RolUsuario>>();
+            if (list.Count > 0)
+            {
+                ListSexo = list;
+                StateHasChanged();
+            }
+        }
+
+        return ListSexo;
+
+    }
+
+    public async Task<List<Usuarios>> ListaUsuario()
+    {
+        var response = await httpClient.PostAsJsonAsync<List<Usuarios>>("/api/Catalogos/ListaUsuario", null);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var list = await response.Content.ReadFromJsonAsync<List<Usuarios>>();
+            if (list.Count > 0)
+            {
+                ListUsuario = list;
+                StateHasChanged();
+            }
+        }
+
+        return ListUsuario;
+
+    }
+    public async Task Limpiar()
+    {
+        _usuario.Usuario = "";
+        _usuario.ApellidoMaterno = "";
+        _usuario.ApellidoPaterno = "";
+        _usuario.Contrasena = "";
+        _usuario.CorreoElectronico = "";
+        _usuario.IdRolUsuario = 0;
+        _usuario.Nombre = "";
+    }
+}

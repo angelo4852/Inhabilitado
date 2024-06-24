@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = ConstanciaNoInhabilitado.Shared
-build_property.ProjectDir = C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Shared\
+build_property.ProjectDir = C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInhabilitadoV2\Inhabilitado\ConstanciaNoInhabilitado\Shared\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

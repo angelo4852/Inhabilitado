@@ -294,5 +294,29 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             }
 
         }
+
+        public async Task<List<RolUsuario>> ObtenerRolUsuario()
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+                var data = await connection.QueryAsync(@"SELECT * FROM RolUsuario");
+                var jsonResult = JsonConvert.SerializeObject(data);
+                var TipoSancion = JsonConvert.DeserializeObject<List<RolUsuario>>(jsonResult);
+                List<RolUsuario> TipoSanciones = new();
+                RolUsuario TipoSancionDefault = new RolUsuario
+                {
+                    IdRolUsuario = 0,
+                    Descripcion = "--Seleccione--"
+                };
+                TipoSanciones.Add(TipoSancionDefault);
+                TipoSanciones.AddRange(TipoSancion);
+                return TipoSanciones;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
