@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConstanciaNoInhabilitado.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53fd023b6cbe863740e1d608f88c4d4b2781e36b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1beb74bdf3a836f4bdf8e4324db56ba59b56bcc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConstanciaNoInhabilitado.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConstanciaNoInhabilitado.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

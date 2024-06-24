@@ -33,6 +33,67 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script>
+        window.saveAsFile = function (fileName, byteBase64) {
+            const byteCharacters = atob(byteBase64);
+            const byteNumbers = new Array(byteCharacters.length);
+
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+
+            const byteArray = new Uint8Array(byteNumbers);
+            const blob = new Blob([byteArray], { type: "application/pdf" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            link.click();
+            //  alert(link.href);
+        }
+
+      
+
+        window.JS = {
+            SaveAs: function (fileName, bytesBase64) {
+                var link = document.createElement('a');
+                link.download = fileName;
+                link.href = "data:application/octet-stream;base64," + bytesBase64;
+                document.body.appendChild(link); // Required for Firefox
+                link.click();
+                document.body.removeChild(link);
+            }
+        };
+
+        function open_reportviewer(fileName, pdfBase64) {
+            // Decodificar el PDF Base64
+            const pdfBytes = atob(pdfBase64);
+            const pdfBlob = new Blob([new Uint8Array(pdfBytes)], { type: "application/pdf" });
+
+            // Crear una URL para el PDF Blob
+            const pdfUrl = URL.createObjectURL(pdfBlob);
+
+            // Abrir el PDF en una nueva ventana o pestaña
+            window.open(pdfUrl, "_blank");
+        }
+
+        function downloadPdf(base64) {
+            var binaryString = window.atob(base64);
+            var len = binaryString.length;
+            var bytes = new Uint8Array(len);
+            for (var i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            var blob = new Blob([bytes], { type: 'application/pdf' });
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);            
+            link.download = 'ReporteDeConstanciasExpedidas.pdf';
+            link.click();
+        }
+
+        function openNewTab(url) {
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 
 </html>

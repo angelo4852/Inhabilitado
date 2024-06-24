@@ -1,0 +1,108 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/CargarExcel"
+
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs;
+@using ConstanciaNoInhabilitado.Client.Interfaces;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@inject IDialogService dialogService
+@inject IFileService FileService
+@inject HttpClient httpClient
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage
+@attribute [Authorize]
+
+
+<MainFormHome>
+    <ContentBreadcrumbs>
+        <MudLink>
+            <b>Inicio</b>
+        </MudLink>
+        <b>/</b>
+        <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
+            <b>Administración</b>
+        </MudLink>
+        <b>/</b>
+        <b style="color:#A8113E;">
+            Cargar desde Archivo
+        </b>
+    </ContentBreadcrumbs>
+    <Main>
+        <CardForm>
+            <Content>
+                <MudGrid Justify="Justify.Center">                                              
+                    <MudItem xs="11">
+                        <MudLink OnClick="MostrarMensaje">
+                            <p style="font-size: 1.3rem">
+                                <MudIcon Icon="@Icons.Material.Filled.Flag" Style="color:#A8113E; font-size: 2rem"></MudIcon>
+                                Ayuda
+                            </p>
+                        </MudLink>
+                    </MudItem>
+                    <MudItem xs="5">
+                        <MudFileUpload T="IBrowserFile" FilesChanged="UploadFiles" Accept=".xlsx">
+                            <ButtonTemplate>
+                                <MudFab HtmlTag="label"
+                                        Color="Color.Success"
+                                        Icon="@Icons.Material.Filled.AttachFile"
+                                        for="@context.Id"
+                                        Label="Seleccionar Archivo" />
+                            </ButtonTemplate>
+                        </MudFileUpload>
+                    </MudItem>   
+                    <MudItem xs="5">
+                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:27vw;height:55px;" OnClick="LeerArchivoExcel">Cargar Archivo</MudButton>
+                    </MudItem>
+                    <MudItem xs="5">
+                        @if (ExcelFile is not null)
+                        {
+                            <p>@ExcelFile.Name</p>
+                        }
+                    </MudItem>
+                    @if (Spinner)
+                    {
+                        <MudItem xs="10">
+                            <div class="row justify-content-center">
+                                <div class="spinner-border text-primary " style="width: 5rem; height: 5rem;" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <MudText Typo="Typo.h4" Align="Align.Center">Cargando información del archivo Excel...</MudText>
+                                <MudText Typo="Typo.h6" Align="Align.Center">Espere un momento por favor...</MudText>
+                            </div>                        
+                        </MudItem>
+                    }
+                    @if (MostrarRescultadosCargaMasiva)
+                    {
+                        <MudItem xs="11">
+                            <MudExpansionPanels>
+                                <MudExpansionPanel Text="Se cargaron los siguientes datos." MaxHeight="220">
+                                    <MudAlert Severity="Severity.Success">
+                                        <p>El proceso ha finalizado</p>
+                                        <p>Registros detectados del archivo: @CargaMasivaData.CargaMasivaExcel.Count()</p>
+                                        <p>Registros insertados correctamente: @($"{CargaMasivaData.InhabilitadoCarga.Where(i => i.SeInserto).Count() + CargaMasivaData.InhabilitacionCarga.Where(i => i.SeInserto).Count()}")</p>
+                                        <p>Registros no insertados: @($"{CargaMasivaData.InhabilitadoCarga.Where(i => i.SeInserto == false).Count() + CargaMasivaData.InhabilitacionCarga.Where(i => i.SeInserto == false).Count()}")</p>
+                                        <p>Registros que requiere información: @CargaMasivaData.CargaMasivaExcel.Where(c => c.FaltaInformacion).Count()</p>
+                                    </MudAlert>
+                                </MudExpansionPanel>
+                                <MudExpansionPanel Text="Revise los siguientes registros" MaxHeight="@MaxHeight">
+                                    <MudAlert Severity="Severity.Warning">
+                                        <p>Error al procesar los datos</p>
+                                        @foreach (var error in CargaMasivaData.ErroresDeLaCarga)
+                                        {
+                                            <p>@error</p>
+                                        }
+                                    </MudAlert>
+                                </MudExpansionPanel>
+                            </MudExpansionPanels>
+                        </MudItem>
+                    }
+                </MudGrid>
+            </Content>
+        </CardForm>
+    </Main>
+</MainFormHome>

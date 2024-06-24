@@ -295,46 +295,28 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
 
         }
 
-
-        public async Task<OrigenesInhabilitacion> RegistraOrigen(OrigenesInhabilitacion registraDependencia)
+        public async Task<List<RolUsuario>> ObtenerRolUsuario()
         {
             try
             {
                 using var connection = new SqlConnection(connectionString);
-                var id = await connection.QuerySingleAsync<int>($@" INSERT INTO OrigenInhabilitacion VALUES (@Descripcion) 
-                                                                    SELECT SCOPE_IDENTITY();", registraDependencia);
-
-                registraDependencia.IdOrigenInhabilitacion = id;
-                //var jsonResult = JsonConvert.SerializeObject(id);
-                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
-                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
-                return registraDependencia;
+                var data = await connection.QueryAsync(@"SELECT * FROM RolUsuario");
+                var jsonResult = JsonConvert.SerializeObject(data);
+                var TipoSancion = JsonConvert.DeserializeObject<List<RolUsuario>>(jsonResult);
+                List<RolUsuario> TipoSanciones = new();
+                RolUsuario TipoSancionDefault = new RolUsuario
+                {
+                    IdRolUsuario = 0,
+                    Descripcion = "--Seleccione--"
+                };
+                TipoSanciones.Add(TipoSancionDefault);
+                TipoSanciones.AddRange(TipoSancion);
+                return TipoSanciones;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
-
-        }
-
-        public async Task<OrigenesInhabilitacion> UpdateOrigen(OrigenesInhabilitacion usuarioEntities)
-        {
-            try
-            {
-                using var connection = new SqlConnection(connectionString);
-                var id = await connection.ExecuteAsync(@"UPDATE OrigenInhabilitacion SET Descripcion = @Descripcion  where IdOrigenInhabilitacion = @IdOrigenInhabilitacion", usuarioEntities);
-                usuarioEntities.idBandera = id;
-                return usuarioEntities;
-                //var jsonResult = JsonConvert.SerializeObject(id);
-                //ServidorPublico? resutadoInhabilitado = JsonConvert.DeserializeObject<ServidorPublico>(jsonResult);
-                //resutadoInhabilitado.IdInhabilitado = usuarioEntities.IdInhabilitado;
-            }
-            catch (Exception e)
-            {
-                throw;
-            }
-
         }
     }
 }

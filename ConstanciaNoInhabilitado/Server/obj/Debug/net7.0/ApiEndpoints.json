@@ -159,6 +159,22 @@
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregarInhabilitaci\u00F3n",
+    "Method": "ActualizarInhabilitacion",
+    "RelativePath": "api/AgregarInhabilitaci\u00F3n/ActualizarInhabilitacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InhabilitacionUpdate",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion.InhabilitacionUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregarInhabilitaci\u00F3n",
     "Method": "CreateInhabilitacion",
     "RelativePath": "api/AgregarInhabilitaci\u00F3n/CreateInhabilitacion",
     "HttpMethod": "POST",
@@ -166,14 +182,50 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "registrarNuevaInhabilitacion",
-        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.RegistrarNuevaInhabilitacion",
+        "Name": "inhabilitacionDTO",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion.InhabilitacionDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.RegistrarNuevaInhabilitacion",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion.InhabilitacionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregarInhabilitaci\u00F3n",
+    "Method": "GetInhabilitaciones",
+    "RelativePath": "api/AgregarInhabilitaci\u00F3n/GetInhabilitaciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregarInhabilitaci\u00F3n",
+    "Method": "GetInhabilitado",
+    "RelativePath": "api/AgregarInhabilitaci\u00F3n/GetInhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rfc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion.Inhabilitado",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -210,6 +262,32 @@
     ]
   },
   {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.CargaMasivaArchivoExcel",
+    "Method": "RegistrarCargaMasicaExcel",
+    "RelativePath": "api/CargaMasivaArchivoExcel/RegistrarCargaMasicaExcel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cargaMasivaExcelDTO",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.CargaMasiva.CargaMasivaExcelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.CargaMasiva.CargaMasivaExcelDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
     "Method": "ActualizarCausa",
     "RelativePath": "api/Catalogos/ActualizarCausa",
@@ -236,22 +314,6 @@
       {
         "Name": "causasInhabilitacion",
         "Type": "ConstanciaNoInhabilitado.Shared.Entities.Catalogos.Dependencia",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
-    "Method": "ActualizarOrigen",
-    "RelativePath": "api/Catalogos/ActualizarOrigen",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "origenInhabilitacion",
-        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.OrigenesInhabilitacion",
         "IsRequired": true
       }
     ],
@@ -339,18 +401,12 @@
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
-    "Method": "RegistraOrigen",
-    "RelativePath": "api/Catalogos/RegistraOrigen",
+    "Method": "ListaRol",
+    "RelativePath": "api/Catalogos/ListaRol",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "causaInhabilitacion",
-        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.OrigenesInhabilitacion",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -380,6 +436,22 @@
       {
         "Name": "registroDependencia",
         "Type": "ConstanciaNoInhabilitado.Shared.Entities.Catalogos.Dependencia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Constancias",
+    "Method": "GetReportes",
+    "RelativePath": "api/Constancias/GetReportes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "constanciaBusqueda",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Constancia.ConstanciaBusqueda",
         "IsRequired": true
       }
     ],
@@ -468,6 +540,70 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.ReportesConstancias",
+    "Method": "GeneratePdf",
+    "RelativePath": "api/ReportesConstancias/GeneratePdf",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obtenerReportePdf",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Reportes.ObtenerReportePdf",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.ReportesConstancias",
+    "Method": "GetReportes",
+    "RelativePath": "api/ReportesConstancias/GetReportes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "criterioDeReportesConsulta",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Reportes.CriterioDeReportesConsulta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.ReportesConstancias",
+    "Method": "GetReportesAltasoBajas",
+    "RelativePath": "api/ReportesConstancias/GetReportesAltasoBajas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "criterioDeReportesConsulta",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Reportes.CriterioDeReportesConsulta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.ReportesConstancias",
+    "Method": "GetReportesPDF",
+    "RelativePath": "api/ReportesConstancias/GetReportesPDF",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obtenerReportePdf",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Reportes.ObtenerReportePdf",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.WeatherForecastController",

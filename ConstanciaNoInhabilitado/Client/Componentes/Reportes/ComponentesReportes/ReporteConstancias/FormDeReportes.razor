@@ -1,0 +1,82 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Client.Utils.Services;
+@inject IDialogService DialogService;
+@inject HttpClient httpClient
+@inject IJSRuntime JSRuntime
+@inject ExcelService _excelService;
+@inject NavigationManager navigationManager
+
+@if (MostrarSppinerLogin)
+{
+    <div class="row justify-content-center">
+        <div class="col-md-12 mb-4 SpacePaddingInput text-center">
+            <MudProgressCircular Color="Color.Secondary" Style="height:70px;width:70px;" Indeterminate="true"></MudProgressCircular>
+            <MudText Typo="Typo.h4">Cargando información ...</MudText>
+        </div>
+    </div>
+}
+else
+{
+    <MudItem xs="5">
+        <MudDatePicker T="DateTime"
+                       Label="Introduce la Fecha de Inicio"
+                       DateFormat="dd/MM/yyyy"
+                       @bind-Date="CriterioDeReportes.FechaInicio"
+                       For="@(()=>CriterioDeReportes.FechaInicio)" />
+    </MudItem>
+    <MudItem xs="5">
+        <MudDatePicker T="DateTime"
+                       Label="Introduce la Fecha de Término"
+                       DateFormat="dd/MM/yyyy"
+                       @bind-Date="CriterioDeReportes.FechaTermino"
+                       For="@(()=>CriterioDeReportes.FechaTermino)" />
+    </MudItem>
+    @if (ReporteAltasBajas)
+    {
+        <MudItem xs="3"></MudItem>
+        <MudItem xs="6">
+            <MudSelect T="string" Label="Selecciona una opción" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Text="CriterioDeReportes.TipoDeReporte">
+                <MudSelectItem Value="@("Informe de Altas")" />
+                <MudSelectItem Value="@("Informe de Bajas")" />
+            </MudSelect>
+        </MudItem>
+        <MudItem xs="3"></MudItem>
+    }
+
+    @if (ReportesConstancias is not null)
+    {
+        @if (ReportesConstancias.Count() > 0)
+        {
+            <MudItem xs="3"></MudItem>
+            <MudItem xs="6">
+                <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.FileDownloadDone" Style="background-color: yellowgreen; color: white; width: 100%; height: 60px;" OnClick="DownloadExcel">
+                    Descargar Archivo de Excel
+                </MudButton>
+            </MudItem>
+            <MudItem xs="3">               
+            </MudItem>
+        }
+    }
+
+    @if (ReportesConstanciasAltasoBajas is not null)
+    {
+        @if (ReportesConstanciasAltasoBajas.Count() > 0)
+        {
+            <MudItem xs="3"></MudItem>
+            <MudItem xs="6">
+                <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.FileDownloadDone" Style="background-color: yellowgreen; color: white; width: 100%; height: 60px;" OnClick="DownloadExcelAltasoBajas">
+                    Descargar Archivo Generado
+                </MudButton>
+            </MudItem>
+            <MudItem xs="3">
+            </MudItem>
+        }
+    }
+
+    <MudItem xs="3">
+        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:100%;" OnClick="ValidarInformacion">Obtener Reporte</MudButton>
+    </MudItem>
+}
+
+
+

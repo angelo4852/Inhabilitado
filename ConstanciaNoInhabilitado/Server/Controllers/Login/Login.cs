@@ -28,22 +28,23 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
         [HttpPost]
         [Route("ConsultaUsuario")]
-        public async Task<IActionResult> ConsultaUsuario(UserTaxLogin userTaxLogin) 
+        public async Task<IActionResult> ConsultaUsuario(UserTaxLogin userTaxLogin)
         {
-            Session session = new Session();                     
+            Session session = new Session();
             var resp = await service.login(userTaxLogin);
             if (resp != null)
-            {                
-               session.User = resp.Nombre;
-               session.Correo = resp.CorreoElectronico;
-               session.Rol = (string)resp.IdRolUsuario;                
+            {
+                session.IdUser = (int)resp.IdUsuario!;
+                session.User = resp.Nombre;
+                session.Correo = resp.CorreoElectronico;
+                session.Rol = (string)resp.IdRolUsuario;
             }
             else
             {
                 session.User = $"El usuario: {userTaxLogin.Usuario} no existe";
                 session.Rol = "0";
             }
-            return StatusCode(StatusCodes.Status200OK,session);
+            return StatusCode(StatusCodes.Status200OK, session);
         }
 
         [HttpPost]
@@ -52,7 +53,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
         {
             SearchReferenceReponse searchReferenceReponse = new();
 
-            if (searchReference.Reference == "12420000727841991212") 
+            if (searchReference.Reference == "12420000727841991212")
             {
                 searchReferenceReponse.ReferenceSearch = "http://testappdstnet.puebla.gob.mx/api/Divers/GetMethodPaymentWindow?referenceNumber=12420000727841991212";
             }

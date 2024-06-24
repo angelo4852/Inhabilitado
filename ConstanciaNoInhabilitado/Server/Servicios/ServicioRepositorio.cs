@@ -53,7 +53,7 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
             var existe = await connection.QueryFirstOrDefaultAsync<int>(
                                          @"SELECT 1
                                          FROM Inhabilitado WHERE  RFC = @RFC",
-                                         new {  rfc }
+                                         new { nombre, rfc }
                                          );
             return existe == 1;
 

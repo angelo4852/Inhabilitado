@@ -1,0 +1,41 @@
+﻿@page "/ConstanciaNoInhabilitado/Admin/ReporteConstancias"
+
+@using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@attribute [Authorize]
+
+
+<MainFormHome>
+    <ContentBreadcrumbs>
+        <MudLink Href="ConstanciaNoInhabilitado/Default">
+            <b>Inicio</b>
+        </MudLink>
+        <b>/</b>
+        <MudLink Href="ConstanciaNoInhabilitado/Admin/Default">
+            <b>Administración</b>
+        </MudLink>
+        <b>/</b>
+        <b style="color:#A8113E;">
+            Reporte de Constancias Expedidas
+        </b>
+    </ContentBreadcrumbs>
+    <Main>
+        <CardForm>
+            <Content>
+                <MudGrid Justify="Justify.Center">
+                    <MudItem xs="11">
+                        <MudText Typo="Typo.h5">Establezca el intervalo de tiempo para generar el reporte</MudText>
+                    </MudItem>
+                    <FormDeReportes/>
+                </MudGrid>
+            </Content>
+        </CardForm>
+    </Main>
+</MainFormHome>

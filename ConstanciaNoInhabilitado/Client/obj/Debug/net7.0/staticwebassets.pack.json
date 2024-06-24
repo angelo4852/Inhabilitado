@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\ConstanciaNoInhabilitado.Client.styles.css"
     },
     {
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\constancias\\constancia1.gif",
+      "PackagePath": "staticwebassets\\constancias\\constancia1.gif"
+    },
+    {
       "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -89,8 +93,24 @@
       "PackagePath": "staticwebassets\\img\\Menu\\11.png"
     },
     {
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\12.png",
+      "PackagePath": "staticwebassets\\img\\Menu\\12.png"
+    },
+    {
       "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\13.png",
       "PackagePath": "staticwebassets\\img\\Menu\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\14.png",
+      "PackagePath": "staticwebassets\\img\\Menu\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\15.png",
+      "PackagePath": "staticwebassets\\img\\Menu\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\16.png",
+      "PackagePath": "staticwebassets\\img\\Menu\\16.png"
     },
     {
       "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\17.png",
@@ -123,6 +143,10 @@
     {
       "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\8.png",
       "PackagePath": "staticwebassets\\img\\Menu\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\Menu\\9.png",
+      "PackagePath": "staticwebassets\\img\\Menu\\9.png"
     },
     {
       "Id": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\wwwroot\\img\\R.png",

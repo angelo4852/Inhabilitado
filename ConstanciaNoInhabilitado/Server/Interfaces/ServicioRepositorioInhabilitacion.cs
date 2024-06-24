@@ -4,8 +4,11 @@ using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 
 namespace ConstanciaNoInhabilitado.Server.Interfaces
 {
-	public interface IServicioRepositorioInhabilitacion
-	{
-		Task<Inhabilitacion> AgregarInhabilitacion(Inhabilitacion Inhabilitacion);
-	}
+    public interface IServicioRepositorioInhabilitacion
+    {
+        Task<InhabilitacionDTO> AgregarInhabilitacion(InhabilitacionDTO InhabilitacionDTO);       
+        Task<Inhabilitado> GetInhabilitado(string RFC);
+        Task<List<InhabilitacionADD>> GetInhabilitaciones();
+        Task<InhabilitacionUpdate> ActualizarInhabilitacion(InhabilitacionUpdate InhabilitacionUpdate);
+    }
 }

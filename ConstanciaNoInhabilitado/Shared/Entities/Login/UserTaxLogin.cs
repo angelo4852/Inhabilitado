@@ -71,6 +71,12 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 
     public class Session 
     {
+
+        /// <summary>
+        /// Id de usuario BD
+        /// </summary>       
+        public int IdUser { get; set; }
+
         /// <summary>
         /// Nombre de Usuario o RFC
         /// </summary>       
@@ -115,6 +121,11 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// Tipo Menu Admin, Catalogos, Reporte
         /// </summary>   
         public TipoMenu TipoMenu { get; set; }
+
+        /// <summary>
+        /// Tipo Usuario  Administrador = 1,Supervisor ,Analista , Ninguno
+        /// </summary>  
+        public List<TipoUsuario> TipoUser { get; set; }
     }
 
     public class CategoriaRegistrarInhabilitado 
@@ -262,10 +273,10 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 		/// </summary>   
 		public int InhabilitacionProceso { get; set; }
 
-		/// <summary>
-		/// RFC de Servidor Publico
-		/// </summary>   
-		public string RFC { get; set; }
+        /// <summary>
+        /// RFC de Servidor Publico
+        /// </summary>   
+        public string RFC { get; set; }
 
 		/// <summary>
 		/// Autoridad Sancionadora de Servidor Publico
@@ -466,24 +477,20 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
 
     public class OrigenesInhabilitacion
     {
-        public int IdOrigenInhabilitacion { get; set; }
-
         /// <summary>
         /// Id de la Origenes
         /// </summary>   
-        public string? Value { get; set; }
+        public string Value { get; set; }
 
         /// <summary>
         /// Descripcion de la Origenes
         /// </summary>   
-        public string? Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
         /// <summary>
         /// Muestra la opcion de actualizar y cancelar
         /// </summary>   
         public bool Acciones { get; set; }
-        public int? idBandera { get; set; } = 3;
-
     }
 
     public class DependenciasInhabilitacion
@@ -508,5 +515,13 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         Admin = 1,
         Catalogo,
         Reporte
+    }
+
+    public enum TipoUsuario
+    {
+        Administrador = 1,
+        Supervisor,
+        Analista,
+        Ninguno
     }
 }
