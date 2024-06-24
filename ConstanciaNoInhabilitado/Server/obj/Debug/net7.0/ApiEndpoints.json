@@ -184,6 +184,32 @@
     ]
   },
   {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregaUsuario",
+    "Method": "AgregaUsuarios",
+    "RelativePath": "api/AgregaUsuario/AgregaUsuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_usuarios",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.Usuarios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.Catalogos",
     "Method": "ActualizarCausa",
     "RelativePath": "api/Catalogos/ActualizarCausa",
