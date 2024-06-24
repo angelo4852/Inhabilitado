@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
       "projectName": "ConstanciaNoInhabilitado.Shared",
-      "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
+      "projectPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
       "packagesPath": "C:\\Users\\ECA-SDA-075\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\obj\\",
+      "outputPath": "C:\\Users\\ECA-SDA-075\\Documents\\Proyectos\\ProyectoInhabilitadoV2\\InhabilitadosV3\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

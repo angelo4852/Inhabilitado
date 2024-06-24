@@ -13,259 +13,259 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ConstanciaNoInhabilitado.Client
 build_property.RootNamespace = ConstanciaNoInhabilitado.Client
-build_property.ProjectDir = C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInhabilitadoV2\Inhabilitado\ConstanciaNoInhabilitado\Client\
+build_property.ProjectDir = C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInhabilitadoV2\InhabilitadosV3\Inhabilitado\ConstanciaNoInhabilitado\Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInhabilitadoV2\Inhabilitado\ConstanciaNoInhabilitado\Client
+build_property.MSBuildProjectDirectory = C:\Users\ECA-SDA-075\Documents\Proyectos\ProyectoInhabilitadoV2\InhabilitadosV3\Inhabilitado\ConstanciaNoInhabilitado\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/App.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/Admin.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/Admin.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQWRtaW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarInhabilitación/AgregarInhabilitación.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarInhabilitación/AgregarInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBZ3JlZ2FySW5oYWJpbGl0YWNpw7NuXEFncmVnYXJJbmhhYmlsaXRhY2nDs24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarInhabilitación/FormAgregarInhabilitación.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarInhabilitación/FormAgregarInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBZ3JlZ2FySW5oYWJpbGl0YWNpw7NuXEZvcm1BZ3JlZ2FySW5oYWJpbGl0YWNpw7NuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarUsuario/AgregarUsuario.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarUsuario/AgregarUsuario.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBZ3JlZ2FyVXN1YXJpb1xBZ3JlZ2FyVXN1YXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarUsuario/EditarUsuarios.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AgregarUsuario/EditarUsuarios.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBZ3JlZ2FyVXN1YXJpb1xFZGl0YXJVc3Vhcmlvcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/AsistenteRegistro.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/AsistenteRegistro.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xBc2lzdGVudGVSZWdpc3Ryby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/CarouselAsistenteRegistro.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/CarouselAsistenteRegistro.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xDYXJvdXNlbEFzaXN0ZW50ZVJlZ2lzdHJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoIII/PasoIII.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoIII/PasoIII.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSUlJXFBhc29JSUkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoII/PasoII.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoII/PasoII.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSUlcUGFzb0lJLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoI/PasoI.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/AsistenteRegistro/PasoI/PasoI.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxBc2lzdGVudGVSZWdpc3Ryb1xQYXNvSVxQYXNvSS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/CargarDesdeExcel/CargarDesdeExcel.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/CargarDesdeExcel/CargarDesdeExcel.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxDYXJnYXJEZXNkZUV4Y2VsXENhcmdhckRlc2RlRXhjZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitación/EditarInhabilitación.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitación/EditarInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxFZGl0YXJJbmhhYmlsaXRhY2nDs25cRWRpdGFySW5oYWJpbGl0YWNpw7NuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitados.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/EditarInhabilitados.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxFZGl0YXJJbmhhYmlsaXRhZG9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/RegistrarInhabilitado/FormProveedorContratista.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/RegistrarInhabilitado/FormProveedorContratista.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxSZWdpc3RyYXJJbmhhYmlsaXRhZG9cRm9ybVByb3ZlZWRvckNvbnRyYXRpc3RhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/RegistrarInhabilitado/FormServidorPublico.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/RegistrarInhabilitado/FormServidorPublico.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxSZWdpc3RyYXJJbmhhYmlsaXRhZG9cRm9ybVNlcnZpZG9yUHVibGljby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/RegistrarInhabilitado/RegistrarInhabilitado.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/RegistrarInhabilitado/RegistrarInhabilitado.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxSZWdpc3RyYXJJbmhhYmlsaXRhZG9cUmVnaXN0cmFySW5oYWJpbGl0YWRvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/VerInhabilitaciones/VerInhabilitaciones.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Admin/ComponentesAdmin/VerInhabilitaciones/VerInhabilitaciones.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQWRtaW5cQ29tcG9uZW50ZXNBZG1pblxWZXJJbmhhYmlsaXRhY2lvbmVzXFZlckluaGFiaWxpdGFjaW9uZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/Catalogos.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/Catalogos.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENhdGFsb2dvcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarCausa/DataGridEditarCausa.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarCausa/DataGridEditarCausa.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXEVkaXRhckNhdXNhXERhdGFHcmlkRWRpdGFyQ2F1c2EucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarCausa/EditarCausa.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarCausa/EditarCausa.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXEVkaXRhckNhdXNhXEVkaXRhckNhdXNhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarDependencia/DataGridEditarDependencia.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarDependencia/DataGridEditarDependencia.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXEVkaXRhckRlcGVuZGVuY2lhXERhdGFHcmlkRWRpdGFyRGVwZW5kZW5jaWEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarDependencia/EditarDependencia.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarDependencia/EditarDependencia.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXEVkaXRhckRlcGVuZGVuY2lhXEVkaXRhckRlcGVuZGVuY2lhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarOrigen/DataGridEditarOrigen.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarOrigen/DataGridEditarOrigen.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXEVkaXRhck9yaWdlblxEYXRhR3JpZEVkaXRhck9yaWdlbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarOrigen/EditarOrigen.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/EditarOrigen/EditarOrigen.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXEVkaXRhck9yaWdlblxFZGl0YXJPcmlnZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarCausa/FormRegistrarCausa.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarCausa/FormRegistrarCausa.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXFJlZ2lzdHJhckNhdXNhXEZvcm1SZWdpc3RyYXJDYXVzYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarCausa/RegistrarCausa.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarCausa/RegistrarCausa.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXFJlZ2lzdHJhckNhdXNhXFJlZ2lzdHJhckNhdXNhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarDependencia/FormRegistrarDependencia.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarDependencia/FormRegistrarDependencia.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXFJlZ2lzdHJhckRlcGVuZGVuY2lhXEZvcm1SZWdpc3RyYXJEZXBlbmRlbmNpYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarDependencia/RegistrarDependencia.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarDependencia/RegistrarDependencia.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXFJlZ2lzdHJhckRlcGVuZGVuY2lhXFJlZ2lzdHJhckRlcGVuZGVuY2lhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarOrigen/FormRegistrarOrigen.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarOrigen/FormRegistrarOrigen.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXFJlZ2lzdHJhck9yaWdlblxGb3JtUmVnaXN0cmFyT3JpZ2VuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarOrigen/RegistrarOrigen.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Catalogos/ComponentesCatalogos/RegistrarOrigen/RegistrarOrigen.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcQ2F0YWxvZ29zXENvbXBvbmVudGVzQ2F0YWxvZ29zXFJlZ2lzdHJhck9yaWdlblxSZWdpc3RyYXJPcmlnZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Menu/Menu.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Menu/Menu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcTWVudVxNZW51LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ConsultarConstancias/ConsultarConstancias.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ConsultarConstancias/ConsultarConstancias.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcUmVwb3J0ZXNcQ29tcG9uZW50ZXNSZXBvcnRlc1xDb25zdWx0YXJDb25zdGFuY2lhc1xDb25zdWx0YXJDb25zdGFuY2lhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ConsultarConstancias/FormConstancias.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ConsultarConstancias/FormConstancias.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcUmVwb3J0ZXNcQ29tcG9uZW50ZXNSZXBvcnRlc1xDb25zdWx0YXJDb25zdGFuY2lhc1xGb3JtQ29uc3RhbmNpYXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ReporteConstancias/FormDeReportes.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ReporteConstancias/FormDeReportes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcUmVwb3J0ZXNcQ29tcG9uZW50ZXNSZXBvcnRlc1xSZXBvcnRlQ29uc3RhbmNpYXNcRm9ybURlUmVwb3J0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ReporteConstancias/ReporteConstancias.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ReporteConstancias/ReporteConstancias.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcUmVwb3J0ZXNcQ29tcG9uZW50ZXNSZXBvcnRlc1xSZXBvcnRlQ29uc3RhbmNpYXNcUmVwb3J0ZUNvbnN0YW5jaWFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ReporteInhabilitaciones.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/ComponentesReportes/ReporteInhabilitaciones.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcUmVwb3J0ZXNcQ29tcG9uZW50ZXNSZXBvcnRlc1xSZXBvcnRlSW5oYWJpbGl0YWNpb25lcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/Reportes.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Reportes/Reportes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcUmVwb3J0ZXNcUmVwb3J0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Todo/MostoTodo.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Componentes/Todo/MostoTodo.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50ZXNcVG9kb1xNb3N0b1RvZG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Admin/Default.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Admin/Default.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGVmYXVsdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Counter.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/FetchData.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Index.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Errors/NotFound.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Errors/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVycm9yc1xOb3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Forms/MainFormUpdate.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Forms/MainFormUpdate.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvcm1zXE1haW5Gb3JtVXBkYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalActualizarInhabilitado.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalActualizarInhabilitado.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbEFjdHVhbGl6YXJJbmhhYmlsaXRhZG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalAvisoInformacionReferencia.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalAvisoInformacionReferencia.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbEF2aXNvSW5mb3JtYWNpb25SZWZlcmVuY2lhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalAyudaCargarExcel.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalAyudaCargarExcel.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbEF5dWRhQ2FyZ2FyRXhjZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalDefineInhabilitado.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalDefineInhabilitado.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbERlZmluZUluaGFiaWxpdGFkby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalDefineLaInhabilitación.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalDefineLaInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbERlZmluZUxhSW5oYWJpbGl0YWNpw7NuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalEditarInhabilitación.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalEditarInhabilitación.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbEVkaXRhckluaGFiaWxpdGFjacOzbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalErrores.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalErrores.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbEVycm9yZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalRegistrarDependencia.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Dialogs/ModalRegistrarDependencia.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcRGlhbG9nc1xNb2RhbFJlZ2lzdHJhckRlcGVuZGVuY2lhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/SurveyPrompt.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/_Imports.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Login/Default.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Login/Default.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cRGVmYXVsdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-r39in0vhjj
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Login/Login.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Pages/Login/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-7yhwc714s9
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Forms/MainForm.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Forms/MainForm.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvcm1zXE1haW5Gb3JtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-cxpm6ac47i
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Forms/MainFormHome.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Forms/MainFormHome.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvcm1zXE1haW5Gb3JtSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-jjfc4oppvl
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/MainLayout.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-kijgo3skqq
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/NavMenu.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3nolpozc3g
 
-[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Cards/CardForm.razor]
+[C:/Users/ECA-SDA-075/Documents/Proyectos/ProyectoInhabilitadoV2/InhabilitadosV3/Inhabilitado/ConstanciaNoInhabilitado/Client/Shared/Partial/Cards/CardForm.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRpYWxcQ2FyZHNcQ2FyZEZvcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rzef2lrm0d
