@@ -29,7 +29,7 @@ namespace ConstanciaNoInhabilitado.Client.Auth
                     new Claim(ClaimTypes.Role,userTaxLogin.Rol)
                 }, "JwtAuth"));
 
-                //userTaxLogin.ExpiryTime = DateTime.UtcNow.ToString("o");
+                userTaxLogin.ExpiryTime = DateTime.UtcNow;
                 await _sessionStorageService.SetItemAsync("sesionUser", userTaxLogin);
             }
             else 
@@ -46,16 +46,11 @@ namespace ConstanciaNoInhabilitado.Client.Auth
 
             if(sesionUsuario == null)
                 return await Task.FromResult(new AuthenticationState(_principal));
-            
-            //if(sesionUsuario.ExpiryTime == null)
-            //    return await Task.FromResult(new AuthenticationState(_principal));
+            DateTime fechaProporcionada = sesionUsuario.ExpiryTime;
+            DateTime fechaActual = DateTime.UtcNow;
+            TimeSpan diferencia = fechaActual - fechaProporcionada;
 
-            //var storedDataTimestamp = DateTime.Parse(sesionUsuario.ExpiryTime);
-
-            //var expirationTime = TimeSpan.FromMinutes(30); // Ca
-
-            //if(DateTime.UtcNow - storedDataTimestamp > expirationTime)
-            //    return await Task.FromResult(new AuthenticationState(_principal));
+            if (diferencia.TotalMinutes > 30) return await Task.FromResult(new AuthenticationState(_principal));
 
             var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(new List<Claim>
                 {

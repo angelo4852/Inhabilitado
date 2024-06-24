@@ -2,6 +2,8 @@
 @using ConstanciaNoInhabilitado.Client.Auth;
 @using Microsoft.AspNetCore.Authorization;
 @using Microsoft.AspNetCore.Components.Authorization;
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage
 @inject AuthenticationStateProvider authenticationStateProvider;
 @inject NavigationManager navigationManager;
 
@@ -25,35 +27,57 @@
                                 <b>INICIO</b>
                             </MudLink>
                             @* Menu se ADMINISTRACIÓN inicio *@
-                            <MudMenu Label="ADMINISTRACIÓN" Dense="true" Class="@Css">
-                                <MudNavGroup Title="Inhabilitados" Expanded="false">
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitado" IconColor="Color.Success">Registrar Inhabilitado</MudNavLink>
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarInhabilitado" IconColor="Color.Info">Editar Inhabilitado</MudNavLink>
-                                </MudNavGroup>
-                                <MudNavGroup Title="Inhabilitaciones" Expanded="false">
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitacion" IconColor="Color.Success">Agregar Inhabilitación</MudNavLink>
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarInhabilitacion" IconColor="Color.Info">Editar Inhabilitación</MudNavLink>
-                                </MudNavGroup>
-                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/Asistente">Asistente de Registro</MudMenuItem>
-                                <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/CargarExcel">Carga desde Excel</MudMenuItem>
-                            </MudMenu>
+                            @if (RolUser == (int)TipoUsuario.Administrador || RolUser == (int)TipoUsuario.Supervisor)
+                            {
+                                <MudMenu Label="ADMINISTRACIÓN" Dense="true" Class="@Css">
+                                    @if (RolUser == (int)TipoUsuario.Supervisor)
+                                    {
+                                        <MudNavGroup Title="Inhabilitados" Expanded="false">
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitado" IconColor="Color.Success">Registrar Inhabilitado</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarInhabilitado" IconColor="Color.Info">Editar Inhabilitado</MudNavLink>
+                                        </MudNavGroup>
+                                        <MudNavGroup Title="Inhabilitaciones" Expanded="false">
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarInhabilitacion" IconColor="Color.Success">Agregar Usuario</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarInhabilitacion" IconColor="Color.Info">Editar Usuario</MudNavLink>
+                                        </MudNavGroup>
+                                        <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/Asistente">Asistente de Registro</MudMenuItem>
+                                        <MudMenuItem Href="ConstanciaNoInhabilitado/Admin/CargarExcel">Carga desde Excel</MudMenuItem>
+                                    }
+                                    
+                                    @if (RolUser == (int)TipoUsuario.Administrador)
+                                    {
+                                        <MudNavGroup Title="Usuarios" Expanded="false">
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/AgregaUsuario" IconColor="Color.Success">Agregar Inhabilitación</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarUsuario" IconColor="Color.Info">Editar Inhabilitación</MudNavLink>
+                                        </MudNavGroup>
+                                    }                                 
+                                 
+                                </MudMenu>
+                            }
                             @* Menu se ADMINISTRACIÓN final *@
 
                             @* Menu se CATÁLOGOS inicio *@
-                            <MudMenu Label="CATÁLOGOS" Dense="true" Class="@Css">
-                                <MudNavGroup Title="Registrar" Expanded="false">
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarDependencia" IconColor="Color.Success">Registrar dependencia</MudNavLink>
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarCausa" IconColor="Color.Success">Registrar causa de inhabilitación</MudNavLink>
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarOrigen" IconColor="Color.Success">Registrar origen de inhabilitación</MudNavLink>
-                                </MudNavGroup>
-                                <MudNavGroup Title="Editar" Expanded="false">
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarDependencia" IconColor="Color.Success">Editar dependencia</MudNavLink>
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarCausa" IconColor="Color.Success">Editar causas de inhabilitación</MudNavLink>
-                                    <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarOrigen" IconColor="Color.Success">Editar origenes de inhabilitación</MudNavLink>
-                                </MudNavGroup>
-                                <MudMenuItem Href="/ConstanciaNoInhabilitado/Admin/VerInhabilitacion"> Ver Inhabilitaciones</MudMenuItem>
+                            @if (RolUser == (int)TipoUsuario.Administrador || RolUser == (int)TipoUsuario.Supervisor || RolUser == (int)TipoUsuario.Analista || RolUser == (int)TipoUsuario.Ninguno)
+                            {
+                                <MudMenu Label="CATÁLOGOS" Dense="true" Class="@Css">
+                                    @if (RolUser == (int)TipoUsuario.Supervisor)
+                                    {
+                                        <MudNavGroup Title="Registrar" Expanded="false">
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarDependencia" IconColor="Color.Success">Registrar dependencia</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarCausa" IconColor="Color.Success">Registrar causa de inhabilitación</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/RegistrarOrigen" IconColor="Color.Success">Registrar origen de inhabilitación</MudNavLink>
+                                        </MudNavGroup>
+                                        <MudNavGroup Title="Editar" Expanded="false">
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarDependencia" IconColor="Color.Success">Editar dependencia</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarCausa" IconColor="Color.Success">Editar causas de inhabilitación</MudNavLink>
+                                            <MudNavLink Href="ConstanciaNoInhabilitado/Admin/EditarOrigen" IconColor="Color.Success">Editar origenes de inhabilitación</MudNavLink>
+                                        </MudNavGroup>
+                                    }                                   
+                                    <MudMenuItem Href="/ConstanciaNoInhabilitado/Admin/VerInhabilitacion"> Ver Inhabilitaciones</MudMenuItem>
+                                </MudMenu>                             
                                
-                            </MudMenu> 
+                            }
+                       
                             @* Menu se CATÁLOGOS final *@
 
                             <MudMenu Label="REPORTES" Dense="true" Class="@Css">
@@ -131,9 +155,17 @@
 
     [Parameter]
     public int? view { set; get; } = 2;
-    // [Parameter]
-    // public bool? LinkRequisitos { set; get; } = false;
+
     private string Css { set; get; } = "pa-md-2 mx-lg-auto";
+
+    private Session SessionUser { set; get; }
+    private int RolUser { set; get; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        SessionUser = await _sessionStorage.GetItemAsync<Session>("sesionUser");
+        RolUser = Convert.ToInt32(SessionUser.Rol);
+    }
 
     private async Task CargarPagina()
     {

@@ -109,6 +109,12 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
             if (listaDependencias.IsSuccessStatusCode)
             {
                 var dependenciasResponde = await listaDependencias.Content.ReadFromJsonAsync<List<Dependencia>>();
+                Dependencia dependenciaDefault = new Dependencia
+                {
+                    IdDependencia = 0,
+                    Descripcion = "--Seleccione--"
+                };
+                Dependencias.Add(dependenciaDefault);
                 Dependencias.AddRange(dependenciasResponde!);
 
                 Console.WriteLine($"Dependencias - {Dependencias.Count()}");
@@ -122,7 +128,13 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
             if (listaDependencias.IsSuccessStatusCode)
             {
                 var CausasResponde = await listaDependencias.Content.ReadFromJsonAsync<List<CausaInhabilitacion>>();
-                Causas = CausasResponde!;
+                CausaInhabilitacion CausaInhabilitacion = new CausaInhabilitacion
+                {
+                    IdCausaInhabilitacion = 0,
+                    Descripcion = "--Seleccione--"
+                };
+                Causas.Add(CausaInhabilitacion);
+                Causas.AddRange(CausasResponde!);
 
                 Console.WriteLine($"Causas - {Causas.Count()}");
             }
@@ -134,7 +146,13 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
             if (listaDependencias.IsSuccessStatusCode)
             {
                 var OrigenResponde = await listaDependencias.Content.ReadFromJsonAsync<List<OrigenInhabilitacion>>();
-                Origen = OrigenResponde!;
+                OrigenInhabilitacion OrigenInhabilitacionDefault = new OrigenInhabilitacion
+                {
+                    IdOrigenInhabilitacion = 0,
+                    Descripcion = "--Seleccione--"
+                };
+                Origen.Add(OrigenInhabilitacionDefault);
+                Origen.AddRange(OrigenResponde!);
 
                 Console.WriteLine($"Origen - {Origen.Count()}");
             }

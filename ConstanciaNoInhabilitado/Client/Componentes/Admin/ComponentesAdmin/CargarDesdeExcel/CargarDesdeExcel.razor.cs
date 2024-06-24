@@ -14,6 +14,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Car
         IBrowserFile ExcelFile { set; get; }
         private bool Spinner { set; get; }
         private bool MostrarRescultadosCargaMasiva { set; get; }
+        private bool MostrarRescultadosCargaMasivaFormatoArchivo { set; get; }
         private CargaMasivaExcelDTO CargaMasivaData { set; get; } = new();
         private int MaxHeight { set; get; } = 150;
         private Session Session { set; get; }
@@ -50,6 +51,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Car
         {
             try
             {
+                CargaMasivaData = new();                
                 Spinner = true;
                 MostrarRescultadosCargaMasiva = false;
                 await Task.Delay(500);
@@ -68,14 +70,35 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Car
         }
         private async Task CargarArchivo() 
         {
-            var file = ExcelFile;
-            using var stream = file.OpenReadStream(maxAllowedSize: 10485760); // 10 MB
-            var buffer = new byte[file.Size];
-            await stream.ReadAsync(buffer);
-            Console.WriteLine(buffer);
-            CargaMasivaData = await FileService.ProcessFile(buffer, Session.IdUser);
+            try
+            {
+                var file = ExcelFile;
+                using var stream = file.OpenReadStream(maxAllowedSize: 10485760); // 10 MB
+                var buffer = new byte[file.Size];
+                await stream.ReadAsync(buffer);
+                Console.WriteLine(buffer);
+                CargaMasivaData = await FileService.ProcessFile(buffer, Session.IdUser);
 
-            await RegistrarArchivoExcel();
+                if (CargaMasivaData.ErroresDeLaCarga.Count() > 0) {
+                    int altura = MaxHeight;
+                    int alturaaprox = CargaMasivaData.ErroresDeLaCarga.Count() * 60;
+                    MaxHeight = alturaaprox + altura;
+                    Console.WriteLine($"Altura aprox {MaxHeight}");
+                    MostrarRescultadosCargaMasivaFormatoArchivo = true; 
+                }
+                else await RegistrarArchivoExcel();
+
+                foreach (var item in CargaMasivaData.ErroresDeLaCarga)
+                {
+                    Console.WriteLine($"{item}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+            }
+            finally { MostrarRescultadosCargaMasiva = true; }
+            
         }
         private async Task RegistrarArchivoExcel()
         {
@@ -93,12 +116,7 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Car
                         Console.WriteLine($"InhabilitadoCarga {responde.InhabilitadoCarga.Count()}");
                         Console.WriteLine($"InhabilitacionCarga {responde.InhabilitacionCarga.Count()}");
                         Console.WriteLine($"CargaMasivaExcel {responde.CargaMasivaExcel.Count()}");
-                        CargaMasivaData = responde;
-
-                        foreach (var item in responde.ErroresDeLaCarga)
-                        {
-                            Console.WriteLine($"{item}");   
-                        }
+                        CargaMasivaData = responde;                    
 
                         if (responde.ErroresDeLaCarga.Count() > 0) 
                         {
@@ -115,7 +133,8 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Car
                 Console.WriteLine(ex.Message);
             }
             finally 
-            { 
+            {
+                MostrarRescultadosCargaMasivaFormatoArchivo = false;
                 MostrarRescultadosCargaMasiva = true;
             }
         }
