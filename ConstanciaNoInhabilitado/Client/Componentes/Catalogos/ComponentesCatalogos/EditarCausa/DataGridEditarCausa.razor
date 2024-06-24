@@ -63,7 +63,11 @@ else if (_elements.idBandera == 0)
     protected override async Task OnInitializedAsync()
     {
         await CargarServidoresPublicos();
-        
+        // Elements.Add(new CausasInhabilitacion { Value = "1", Descripcion = "ABUSO DE AUTORIDAD" });
+        // Elements.Add(new CausasInhabilitacion { Value = "2", Descripcion = "ABUSO DE FUNCIONES" });
+        // Elements.Add(new CausasInhabilitacion { Value = "3", Descripcion = "COHECHO O EXTORSIÓN" });
+        // Elements.Add(new CausasInhabilitacion { Value = "4", Descripcion = "ENRIQUECIMIENTO ILICITO" });
+        // Elements.Add(new CausasInhabilitacion { Value = "5", Descripcion = "INCUMPLIMIENTO DE DECLARACIÓN DE SITUACIÓN PATRIMONIAL" });
     }
     private async Task CargarServidoresPublicos()
     {

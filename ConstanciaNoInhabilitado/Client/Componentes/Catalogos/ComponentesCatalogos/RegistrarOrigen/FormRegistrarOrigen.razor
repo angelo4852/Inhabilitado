@@ -7,18 +7,9 @@
 
 
 <MudItem xs="3">
-    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;" OnClick="EventCall">Registrar Origen de Inhabilitación </MudButton>
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" Style="width:200px;">Registrar Origen de Inhabilitación </MudButton>
 </MudItem>
 
 @code {
-    [Parameter]
-    public OrigenesInhabilitacion RegistrarOrigenInhabilitacion { get; set; } = new();
-
-    [Parameter]
-    public EventCallback eventCallback { get; set; }
-
-    public async Task EventCall ()
-    {
-        await eventCallback.InvokeAsync(RegistrarOrigenInhabilitacion);
-    }
+    private RegistrarOrigenInhabilitacion RegistrarOrigenInhabilitacion { get; set; } = new();
 }

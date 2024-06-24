@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Runtime.CompilerServices;
 using System.Net.Http.Json;
+using ConstanciaNoInhabilitado.Shared.Entities.Constancia;
 
 namespace ConstanciaNoInhabilitado.Client.Pages.Login
 {
@@ -13,6 +14,7 @@ namespace ConstanciaNoInhabilitado.Client.Pages.Login
         [Inject]
         public IDialogService dialogService { get; set; }
         public SearchReference Reference { get; set; } = new();
+        public List<ConstanciaInhabilitado> constanciaInhabilitados { get; set; } = new();
         private bool MostrarSppinerLogin { get; set; }
         private string Captcha { get; set; } = "";
         public string CaptchaDeUser { get; set; } = "";
@@ -46,27 +48,54 @@ namespace ConstanciaNoInhabilitado.Client.Pages.Login
 
         private async Task ValidarInformacion() 
         {
-            MostrarSppinerLogin = true;
-            MensajeDeError = string.Empty;
-            if (Reference.Reference.Length < 20) MensajeDeError = "¡La longitud de la referencia debe de ser de 20 digitos!";
-            if (Reference.Captcha != Captcha) MensajeDeError = "¡Introduce correctamente el texto de la imagen!";
-            if (MensajeDeError == string.Empty) await ConsultaConstancia();
-            MostrarSppinerLogin = false;
+            try
+            {
+                MostrarSppinerLogin = true;
+                MensajeDeError = string.Empty;
+                if (Reference.Reference is null)
+                {
+                    MensajeDeError = "¡El campo referencia es obligatoria!";
+                }
+                else 
+                {
+                    if (Reference.Reference!.Length < 20) MensajeDeError = "¡La longitud de la referencia debe de ser de 20 digitos!";
+                }
+                if (Reference.Reference == string.Empty) MensajeDeError = "¡El campo referencia es obligatoria!";                
+                if (Reference.Captcha != Captcha) MensajeDeError = "¡Introduce correctamente el texto de la imagen!";
+                if (MensajeDeError == string.Empty) await ConsultaConstancia();            
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally 
+            {
+                MostrarSppinerLogin = false;
+            }
+           
         }
         public async Task ConsultaConstancia()
         {
             try
             {
-                var logueoResponse = await httpClient.PostAsJsonAsync<SearchReference>("/api/Login/DescargarConstancia", Reference);
+                ConstanciaBusqueda constanciaBusqueda = new ConstanciaBusqueda 
+                {
+                    Criterio = Reference.Reference,
+                    Tipo = 1
+                };
+
+                var logueoResponse = await httpClient.PostAsJsonAsync<ConstanciaBusqueda>("/api/Constancias/GetReportes", constanciaBusqueda);
                 if (logueoResponse.IsSuccessStatusCode) 
                 {
-                    var referenceResponse = await logueoResponse.Content.ReadFromJsonAsync<SearchReferenceReponse>();
-                    if(referenceResponse?.ReferenceSearch != string.Empty) navigationManager.NavigateTo(referenceResponse.ReferenceSearch);
+                    var referenceResponse = await logueoResponse.Content.ReadFromJsonAsync<List<ConstanciaInhabilitado>>();
+                    if (referenceResponse is not null) 
+                    {
+
+                    }
                 }
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally 

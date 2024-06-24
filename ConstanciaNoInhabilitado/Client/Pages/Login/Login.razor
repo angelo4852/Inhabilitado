@@ -1,6 +1,9 @@
-﻿@page "/ConstanciaNoInhabilitado/Admin/Login";
+﻿@page "/";
+@page "/ConstanciaNoInhabilitado/Admin/Login";
+
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
+@using ConstanciaNoInhabilitado.Client.Utils.Services;
 @using MudBlazor
 
 @inject HttpClient httpClient
@@ -9,6 +12,7 @@
 @using Microsoft.AspNetCore.Components.Authorization
 @inject AuthenticationStateProvider authenticationStateProvider
 @inject NavigationManager navigationManager
+@inject MD5Service MD5Service
 
 <title>Acceso a Usuarios</title>
 
@@ -20,15 +24,16 @@
         </div>
     </div>
 }
-    <MainForm>
-        <ContentBreadcrumbs>
-            <MudLink Href="ConstanciaNoInhabilitado/Default">
-                <b>Inicio</b>
-            </MudLink>
-            <b>/ Administración / </b>
-            <b style="color:#A8113E;">Acceso a Usuarios</b>
-        </ContentBreadcrumbs>       
-        <Main>
+<MainForm>
+    <ContentBreadcrumbs>
+        @* <MudLink Href="ConstanciaNoInhabilitado/Default"> *@
+        <MudLink>
+            <b>Inicio</b>
+        </MudLink>
+        <b>/ Administración / </b>
+        <b style="color:#A8113E;">Acceso a Usuarios</b>
+    </ContentBreadcrumbs>
+    <Main>
 
         @if (MostrarSppinerLogin)
         {
@@ -38,8 +43,9 @@
                     <MudText Typo="Typo.h4">Cargando información ...</MudText>
                 </div>
             </div>
-        }else
-        {     
+        }
+        else
+        {
             <EditForm Model="@loguear" OnValidSubmit="@ConsultaUsuario" FormName="form1">
                 <DataAnnotationsValidator />
                 <div class="SpacePadding">
@@ -66,14 +72,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mb-3 SpacePaddingInput">
-                                    <label>Constraseña</label><br>
-                                    <MudTextField T="string"
-                                                  Margin="Margin.Dense"
-                                                  Variant="Variant.Outlined"
-                                                  Label="Escriba su Constraseña"
-                                                  Required="true"
-                                                  @bind-Value="loguear.Contrasena"
-                                                  For="@(()=> loguear.Contrasena)" />
+                                    <label>Contraseña</label><br>
+                                    <MudTextField @bind-Value="loguear.Contrasena" Label="Escriba su Contraseña" Variant="Variant.Outlined" InputType="@PasswordInput"
+                                                  Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick" AdornmentAriaLabel="Show Password" />
                                 </div>
                             </div>
                             @if (MostrarErrorDeConsulta)
@@ -86,21 +87,22 @@
                                         </MudAlert>
                                     </div>
                                 </div>
-                            }                                                
+                            }
                             <div class="row">
                                 <div class="col-md-12 mb-3 text-center">
                                     <MudButton Variant="Variant.Filled" ButtonType="ButtonType.Submit" Style="width:200px;background-color:#A8113E;color:white;">
                                         Entrar
                                     </MudButton>
                                 </div>
-                            </div>                        
+                            </div>
+                            <b>v18.06</b>
                         </div>
                     </div>
                 </div>
             </EditForm>
         }
-        </Main>
-    </MainForm>
+    </Main>
+</MainForm>
 
 
 
