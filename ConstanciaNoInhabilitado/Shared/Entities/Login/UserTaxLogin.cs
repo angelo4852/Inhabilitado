@@ -43,18 +43,19 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
     }
     public class Usuarios
     {
-        public int IdUsuario { get; set; }
-        public string Nombre { get; set; }
-        public string ApellidoPaterno { get; set; }
+        public int? IdUsuario { get; set; }
+        public string? Nombre { get; set; }
+        public string? ApellidoPaterno { get; set; }
 
-        public string ApellidoMaterno { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string Usuario { get; set; }
-        public string Contrasena { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime FechaModificacion { get; set; }
-        public int IdUsuarioModifica { get; set; }
-        public int IdRolUsuario { get; set; }
+        public string? ApellidoMaterno { get; set; }
+        public string? CorreoElectronico { get; set; }
+        public string? Usuario { get; set; }
+        public string? Contrasena { get; set; }
+        public DateTime? FechaCreacion { get; set; }
+        public DateTime? FechaModificacion { get; set; }
+        public int? IdUsuarioModifica { get; set; }
+        public int? IdRolUsuario { get; set; }
+        public string? Descripcion { get; set; }
 
 
     }
@@ -67,6 +68,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         public string Descripcion { get; set; }
 
     }
+
 
 
     public class Session 

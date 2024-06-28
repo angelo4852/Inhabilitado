@@ -48,10 +48,10 @@
 					</MudItem>
 
 					<MudItem xs="7">
-						<MudSelect T="int" Label="Rol" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="_usuario.IdRolUsuario" Required="true">
+						<MudSelect T="string" Label="Rol" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="_usuario.Descripcion" Required="true">
 							@foreach (var item in ListSexo)
 							{
-								<MudSelectItem Value="@(item.IdRolUsuario)">
+								<MudSelectItem Value="@(item.IdRolUsuario.ToString())">
 									@item.Descripcion
 								</MudSelectItem>
 							}
@@ -150,7 +150,7 @@
 
 		}
 
-		
+
 	}
 	public async Task<List<RolUsuario>> ListaRol()
 	{
@@ -161,10 +161,12 @@
 			var list = await response.Content.ReadFromJsonAsync<List<RolUsuario>>();
 			if (list.Count > 0)
 			{
+				_usuario.IdRolUsuario = 0;
 				ListSexo = list;
 				StateHasChanged();
 			}
 		}
+
 
 		return ListSexo;
 
@@ -201,7 +203,7 @@
 	public async Task<List<string>> ValidaInformacion(Usuarios _usuario)
 	{
 		List<string> strings = new List<string>();
-
+		_usuario.IdRolUsuario = Convert.ToInt32(_usuario.Descripcion);
 		if (_usuario.Nombre == string.Empty || _usuario.Nombre == null)
 		{
 			strings.Add("El campo  no puede estar vacio");
@@ -222,14 +224,18 @@
 			strings.Add("El campo Usuario no puede estar vacio");
 
 		}		
-		
+
 		if (_usuario.Contrasena == string.Empty || _usuario.Contrasena == null)
 		{
 			strings.Add("El campo Contraseña no puede estar vacio");
 
 		}
+		Console.WriteLine(_usuario.IdRolUsuario);
 		if (_usuario.IdRolUsuario == 0 || _usuario.IdRolUsuario == null)
 		{
+			Console.WriteLine(_usuario.IdRolUsuario);
+			Console.WriteLine("Descripcion" + _usuario.Descripcion);
+
 			strings.Add("El campo Rol no puede estar vacio");
 
 		}

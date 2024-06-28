@@ -1,9 +1,11 @@
 ﻿using ConstanciaNoInhabilitado.Server.Interfaces;
 using ConstanciaNoInhabilitado.Shared.Entities.Login;
+using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 using ConstanciaNoInhabilitado.Shared.Entities.Reportes;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace ConstanciaNoInhabilitado.Server.Servicios
 {
@@ -36,5 +38,29 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
                 throw;
             }
         }
+
+        public async Task<List<Usuarios>> GetInhabilitado()
+        {
+            try
+            {
+                using var connection = new SqlConnection(connectionString);
+
+                var data = await connection.QueryAsync(@"  SELECT IdUsuario,Nombre,ApellidoPaterno,ApellidoMaterno,CorreoElectronico,Usuario,Contrasena,FechaCreacion,FechaModificacion,IdUsuarioModifica,Descripcion,Usuario.IdRolUsuario
+                                                           FROM Usuario 
+                                                           INNER JOIN RolUsuario ON Usuario.IdRolUsuario = RolUsuario.IdRolUsuario");
+                var jsonResult = JsonConvert.SerializeObject(data);
+                var TipoSancion = JsonConvert.DeserializeObject<List<Usuarios>>(jsonResult);
+                return TipoSancion;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public async Task<Usuarios> UpdateUsuarios(Usuarios _usuarios) 
+        {
+            return _usuarios;
+		}
     }
 }

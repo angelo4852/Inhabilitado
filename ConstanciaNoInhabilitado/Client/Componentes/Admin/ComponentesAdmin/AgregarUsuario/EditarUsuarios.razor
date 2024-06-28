@@ -2,7 +2,23 @@
 
 @using ConstanciaNoInhabilitado.Client.Shared.Forms;
 @using ConstanciaNoInhabilitado.Client.Componentes.Menu;
+@using MudBlazor
+@using ConstanciaNoInhabilitado.Client.Auth;
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
 @using ConstanciaNoInhabilitado.Client.Shared.Partial.Cards;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+
+@inject AuthenticationStateProvider authenticationStateProvider;
+@inject NavigationManager navigationManager;
+@attribute [Authorize]
+@inject IDialogService DialogService;
+@inject ISnackbar Snackbar
+@inject HttpClient httpClient
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage
+@inject IDialogService dialogService
+
 
 <h3>EditarUsuarios</h3>
 
@@ -14,13 +30,60 @@
         <Main>
             <CardForm>
                 <Content>
-                
+                <MudGrid Justify="Justify.Center">
+                    <MudItem xs="11">
+                        <MudText Typo="Typo.h5">Para modificar un Usuario introduzca el nombre asociado a este</MudText>
+                    </MudItem>
+                </MudGrid>
+
+                <MudDataGrid T="Usuarios" MultiSelection="true" Items="@inhabilitacionBDs" QuickFilter="@_quickFilter"
+                             Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" Filterable="false" SortMode="@SortMode.None">
+                    <ToolBarContent>
+                        <MudText Typo="Typo.h6">Inhabilitaciones</MudText>
+                        <MudSpacer />
+                        <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
+                                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                    </ToolBarContent>
+                    <Columns>
+                        <HierarchyColumn T="Usuarios" />
+                        <PropertyColumn Property="x => x.IdUsuario" Title="Id" Sortable="false" Filterable="false" />
+                        <PropertyColumn Property="x => x.Nombre + ' ' + x.ApellidoPaterno + ' ' + x.ApellidoMaterno" Title="Nombre Completo" />
+                      @*   <PropertyColumn Property="x => x.RFC" Title="RFC" />
+                        <PropertyColumn Property="x => x.ExpedienteLegal" Title="Expediente Legal" />
+                        <PropertyColumn Property="x => x.Dependencia" Title="Dependencia" /> *@
+                        <TemplateColumn>
+                            <CellTemplate>
+                                <MudStack Row>
+                                    <MudButton Variant="Variant.Filled" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Edit" OnClick="() => EditarCausa(context.Item)">Editar</MudButton>
+                                </MudStack>
+                            </CellTemplate>
+                        </TemplateColumn>
+                    </Columns>
+                    <ChildRowContent>
+                        <MudCard>
+                            <MudCardContent>
+                                <MudGrid>
+                                    <MudItem xs="2"></MudItem>
+
+                                    <MudItem xs="4"><b>Correo Electronico:</b> @context.Item.CorreoElectronico</MudItem>
+                                    <MudItem xs="2"><b>Rol Usuario:</b> @context.Item.Descripcion</MudItem>                                    
+                                    <MudItem xs="3"><b>Usuario:</b> @context.Item.Usuario</MudItem>
+
+                                </MudGrid>
+                            </MudCardContent>
+                        </MudCard>
+                    </ChildRowContent>
+                    <PagerContent>
+                        <MudDataGridPager T="InhabilitacionADD" />
+                    </PagerContent>
+                </MudDataGrid>
                 </Content>
             </CardForm>
 
 
         </Main>
     </MainFormHome>
+
 @code {
 
 }

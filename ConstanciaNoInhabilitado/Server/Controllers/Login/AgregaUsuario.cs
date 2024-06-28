@@ -24,5 +24,25 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
 
 
         }
+
+        [HttpPost]
+        [Route("GetUsuarios")]
+        public async Task<List<Usuarios>> GetUsuarios()
+        {
+            List<Usuarios> reponseUsuarios = await service.GetInhabilitado();
+
+            return reponseUsuarios;
+
+
+        }
+
+		[HttpPost]
+		[Route("GetUsuarios")]
+		public async Task<Usuarios> EditarUsuarios(Usuarios _usuarios)
+        {
+            Usuarios responseUsuarios = await service.UpdateUsuarios(_usuarios);
+            return _usuarios;
+        
+        }
     }
 }

@@ -262,6 +262,52 @@
     ]
   },
   {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregaUsuario",
+    "Method": "GetUsuarios",
+    "RelativePath": "api/AgregaUsuario/GetUsuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConstanciaNoInhabilitado.Shared.Entities.Login.Usuarios, ConstanciaNoInhabilitado.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.AgregaUsuario",
+    "Method": "EditarUsuarios",
+    "RelativePath": "api/AgregaUsuario/GetUsuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_usuarios",
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConstanciaNoInhabilitado.Shared.Entities.Login.Usuarios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ConstanciaNoInhabilitado.Server.Controllers.Login.CargaMasivaArchivoExcel",
     "Method": "RegistrarCargaMasicaExcel",
     "RelativePath": "api/CargaMasivaArchivoExcel/RegistrarCargaMasicaExcel",

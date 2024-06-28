@@ -9,7 +9,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Catalogos
 	public class Dependencia
 	{
 		public int IdDependencia { set; get; }
-		public string? Descripcion { set; get; }
+		public string? Descripcion { set; get; }= string.Empty;
 		public string? siglas { set; get; }
         public string? Value { set; get; }
         public bool Acciones { get; set; }

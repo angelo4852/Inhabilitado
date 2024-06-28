@@ -1,0 +1,116 @@
+﻿@using ConstanciaNoInhabilitado.Shared.Entities.Login;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.RegistrarInhabilitado;
+@using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.AgregarInhabilitación;
+@using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+@inject HttpClient httpClient;
+
+<MudDialog>
+    <TitleContent>
+        <div class="container">
+            <p style="text-align:center; font-size: 1.8rem;">
+                <b>Editar Usuario</b>
+            </p>
+        </div>
+    </TitleContent>
+    <DialogContent>
+@* 		<MudText Align="Align.Center" Typo="Typo.h6">Editar Usuario</MudText>
+ *@
+		<MudGrid Justify="Justify.Center">
+			<MudItem xs="7">
+				<MudTextField @bind-Value="EditarInhabilitacion.Nombre" Label="Nombre" Variant="Variant.Outlined" Required="true"></MudTextField>
+			</MudItem>
+			<MudItem xs="7">
+				<MudTextField @bind-Value="EditarInhabilitacion.ApellidoPaterno" Label="Apellido Paterno" Variant="Variant.Outlined" Required="true"></MudTextField>
+			</MudItem>
+			<MudItem xs="7">
+				<MudTextField @bind-Value="EditarInhabilitacion.ApellidoMaterno" Label="Apellido Materno" Variant="Variant.Outlined" Required="true"></MudTextField>
+			</MudItem>
+
+			<MudItem xs="7">
+				<MudTextField @bind-Value="EditarInhabilitacion.CorreoElectronico" Label="Correo Electronico" Variant="Variant.Outlined" Required="true"></MudTextField>
+			</MudItem>
+			<MudItem xs="7">
+				<MudTextField @bind-Value="EditarInhabilitacion.Usuario" Label="Usuario" Variant="Variant.Outlined" Required="true"></MudTextField>
+			</MudItem>
+			<MudItem xs="7">
+				<MudTextField @bind-Value="EditarInhabilitacion.Contrasena" Label="Contraseña" Variant="Variant.Outlined" Required="true"></MudTextField>
+			</MudItem>
+
+			<MudItem xs="7">
+				<MudSelect T="string" Label="Rol" Variant="Variant.Filled" AnchorOrigin="Origin.BottomCenter" @bind-Value="EditarInhabilitacion.Descripcion" Required="true">
+					@foreach (var item in ListSexo)
+					{
+						<MudSelectItem Value="@(item.IdRolUsuario.ToString())">
+							@item.Descripcion
+						</MudSelectItem>
+					}
+				</MudSelect>
+			</MudItem>
+
+
+		</MudGrid>
+		<MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="EditarUsuario">Establecer Inhabilitado</MudButton>
+
+    </DialogContent>
+    <DialogActions>
+    </DialogActions>
+</MudDialog>
+
+<style>
+    a {
+        color: #A5987E;
+        opacity: 75%;
+    }
+
+    .my-custom-class {
+        backdrop-filter: blur(10px);
+    }
+</style>
+
+@code {
+
+	[CascadingParameter] MudDialogInstance MudDialog { get; set; }
+	[Parameter] public Usuarios? EditarInhabilitacion { set; get; }
+	private List<RolUsuario>? ListSexo = new List<RolUsuario>();
+	private List<Usuarios> ListUsuario = new List<Usuarios>();
+
+	void Submit() => MudDialog.Close(DialogResult.Ok(true));
+	void Cancel() => MudDialog.Cancel();
+	protected override async Task OnInitializedAsync()
+	{
+		await ListaRol();
+	}
+	public async Task EditarUsuario()
+	{
+
+		var response = await httpClient.PostAsJsonAsync<Usuarios>("", EditarInhabilitacion);
+		Console.WriteLine("Metodo para Actualizar Usuario");
+	}
+
+	public async Task<List<RolUsuario>> ListaRol()
+	{
+
+		var response = await httpClient.PostAsJsonAsync<List<RolUsuario>>("/api/Catalogos/ListaRol", null);
+
+		if (response.IsSuccessStatusCode)
+		{
+			var list = await response.Content.ReadFromJsonAsync<List<RolUsuario>>();
+			if (list.Count > 0)
+			{
+				foreach (var item in list)
+				{
+					Console.WriteLine(" list IdRolUsuario " + item.Descripcion);
+				
+				}
+				
+
+				ListSexo = list;
+				StateHasChanged();
+			}
+		}
+
+
+		return ListSexo;
+
+	}
+}

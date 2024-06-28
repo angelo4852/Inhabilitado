@@ -4,7 +4,7 @@
 @inject ISnackbar Snackbar
 
 
-@* <MudDataGrid T="Dependencia" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
+<MudDataGrid T="Dependencia" MultiSelection="true" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged" Style="width:65vw;">
     <ToolBarContent>
         <MudSpacer />
@@ -44,35 +44,6 @@
         <MudDataGridPager T="Dependencia" />
     </PagerContent>
 </MudDataGrid>
- *@
-
-@* <div id="users">
-    <input class="search" placeholder="Search" />
-    <button class="sort" data-sort="name">
-        Sort by name
-    </button>
-    <table>
-        <!-- IMPORTANT, class="list" have to be at tbody -->
-        <tbody class="list">
-            <tr>
-                <td class="name">Hola</td>
-                <td class="born">como estas</td>
-            </tr>
-                @for (int i = 0; i < Elements.Count; i++)
-                {
-                    <tr>
-                          <td class="name">@Elements[i].IdDependencia</td>
-                          <td class="born">@Elements[i].Descripcion</td>
-                    </tr>
-                }
-            
-           
-
-        </tbody>
-    </table>
-    <ul class="pagination"></ul>
-
-</div> *@
 
 
 
@@ -81,52 +52,6 @@
 
 
 
-
-
-
-
- <div id="test-list">
-    <input type="text" class="form-control search" />
-    <ul class="list">
-     
-        @for (int i = 0; i < Elements.Count;i++)
-        {
-            <li>
-            <p class="name">@Elements[i].Descripcion</p>
-            </li>
-        }
-    
-       @*  @foreach (var item in Elements)
-        {
-            <li><p class="name">@item.IdDependencia @item.Descripcion</p></li>
-            
-        
-        }  *@
-     </ul>
-    <ul class="pagination"></ul>
-</div>  
-
-<script>
-
-    alert("hola");
-
-
-
-    // var options = {
-    //     valueNames: ['name', 'born']
-    // };
-
-    // var userList = new List('users', options);
-
-
-    var monkeyList = new List('test-list', {
-        valueNames: ['name'],
-        page: 3,
-        pagination: true
-    });
-
-
-</script>
 
 @if (_elements.idBandera == 1)
 {
@@ -143,8 +68,8 @@ else if (_elements.idBandera == 0)
 @code {
 
     private List<Dependencia> Elements { set; get; } = new();
-    private string _searchString;
-    private bool _sortNameByLength;
+    private string? _searchString;
+    private bool _sortNameByLength { set; get; } = new();
     private List<string> _events = new();
     private Dependencia _elements { set; get; } = new();
 
@@ -187,17 +112,18 @@ else if (_elements.idBandera == 0)
         else
             return x.Descripcion;
     };
-    // quick filter - filter globally across multiple columns with the same input
+
     private Func<Dependencia, bool> _quickFilter => x =>
     {
+        _elements.idBandera = 3;
         if (string.IsNullOrWhiteSpace(_searchString))
             return true;
 
-        if (x.Descripcion.Contains(_searchString, StringComparison.OrdinalIgnoreCase))
+        if (x.Descripcion.Contains(_searchString, StringComparison.OrdinalIgnoreCase))           
             return true;
 
         return false;
-    };   
+    };
 
     // events
     void RowClicked(DataGridRowClickEventArgs<Dependencia> args)
