@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IxH+0zc89XLIrLU/wNdvussgUf1z2B2I8f2cZomAxDcfTCzNtcvPVZ9Kj13qMEzy9O6gsvHNsxdHOltUT8t/CQ==",
+  "dgSpecHash": "nOTERUE9wOI=",
   "success": true,
   "projectFilePath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Server\\ConstanciaNoInhabilitado.Server.csproj",
   "expectedPackageFiles": [
@@ -168,7 +168,11 @@
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.19\\microsoft.netcore.app.host.win-x64.7.0.19.nupkg.sha512"
   ],
   "logs": [
     {

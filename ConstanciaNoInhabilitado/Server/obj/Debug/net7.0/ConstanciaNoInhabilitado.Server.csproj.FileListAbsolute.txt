@@ -499,7 +499,6 @@ C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabi
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ConstanciaNoInhabilitado.Server.props
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\scopedcss\bundle\ConstanciaNoInhabilitado.Server.styles.css
-C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\ConstanciaNoInhabilitado.Server.csproj.CopyComplete
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\ConstanciaNoInhabilitado.Server.dll
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\refint\ConstanciaNoInhabilitado.Server.dll
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\ConstanciaNoInhabilitado.Server.pdb
@@ -514,3 +513,4 @@ C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabi
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\bin\Debug\net7.0\SixLabors.Fonts.dll
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\bin\Debug\net7.0\System.IO.Packaging.dll
 C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\bin\Debug\net7.0\XLParser.dll
+C:\Users\gilberto.peralta\Documents\NoInhabitado\Inhabilitado\ConstanciaNoInhabilitado\Server\obj\Debug\net7.0\Constanc.0832FFBD.Up2Date

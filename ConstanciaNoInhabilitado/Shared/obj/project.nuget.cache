@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HsglvpjtAKVx3Qv55Hg3EULNgJKjtM5XGhrXca1pblHXJOkbaVJQYBF3YZ58TIgZB7nViMpCj35Fl1gjs1wCsQ==",
+  "dgSpecHash": "QHQe8z5wu1o=",
   "success": true,
   "projectFilePath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Shared\\ConstanciaNoInhabilitado.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

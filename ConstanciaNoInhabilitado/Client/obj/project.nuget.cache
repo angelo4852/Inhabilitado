@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ChqPw0QIb3zA1RGdpOgi7tuDqzDVIQRTSN+0f4JOilCBfsrCynajOUmea/SNX4qS0dJECdQR4dsLSaIkHEl5vA==",
+  "dgSpecHash": "0leIO+L4Nog=",
   "success": true,
   "projectFilePath": "C:\\Users\\gilberto.peralta\\Documents\\NoInhabitado\\Inhabilitado\\ConstanciaNoInhabilitado\\Client\\ConstanciaNoInhabilitado.Client.csproj",
   "expectedPackageFiles": [
@@ -42,9 +42,9 @@
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.jsinterop\\7.0.17\\microsoft.jsinterop.7.0.17.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.13\\microsoft.jsinterop.webassembly.7.0.13.nupkg.sha512",
-    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
-    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
-    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.0\\microsoft.net.sdk.webassembly.pack.8.0.0.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23401.1\\microsoft.net.illink.analyzers.7.0.100-1.23401.1.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23401.1\\microsoft.net.illink.tasks.7.0.100-1.23401.1.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.5\\microsoft.net.sdk.webassembly.pack.8.0.5.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
@@ -155,7 +155,9 @@
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\gilberto.peralta\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
-    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.14\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.14.nupkg.sha512"
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\gilberto.peralta\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
   ],
   "logs": []
 }
