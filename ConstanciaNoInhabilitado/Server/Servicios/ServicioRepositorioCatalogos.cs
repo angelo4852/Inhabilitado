@@ -26,14 +26,8 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
 				using var connection = new SqlConnection(connectionString);
 				var data = await connection.QueryAsync(@"SELECT * FROM CausaInhabilitacion");
 				var jsonResult = JsonConvert.SerializeObject(data);
-				var causa = JsonConvert.DeserializeObject<List<CausaInhabilitacion>>(jsonResult);
-				CausaInhabilitacion CausaInhabilitacion = new CausaInhabilitacion
-				{
-					IdCausaInhabilitacion = 0,
-					Descripcion = "--Seleccione--"
-				};
-				List<CausaInhabilitacion> causas = new();
-				causas.Add(CausaInhabilitacion);
+				var causa = JsonConvert.DeserializeObject<List<CausaInhabilitacion>>(jsonResult);				
+				List<CausaInhabilitacion> causas = new();				
 				causas.AddRange(causa);
 				return causas;
 			}
@@ -51,14 +45,8 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
 				using var connection = new SqlConnection(connectionString);
 				var data = await connection.QueryAsync(@"SELECT * FROM DEPENDENCIA");
 				var jsonResult = JsonConvert.SerializeObject(data);
-				var dependencia = JsonConvert.DeserializeObject<List<Dependencia>>(jsonResult);
-				Dependencia dependenciaDefault = new Dependencia
-				{
-					IdDependencia = 0,
-					Descripcion = "--Seleccione--"
-				};
-				List<Dependencia> dependencias = new();
-				dependencias.Add(dependenciaDefault);
+				var dependencia = JsonConvert.DeserializeObject<List<Dependencia>>(jsonResult);			
+				List<Dependencia> dependencias = new();				
 				dependencias.AddRange(dependencia!);
 				return dependencias;
 			}
@@ -124,13 +112,7 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
 				var data = await connection.QueryAsync(@"SELECT * FROM OrigenInhabilitacion");
 				var jsonResult = JsonConvert.SerializeObject(data);
 				var origen = JsonConvert.DeserializeObject<List<OrigenInhabilitacion>>(jsonResult);
-				List<OrigenInhabilitacion> origenes = new();
-				OrigenInhabilitacion OrigenInhabilitacionDefault = new OrigenInhabilitacion
-				{
-					IdOrigenInhabilitacion = 0,
-					Descripcion = "--Seleccione--"
-				};
-				origenes.Add(OrigenInhabilitacionDefault);
+				List<OrigenInhabilitacion> origenes = new();				
 				origenes.AddRange(origen);
 				return origenes;
 			}
