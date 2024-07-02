@@ -60,7 +60,22 @@ namespace ConstanciaNoInhabilitado.Server.Servicios
 
         public async Task<Usuarios> UpdateUsuarios(Usuarios _usuarios) 
         {
-            return _usuarios;
+			try
+			{
+				Usuarios ReportesExpedidas = new();
+				using var connection = new SqlConnection(connectionString);
+				string query = "USP_UPDATE_USER";
+				var data = await connection.ExecuteAsync(query, _usuarios);
+
+				_usuarios.Resultado = data;
+
+				return _usuarios;
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+				throw;
+			}
 		}
     }
 }

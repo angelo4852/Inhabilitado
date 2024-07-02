@@ -3,7 +3,9 @@
 @using ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.AgregarInhabilitación;
 @using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
 @inject HttpClient httpClient;
-
+@inject ISnackbar Snackbar
+@inject IDialogService _dialogService;
+@inject IDialogService DialogService;
 <MudDialog>
     <TitleContent>
         <div class="container">
@@ -83,8 +85,49 @@
 	public async Task EditarUsuario()
 	{
 
-		var response = await httpClient.PostAsJsonAsync<Usuarios>("", EditarInhabilitacion);
-		Console.WriteLine("Metodo para Actualizar Usuario");
+		var response = await httpClient.PostAsJsonAsync<Usuarios>("api/AgregaUsuario/EditarUsuarios", EditarInhabilitacion);
+
+		if (response.IsSuccessStatusCode)
+		{
+			var respuestaJson = await response.Content.ReadFromJsonAsync<Usuarios>();
+
+			if (respuestaJson.Resultado > 0)
+			{
+				EditarInhabilitacion.Resultado = respuestaJson.Resultado;
+
+				Snackbar.Clear();
+				Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+				Snackbar.Configuration.ShowCloseIcon = false;
+				Snackbar.Add("Usuario actualizado correctamente", Severity.Success, config =>
+				{
+					Console.WriteLine(EditarInhabilitacion.Resultado);
+					config.Icon = Icons.Material.Filled.SdCardAlert;
+					config.IconColor = Color.Primary;
+					config.IconSize = Size.Large;
+					// Limpiar();
+				});
+				if (EditarInhabilitacion.Resultado == 2)
+				{		
+					StateHasChanged();
+					Submit();
+				}
+				
+			}
+
+		}
+		else
+		{
+			Snackbar.Clear();
+			Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+			Snackbar.Configuration.ShowCloseIcon = false;
+			Snackbar.Add("Upp´s Ocurrio un problema", Severity.Warning, config =>
+			{
+				config.Icon = Icons.Material.Filled.SdCardAlert;
+				config.IconColor = Color.Primary;
+				config.IconSize = Size.Large;
+				// Limpiar();
+			});		
+		}
 	}
 
 	public async Task<List<RolUsuario>> ListaRol()

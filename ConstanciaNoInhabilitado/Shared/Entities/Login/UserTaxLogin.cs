@@ -56,9 +56,9 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         public int? IdUsuarioModifica { get; set; }
         public int? IdRolUsuario { get; set; }
         public string? Descripcion { get; set; }
+		public int Resultado {  get; set; }
 
-
-    }
+	}
     public class RolUsuario
     {
         /// <summary>

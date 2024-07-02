@@ -2,6 +2,7 @@
 using ConstanciaNoInhabilitado.Client.Shared.Partial.Dialogs;
 using ConstanciaNoInhabilitado.Shared.Entities.Login;
 using ConstanciaNoInhabilitado.Shared.Entities.RegistroInhabilitacion;
+using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Net.Http.Json;
 
@@ -15,8 +16,9 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
         private bool _sortNameByLength { get; set; }
         private List<string> _events { get; set; } = new();
         private bool MostrarSppinerLogin { get; set; }
+		[Parameter] public Usuarios? EditarInhabilitacion { set; get; } = new();
 
-        protected override async Task OnInitializedAsync()
+		protected override async Task OnInitializedAsync()
         {
             await CargarInformacionDeInicio();
         }
@@ -56,16 +58,24 @@ namespace ConstanciaNoInhabilitado.Client.Componentes.Admin.ComponentesAdmin.Agr
                 ClassBackground = "filterBackground",
                 CloseButton = true
             };
-
+			StateHasChanged();
+            Console.WriteLine("aqui mero entro 1"+inhabilitacionBD.Resultado+" "+ EditarInhabilitacion.Resultado);
             DialogParameters<ModalEditarUsuarios> parameters = new DialogParameters<ModalEditarUsuarios>()
             {
-                {x => x.EditarInhabilitacion, inhabilitacionBD }
+                {x => x.EditarInhabilitacion, inhabilitacionBD }                
             };
+			Console.WriteLine("aqui mero entro 2"+inhabilitacionBD.Resultado + " " + EditarInhabilitacion.Resultado);
 
-            await dialogService.ShowAsync<ModalEditarUsuarios>("Simple Dialog", parameters, options);
-        }
+			StateHasChanged();
+			await dialogService.ShowAsync<ModalEditarUsuarios>("Simple Dialog", parameters, options);
+			Console.WriteLine("aqui mero entro 3"+inhabilitacionBD.Resultado + " " + EditarInhabilitacion.Resultado);
 
-        private Func<Usuarios, object> _sortBy => x =>
+			StateHasChanged();
+			Console.WriteLine("aqui mero entro 4"+inhabilitacionBD.Resultado + " " + EditarInhabilitacion.Resultado);
+
+		}
+
+		private Func<Usuarios, object> _sortBy => x =>
         {
             if (_sortNameByLength)
                 return x.Nombre.Length;

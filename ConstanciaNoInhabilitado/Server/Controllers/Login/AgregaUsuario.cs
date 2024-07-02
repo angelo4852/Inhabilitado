@@ -37,7 +37,7 @@ namespace ConstanciaNoInhabilitado.Server.Controllers.Login
         }
 
 		[HttpPost]
-		[Route("GetUsuarios")]
+		[Route("EditarUsuarios")]
 		public async Task<Usuarios> EditarUsuarios(Usuarios _usuarios)
         {
             Usuarios responseUsuarios = await service.UpdateUsuarios(_usuarios);
