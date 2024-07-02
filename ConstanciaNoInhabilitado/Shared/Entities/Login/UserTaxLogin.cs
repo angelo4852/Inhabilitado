@@ -68,7 +68,7 @@ namespace ConstanciaNoInhabilitado.Shared.Entities.Login
         /// <summary>
         /// Tiempo de expiracion de la sesion
         /// </summary>      
-        public string ExpiryTime { get; set; }
+        public DateTime ExpiryTime { get; set; }
     }
 
     public class MenuOpciones 
